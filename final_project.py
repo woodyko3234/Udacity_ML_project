@@ -10,14 +10,14 @@
 
 # ### Step 1: Load the dataset and get understanding about the features
 
-# In[55]:
+# In[1]:
 
 import pickle
 from collections import defaultdict
 import numpy as np
 
 ### Load the dictionary containing the dataset
-with open("/Users/KunWuYao/GitHub/Udacity_ML_projects/final_project/final_project_dataset.pkl", "rb") as data_file:
+with open("final_project_dataset.pkl", "rb") as data_file:
     data_dict = pickle.load(data_file)
 
 print ("Data type: ", type(data_dict))
@@ -61,7 +61,7 @@ print(counting_machine(data_dict))
 # 
 # From the dictionary I found that even the salary, total payments, and messages sent and received got many none values, which might make the POI prediction more difficult.
 
-# In[56]:
+# In[2]:
 
 def ppl_counting(dictionary, value_appointed):
     '''Put the original data_dict into this function and appoint what you want to count 
@@ -98,9 +98,9 @@ print(sorted(NaN_count.items(), key = lambda counting: counting[1],
 
 # ### Step 2: Data pre-process and analysis
 
-# In[57]:
+# In[3]:
 
-def ExtractFeatureNames(dict):
+def extract_feature_names(dict):
     "Define a function to extract all features in the dict of dict and easier to plot"
     dict_values = list(dict.values())[0]
     dict_values_features = list(dict_values.keys())
@@ -111,13 +111,13 @@ def ExtractFeatureNames(dict):
     return dict_values_features
 
 
-# In[58]:
+# In[4]:
 
 ### Store to my_dataset for easy export below.
 my_dataset = data_dict
 
 #preprocess on the NaN value in the dictionary!!!
-def RemoveNaN(dict, penalty, RemoveOutlier = False):
+def remove_nan(dict, penalty, remove_outlier = False):
     '''looking through the dataset and 
     turn NaN into -1
     also turn all integers into floats
@@ -132,22 +132,22 @@ def RemoveNaN(dict, penalty, RemoveOutlier = False):
                     sub_dict[key] = float(penalty)
             else:
                 sub_dict[key] = float( value )
-    if RemoveOutlier:
+    if remove_outlier:
         dict.pop('THE TRAVEL AGENCY IN THE PARK', 0)
         dict.pop('TOTAL', 0)
         dict.pop('LOCKHART EUGENE E', 0)
     return dict
-my_dataset = RemoveNaN(my_dataset, -10, RemoveOutlier = True)
+my_dataset = remove_nan(my_dataset, -10, remove_outlier = True)
 
-def ResetFeatureList(my_dataset):
+def reset_feature_list(my_dataset):
     ### features_list is a list of strings, each of which is a feature name.
     ### The first feature must be "poi".
     features_list = ['poi']
-    features_list.extend(ExtractFeatureNames(my_dataset))
+    features_list.extend(extract_feature_names(my_dataset))
     return features_list
     #Total 20 features including poi as the first feature
 
-features_list = ResetFeatureList(my_dataset)
+features_list = reset_feature_list(my_dataset)
 #print(list(my_dataset.items())[1])
 print(features_list)
 
@@ -157,13 +157,13 @@ print(features_list)
 # ###Outliers
 # In addition, by checking the pdf file of financial benefits, I noticed that there were 2 clear outliers in the data, "TOTAL" and "THE TRAVEL AGENCY IN THE PARK". The first one seemed to be the sum total of all the other data points, while the second outlier was quite bizarre. Both these outliers and the datum with all NaN values, "LOCKHART EUGENE E", were removed from the dataset for all the analysis by applying __dict.pop(key, 0)__. 
 
-# In[59]:
+# In[5]:
 
 def is_nan(x):
     return (x is np.nan or x != x)
 #create a dict that key is the feature name and values are a list of floats
 
-def DictWithFeature(dataset, sorting=False):
+def dict_with_feature(dataset, sorting=False):
     '''
     define a dict with feature_key to better understand the distribution
     key = feature name (salary, bonus, etc.)
@@ -194,9 +194,9 @@ def DictWithFeature(dataset, sorting=False):
     #nan means 0.000000
 
 
-# In[60]:
+# In[6]:
 
-dict_with_features = DictWithFeature(my_dataset)
+dict_with_features = dict_with_feature(my_dataset)
 from scipy.stats.stats import pearsonr
 for key in dict_with_features.keys():
     print ('PearsonR between poi and ', key, " : ", 
@@ -245,7 +245,7 @@ for key in dict_with_features.keys():
 # 
 # The reason behind the new features of message ratio created was that I expected that POI contacted with each other relatively more often than non-POI and the relationship might be non-linear. To enlarge the variance, I would like to squaring all the new features as well. I also expected that the financial gains of POI are more than the average and median, that was why I compared each feature with the average and median and squared it to get bigger variance.
 
-# In[61]:
+# In[7]:
 
 #Create new features about ratio of each feature to the mean and median of the feature
 mean_dict, median_dict = dict(), dict()
@@ -256,7 +256,7 @@ for key, value in dict_with_features.items():
 print(mean_dict, median_dict)
 
 
-# In[62]:
+# In[8]:
 
 #Create feature list
 for point in my_dataset.keys():
@@ -264,14 +264,14 @@ for point in my_dataset.keys():
         try: mean_dict[key]
         except: continue
         if key != 'poi' and mean_dict[key] != 0:
-            my_dataset[point]['%s_mean_ratio' % key] =             my_dataset[point][key] / mean_dict[key]
+            my_dataset[point]['%s_mean_ratio' % key] = my_dataset[point][key] / mean_dict[key]
         if key != 'poi' and median_dict[key] != 0:
-            my_dataset[point]['%s_median_ratio' % key] =             my_dataset[point][key] / median_dict[key]
+            my_dataset[point]['%s_median_ratio' % key] = my_dataset[point][key] / median_dict[key]
 #check
 #print(my_dataset['KISHKILL JOSEPH G'])
 
 
-# In[63]:
+# In[9]:
 
 #Create new features about square of each feature
 #import re
@@ -283,7 +283,7 @@ for point in my_dataset.keys():
 #                my_dataset[point][key] **2
 
 
-# In[64]:
+# In[10]:
 
 import matplotlib.pyplot as plt
 
@@ -302,7 +302,7 @@ for sub_dict in my_dataset.values():
 
     
 #Define a function to run the plotting and set threshold
-def PlottingFunction(dictionary, value1, value2, threshold1, threshold2, threshold_option = False):
+def plotting_function(dictionary, value1, value2, threshold1, threshold2, threshold_option = False):
     counter_r, counter_b = 0, 0
     for sub_dict in dictionary.values():
         if sub_dict['poi'] > 0.:
@@ -323,7 +323,7 @@ def PlottingFunction(dictionary, value1, value2, threshold1, threshold2, thresho
     plt.show()
     print(counter_r, counter_b)
 #show some figures
-PlottingFunction(my_dataset, 'from_poi_message_ratio', 'to_poi_message_ratio', 0.0004 , 0.03, True )
+plotting_function(my_dataset, 'from_poi_message_ratio', 'to_poi_message_ratio', 0.0004 , 0.03, True )
 
 
 
@@ -344,11 +344,11 @@ PlottingFunction(my_dataset, 'from_poi_message_ratio', 'to_poi_message_ratio', 0
 # 
 # The object of the algorithm was to classify and find out which people are more likely to be a POI. There were clearly 2 categories I was looking to label the data.
 # 
-# To tune the algorithm, I applied PCA to decompose features and dimentions, and MaxAbsScaler to scale and normalize the features. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (or sometimes, principal modes of variation). The number of principal components is less than or equal to the smaller of the number of original variables or the number of observations. This transformation is defined in such a way that the first principal component has the largest possible variance (that is, accounts for as much of the variability in the data as possible), and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components. I did not think the outcome would be the best when I put most features into the algorithms, either only few ones. Also for avoiding overfitting and underfitting, I would like to try PCA components between 2 and 20 since there were 58 features in total in the dataset. MaxAbsScaler transforms a dataset of Vector rows, rescaling each feature to range [-1, 1] by dividing through the maximum absolute value in each feature. It does not shift/center the data, and thus does not destroy any sparsity. MaxAbsScaler computes summary statistics on a data set and produces a MaxAbsScalerModel. The model can then transform each feature individually to range [-1, 1].
+# To tune the algorithm, I applied PCA to decompose features and dimentions, and MaxAbsScaler to scale and normalize the features. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (or sometimes, principal modes of variation). The number of principal components is less than or equal to the smaller of the number of original variables or the number of observations. This transformation is defined in such a way that the first principal component has the largest possible variance (that is, accounts for as much of the variability in the data as possible), and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components. I did not think the outcome would be the best when I put most features into the algorithms, either only few ones. Also for avoiding overfitting and underfitting, I would like to try PCA components, which meant to group the similar features, between 2 and 10 since there were 58 features in total in the dataset. MaxAbsScaler transforms a dataset of Vector rows, rescaling each feature to range [-1, 1] by dividing through the maximum absolute value in each feature. It does not shift/center the data, and thus does not destroy any sparsity. MaxAbsScaler computes summary statistics on a data set and produces a MaxAbsScalerModel. The model can then transform each feature individually to range [-1, 1].
 # 
-# For the most part, PCA made a huge improvement when trying different feature numbers. You might find more comparison details from the executing section.
+# Also, when conducting machine learning algorithms, validation process must be necessary. A testing set would be needed to validate how the algorithm worked after training and it shall be independent of the training set. In a small or skewed dataset like this one, multiple times of validation process might avoid the algorithm to be biased and improve outcome reliability. To build a validation process, I would like to import the module StratifiedShuffleSplit from sklearn. It would return stratified randomized folds which depends on how many times you want to validate, and the training and testing data allocation would be based on appointed data spliting percentage. Since the Anron dataset was pretty small (only 143 persons) and very skewed POI distribution, I would like to set the cross-validation process to be repeated 1000 time and the tested size to be 10%.
 
-# In[65]:
+# In[11]:
 
 def featureFormat(dictionary, features, sort_keys = True):
     '''definitely not a necessary function
@@ -382,12 +382,12 @@ def targetFeatureSplit( data ):
     return target, features
 
 
-# In[66]:
+# In[12]:
 
 ### Task 4: Try a varity of classifiers
 ### Please name your classifier clf for easy export below.
     
-data = featureFormat(my_dataset, ResetFeatureList(my_dataset), sort_keys = True)
+data = featureFormat(my_dataset, reset_feature_list(my_dataset), sort_keys = True)
 #features order is organized by names of people 
 
 # one data point is consist of zeros n NaN values
@@ -415,7 +415,9 @@ from sklearn.neighbors import KNeighborsClassifier
 ### http://scikit-learn.org/stable/modules/pipeline.html
 from sklearn.decomposition import PCA
 from sklearn.pipeline import Pipeline
-
+from sklearn.feature_selection import SelectKBest
+from sklearn.pipeline import Pipeline, FeatureUnion
+from sklearn.model_selection import GridSearchCV
 
 # Example starting point. Try investigating other evaluation techniques!
 from sklearn.cross_validation import train_test_split
@@ -423,7 +425,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn.model_selection import StratifiedShuffleSplit
 
 
-# In[67]:
+# In[13]:
 
 def algorithm_tester(algorithm, test_times, n_range):
     '''for every PCA n_component in each algorithm
@@ -445,10 +447,10 @@ def algorithm_tester(algorithm, test_times, n_range):
             labels_train   = []
             labels_test    = []    
             for ii in train_idx:
-                features_train.append( features[ii] )
+                features_train.append( features_normalized[ii] )
                 labels_train.append( labels[ii] )
             for jj in test_idx:
-                features_test.append( features[jj] )
+                features_test.append( features_normalized[jj] )
                 labels_test.append( labels[jj] )
             ### fit the classifier using training set, and test on test set
             clf.fit(features_train, labels_train)
@@ -481,50 +483,50 @@ def algorithm_tester(algorithm, test_times, n_range):
     return algorithm_tester
 
 
-# In[68]:
+# In[15]:
 
 algorithms_comparison = dict()
 algorithms_comparison['Naive Bayes'] = algorithm_tester(
-    GaussianNB(), 100, [2, 21])
+    GaussianNB(), 100, [2, 11])
 
 
-# In[ ]:
+# In[16]:
 
 algorithms_comparison['SVM'] = algorithm_tester(
-    SVC(), 100, [2, 21])
+    SVC(), 100, [2, 11])
 
 
-# In[ ]:
+# In[17]:
 
 algorithms_comparison['Decision Tree'] = algorithm_tester(
-    DecisionTreeClassifier(), 100, [2, 21] )
+    DecisionTreeClassifier(), 100, [2, 11] )
 
 
-# In[ ]:
+# In[18]:
 
 algorithms_comparison['Random Forest'] = algorithm_tester(
-    RandomForestClassifier(), 100,[2, 21])
+    RandomForestClassifier(), 100,[2, 11])
 
 
-# In[ ]:
+# In[19]:
 
 algorithms_comparison['AdaBoost'] = algorithm_tester(
-    AdaBoostClassifier(), 100, [2, 21])
+    AdaBoostClassifier(), 100, [2, 11])
 
 
-# In[ ]:
+# In[20]:
 
 algorithms_comparison['K Nearest Neighbors'] = algorithm_tester(
-    KNeighborsClassifier(), 100, [2, 21])
+    KNeighborsClassifier(), 100, [2, 11])
 
 
-# In[ ]:
+# In[21]:
 
 print(algorithms_comparison)
 
 
-# By running the machine learning codes, I noticed that every algorithm return high accuracy, but does that mean the prediction is good? Or that just results from the low ratio of persons of interest to all people in the dataset?
-# After importing and computing recall and precision scores, I found that some algorithms get really bad recall and precision scores. In addition, after testing multiple times, I found that only Naive Bayes returned  recall and precision scores both higher than 0.3. Additionally, there were many different n_component choices in PCA process when running Naive Bayes as the chosen algorithm. Here are the algorithms and PCA choices with both recall and precision scores higher than 0.3:
+# By running the machine learning codes, I noticed that every algorithm return high accuracy, but does that mean the prediction is good? Or that just results from the low ratio of persons of interest to all people in the dataset? Especially the POI distribution was pretty skewed with only 18 out of the 143 persons. How would the accuracy be if I predicted all persons to be a non-POI? 87.41%, which would be pretty high but nothing valuable to the predicting algorithm. To better evaluate how the outcomes were return by the algorithms I applied, I would like to compute the recall and precision scores instead of accuracy. You might check wiki for more details: https://en.wikipedia.org/wiki/Precision_and_recall  In other words, in a skewed dataset with very few true values, recall and precision scores might better evaluate whether the algorithm worked well on predicting positive values.
+# After computing recall and precision scores, I found that some algorithms get really bad recall and precision scores. In addition, after testing multiple times, I found that only Naive Bayes returned  recall and precision scores both higher than 0.3. Additionally, there were many different n_component choices in PCA process when running Naive Bayes as the chosen algorithm. Here are the algorithms and PCA choices with both recall and precision scores higher than 0.3:
 # 
 #  | ML Method |  PCA n_components |  Recall Score |  Precision Score |      
 #  | --- | --- | --- | --- |
@@ -535,17 +537,15 @@ print(algorithms_comparison)
 #  | Naive Bayes GaussianNB | 8 | 0.390 | 0.446 | 
 #  | Naive Bayes GaussianNB | 9 | 0.330 | 0.410 | 
 #  | Naive Bayes GaussianNB | 10 | 0.305 | 0.415 |
-#  | Naive Bayes GaussianNB | 11 | 0.315 | 0.444 |
-#  | Naive Bayes GaussianNB | 12 | 0.310 | 0.437 |
 #  | Decision Tree | 3 | 0.335 | 0.310 |
 #  | Decision Tree | 5 | 0.310 | 0.302 |
 #  |Results WILL vary. There is some randomness in the data splitting |  
 # 
 # From this table we might find that applying algorithm Naive Bayes GaussianNB with 2 to 4 and 7 to 9 PCA n_components would returned the best outcome.
 
-# In[44]:
+# In[22]:
 
-best_outcome = algorithm_tester(GaussianNB(), 1000, [2, 13])
+best_outcome = algorithm_tester(GaussianNB(), 1000, [2, 11])
 print(best_outcome)
 
 
@@ -553,9 +553,9 @@ print(best_outcome)
 # 
 # To validate the performance of each algorithm, **recall** and **precision** scores were calculated for each one. The scores of the best algorithm were listed below:
 # 
-#  |Algorithm        |  PCA n_component |  Recall | Precision |           
+#  |Algorithm        |  PCA n_component | Features included |  Recall | Precision |           
 #  |:--- | --- | --- | --- | 
-#  |Naive Bayes GaussianNB | 8 | 0.347 | 0.426 | 
+#  |Naive Bayes GaussianNB | 9 | 58 | 0.340 | 0.434 | 
 #  |Results WILL vary. There is some randomness in the data splitting 
 #  
 # The best classifier was actually *Naive Bayes GaussianNB* using PCA beforehand. This was achieved by using sklearn Pipline. The GaussianNB achieved a consistent score above 0.30 for both precision and recall. The final parameters applied are detailed below:
@@ -570,61 +570,297 @@ print(best_outcome)
 # 
 # When conducting this project, I added a lot of new features. I'd like to compare what each algorithm returned with no any new features added or even no penalty for the NaN values. 
 
-# In[45]:
+# In[23]:
 
 #try if we don't add any new features
 with open("/Users/KunWuYao/GitHub/Udacity_ML_projects/final_project/final_project_dataset.pkl", "rb") as data_file:
     my_dataset_o = pickle.load(data_file)
-my_dataset_o = RemoveNaN(my_dataset_o, 0., RemoveOutlier = True)
-features_list = ResetFeatureList(my_dataset_o)
+my_dataset_o = remove_nan(my_dataset_o, 0., remove_outlier = True)
+features_list = reset_feature_list(my_dataset_o)
 data_o = featureFormat(my_dataset_o, features_list, sort_keys = True)
 labels, features = targetFeatureSplit( data_o ) 
 features_normalized = min_max_scaler.fit_transform(features)
 
 
-# In[46]:
+# In[24]:
 
 algorithms_comparison_o = dict()
-algorithms_comparison_o['Naive Bayes'] = algorithm_tester(GaussianNB(),100, [2, 20])
+algorithms_comparison_o['Naive Bayes'] = algorithm_tester(GaussianNB(),100, [2, 11])
 
 
-# In[47]:
+# In[25]:
 
-algorithms_comparison_o['SVM'] = algorithm_tester(SVC(),100,[2, 20])
-
-
-# In[48]:
-
-algorithms_comparison_o['Decision Tree'] = algorithm_tester(DecisionTreeClassifier(),100,[2, 20])
+algorithms_comparison_o['SVM'] = algorithm_tester(SVC(),100,[2, 11])
 
 
-# In[49]:
+# In[26]:
 
-algorithms_comparison_o['Random Forest'] = algorithm_tester(RandomForestClassifier(),100, [2, 20])
-
-
-# In[50]:
-
-algorithms_comparison_o['AdaBoost'] = algorithm_tester(AdaBoostClassifier(),100, [2, 20])
+algorithms_comparison_o['Decision Tree'] = algorithm_tester(DecisionTreeClassifier(),100,[2, 11])
 
 
-# In[51]:
+# In[27]:
 
-algorithms_comparison_o['K Nearest Neighbors'] = algorithm_tester(KNeighborsClassifier(),100, [2, 20])
+algorithms_comparison_o['Random Forest'] = algorithm_tester(RandomForestClassifier(),100, [2, 11])
 
 
-# In[52]:
+# In[28]:
+
+algorithms_comparison_o['AdaBoost'] = algorithm_tester(AdaBoostClassifier(),100, [2, 11])
+
+
+# In[29]:
+
+algorithms_comparison_o['K Nearest Neighbors'] = algorithm_tester(KNeighborsClassifier(),100, [2, 11])
+
+
+# In[30]:
 
 print(algorithms_comparison_o)
 
 
-# In[53]:
+# In[31]:
 
 best_outcome_o = (algorithm_tester(GaussianNB(),1000, [2, 10]))
 print(best_outcome_o)
 
 
-# After running to get the consequences, I found that after lots of new features were added, the best score was only a little higher, and that made me think maybe PCA was not the best method to find out how many and which features I shall pick up. This was just a starting point analysis for classifying Enron employees. The results should not be taken too seriously and more advanced models should be used. Possibilities for future research could be to include more complex pipelines for the data, try different feature selecting tools and learning parameters, or even Neural Networks.
+#  |Algorithm        |  PCA n_component | Features included |  Recall | Precision |           
+#  |:--- | --- | --- | --- | 
+#  |Naive Bayes GaussianNB | 8 | 19 | 0.365 | 0.357 | 
+#  |Results WILL vary. There is some randomness in the data splitting 
+#  
+# After running to get the consequences, I found that after lots of new features were added, the best score was only a little higher (pushed precision score from 0.357 up to 0.434 but made recall score drop to 0.340), and that made me think maybe PCA was not the best method to find out how many and which features I shall pick up. Actually, PCA is very usful when conducting face recognizing or database with a tremendous amount of features but not very helpful with small database like this one.
+# To find out whether other algorithms can get higher scores, I would like to remove PCA and try another feature selection tool: SelectKBest. SelectKBest would search in the features list and return the features with highest importance. It can be combined with GridSearchCV to find out how many features might return the best outcome. That is really important because in a dataset with hundreds of features or more, there might be a lot of features which are unimportant/insignificant to the label we want to predict. Putting all features into the algorithm would not only slow down the computation process but also influence the algorithm to make improper predictions.
+# 
+
+# In[32]:
+
+import warnings
+#turn warning messages off!
+warnings.filterwarnings('ignore')
+
+
+# In[33]:
+
+#Try to find out some usful features
+from sklearn.pipeline import Pipeline, FeatureUnion
+from sklearn.model_selection import GridSearchCV
+from sklearn.feature_selection import SelectKBest
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.feature_selection import f_classif, f_regression
+### StratifiedShuffleSplits for 1000 internal cross-validation splits
+### within the grid-search.
+labels, features = targetFeatureSplit( data )
+features_normalized = min_max_scaler.fit_transform(features)
+sss = StratifiedShuffleSplit(n_splits=1000, test_size = 0.1, random_state = 42)
+dt_clf_best_params = []
+param_grid = {#'pca__n_components': [None, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            'select__k': [2, 3, 4, 5, 6, 7, 8, 9, 
+                          10, 12, 14, 16, 18, 20, 25, 30, 40, 50]
+           # 'select__score_func': [f_classif, f_regression] #f_classif got better than f_regression
+             }
+clf_list = [GaussianNB(), SVC(), DecisionTreeClassifier(), RandomForestClassifier(),
+            AdaBoostClassifier(), KNeighborsClassifier()]
+
+for clf in clf_list:
+    # Pipeline object
+    pipe = Pipeline(steps=[('minabser', MaxAbsScaler()),
+                        ('select', SelectKBest()), 
+                        #('pca', PCA()),
+                        ('model', clf)   
+                        ])
+    dt_search = GridSearchCV(pipe, param_grid=param_grid, cv=sss,
+                        scoring = 'f1')
+    #print(dt_search.get_params)
+    dt_search.fit(features, labels)
+    ### Score of best_estimator on the left out data
+    # Print the optimized parameters used in the model selected from grid search
+    print('%s' % clf, ' result table: ', dt_search.best_params_)
+    print('Features index list: ', dt_search.best_estimator_.named_steps['select'].get_support())
+
+
+# In[34]:
+
+def algorithm_tester_tuned(algorithm, tuning_params, test_times):
+    '''for every PCA n_component in each algorithm
+    run pipe.fit 100 times to see how precision and recall scores it is
+    test_times can be 100 or 1000
+    n_range shall be a list including 2 integers'''
+    algorithm_tester = []
+    clf = Pipeline([('minabser', MaxAbsScaler()),
+                    ('select', SelectKBest()), 
+                    ('clf', algorithm) 
+                       ])
+    sss = StratifiedShuffleSplit(test_times, test_size = 0.1, random_state = 42)
+    true_negatives = 0
+    false_negatives = 0
+    true_positives = 0
+    false_positives = 0
+    for train_idx, test_idx in sss.split(features, labels):
+    #reference: http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html
+        features_train = []
+        features_test  = []
+        labels_train   = []
+        labels_test    = []    
+        for ii in train_idx:
+            features_train.append( features_normalized[ii] )
+            labels_train.append( labels[ii] )
+        for jj in test_idx:
+            features_test.append( features_normalized[jj] )
+            labels_test.append( labels[jj] )
+        ### fit the classifier using training set, and test on test set
+        clf.set_params(**tuning_params).fit(features_train, labels_train)
+        predictions = clf.predict(features_test)
+        for prediction, truth in zip(predictions, labels_test):
+            if prediction == 0 and truth == 0:
+                true_negatives += 1
+            elif prediction == 0 and truth == 1:
+                false_negatives += 1
+            elif prediction == 1 and truth == 0:
+                false_positives += 1
+            elif prediction == 1 and truth == 1:
+                true_positives += 1
+            else:
+                print ("Warning: Found a predicted label not == 0 or 1.")
+                print ("All predictions should take value 0 or 1.")
+                print ("Evaluating performance for processed predictions:")
+                break
+    try:
+        total_predictions = true_negatives + false_negatives +                             false_positives + true_positives
+        precision = 1.0*true_positives/(true_positives+false_positives)
+        recall = 1.0*true_positives/(true_positives+false_negatives)
+        accuracy = 1.0*(true_positives + true_negatives)/total_predictions
+
+    except: return ValueError
+    tmp_list = [recall, precision, accuracy] # [avg_recall, avg_precision, avg_accuracy, n_component]
+    algorithm_tester.append(tmp_list)
+    return algorithm_tester
+
+
+# In[47]:
+
+SVC_best_param = {'select__k': 7}
+algorithms_comparison['SVC'] = algorithm_tester_tuned(
+    SVC(), SVC_best_param, 1000)
+
+
+# In[36]:
+
+NB_best_param = {'select__k': 16}
+algorithms_comparison['Naive Bayes'] = algorithm_tester_tuned(
+    GaussianNB(), NB_best_param, 1000)
+
+
+# In[37]:
+
+DT_best_param = {'select__k': 9}
+algorithms_comparison['Decision Tree'] = algorithm_tester_tuned(
+    DecisionTreeClassifier(), DT_best_param, 1000)
+
+
+# In[38]:
+
+RF_best_param = {'select__k': 9}
+algorithms_comparison['Random Forest'] = algorithm_tester_tuned(
+    RandomForestClassifier(), RF_best_param, 1000)
+
+
+# In[39]:
+
+adaboost_best_param = {'select__k': 50}
+algorithms_comparison['Adaboost'] = algorithm_tester_tuned(
+    AdaBoostClassifier(), adaboost_best_param, 1000)
+
+
+# In[40]:
+
+KNN_best_param = {'select__k': 8}
+algorithms_comparison['K Nearest Neighbors'] = algorithm_tester_tuned(
+    KNeighborsClassifier(), KNN_best_param, 1000)
+
+
+# In[41]:
+
+print(algorithms_comparison)
+
+
+# ####SelectKBest
+# With each algorithm tuned with its best k features assessed by f1 score, the scores are listed below:
+#  
+#  |Algorithm        |  Best k Features Number |  Recall | Precision |          
+#  |:--- | --- | --- | --- | 
+#  |Random Forest | 9 |  0.269 | 0.445 |
+#  |Decision Tree | 9 | 0.3575 | 0.322 |
+#  |Adaboost | 50 | 0.339 | 0.418 |
+#  |Naive Bayes | 16 | 0.374 | 0.385 |
+#  |KNN | 8 | 0.237 | 0.701 |
+#  |SVC | 7 | 0.039 | 0.963 |
+# 
+# In this case, each algorithm except for Naive Bayes got a huge improvement, and DecisionTreeClassifier and AdaBoostClassifier pushed both recall and precision scores higher than 0.3! Although KNeighborsClassifier and SVC achieved pretty high precision scores, but they had bad recall scores. To try to get better scores, next I would like to try finding out the best parameters set for KNeighborsClassifier, making its scores higher than 0.3 as well. KNN has some inner parameters like n_neighbors, weights, leaf_size, etc. If I did not change anything in the algorithm, it would apply all default parameters. But the default values might not always work well, even not the optimal for the learning algorithm. That's why I needed to try different parameters to find out the most fitting ones. For example, the KNN algorithm with default setting returned 0.237 and 0.701 for recall and precision scores, which was not a qualified outcome. By changing the parameters, I might lower the precision score but raise the recall score higher than the threshold. To see more details: https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning) 
+
+# In[42]:
+
+sss = StratifiedShuffleSplit(n_splits=100, test_size = 0.1, random_state = 42)
+param_grid = {'select__k': [2, 3, 4, 5, 6, 7, 8, 9, 
+                          10, 12, 14, 16, 18, 20],
+             'model__n_neighbors': [3, 5, 7, 9, 11],
+             'model__weights': ['uniform', 'distance'], #already tried rbf and sigmoid and worse than poly
+             'model__leaf_size': [10, 20, 30, 40]
+             } #push up dimention did not help at all
+##Search for best_params for KNeighborsClassifier
+clf = KNeighborsClassifier()
+## Pipeline object
+pipe = Pipeline(steps=[('minabser', MaxAbsScaler()),
+                    ('select', SelectKBest()), 
+                    ('model', clf)   
+                    ])
+dt_search = GridSearchCV(pipe, param_grid=param_grid, cv=sss,
+                    scoring = 'f1')
+##print(dt_search.get_params)
+dt_search.fit(features, labels)
+### Score of best_estimator on the left out data
+## Print the optimized parameters used in the model selected from grid search
+print('%s' % clf, ' result table: ', dt_search.best_params_)
+print('Features index list: ', dt_search.best_estimator_.named_steps['select'].get_support())
+knn_bestkfeature = dt_search.best_estimator_.named_steps['select'].get_support()
+
+
+# In[43]:
+
+KNN_best_param = {'select__k': 8, 'clf__n_neighbors': 3, 'clf__leaf_size': 10,
+                 'clf__weights': 'distance'}
+algorithms_comparison['K Nearest Neighbors'] = algorithm_tester_tuned(
+    KNeighborsClassifier(), KNN_best_param, 1000)
+print(algorithms_comparison)
+
+
+# In[44]:
+
+features_list = reset_feature_list(my_dataset)
+print(len(features_list[1:]), len(knn_bestkfeature))
+finalized_features_list = []
+for boolean, feature in zip(knn_bestkfeature, features_list[1:]):
+    if boolean == True and feature not in finalized_features_list:
+        finalized_features_list.append(feature)
+print(finalized_features_list)
+
+
+# After trying different parameters in KNN algorithm, the recall and precision scores were pushed up to 0.3105 and 0.4766 separately, with the following parameter setting:
+#  
+#  |  Function |  Parameter Key    |  Parameter Value  |  
+#  |:--- | --- | --- |
+#  |SelectKBest | k | 8 |
+#  |KNeighborsClassifier | n_neighbors | 3|
+#  |KNeighborsClassifier | leaf_size | 10|
+#  |KNeighborsClassifier | weights | distance |
+#  
+#  And the selected features were:
+#  ['bonus_mean_ratio', 'bonus_median_ratio', 'exercised_stock_options', 'exercised_stock_options_mean_ratio', 'exercised_stock_options_median_ratio', 'total_stock_value', 'total_stock_value_mean_ratio', 'total_stock_value_median_ratio']
+#  
+# Compared the outcome with Naive Bayes tuned with PCA, KNN with tuned parameters and SelectKBest returns better scores, so I would like to choose KNN as my final model.
+
+# ### Conclusion
+# The results should not be taken too seriously and more advanced models should be used. Possibilities for future research could be to include more complex pipelines for the data, try different feature selecting tools and learning parameters, or even Neural Networks. This was just a starting point analysis for classifying Enron employees, and I would like to try and learn more tools and algorithms to make the prediction better.
 
 # ##References
 # 
@@ -632,21 +868,26 @@ print(best_outcome_o)
 # 
 # [Sklearn documentation] [1]
 # 
+# [Feature selecting] [2]
+# 
 # [0]: https://www.udacity.com/course/intro-to-machine-learning--ud120
 # [1]: http://scikit-learn.org/stable/documentation.html 
+# [2]: http://machinelearningmastery.com/feature-selection-machine-learning-python/
 
-# In[70]:
+# In[48]:
 
 ### Task 6: Dump your classifier, dataset, and features_list so anyone can
 ### check your results. You do not need to change anything below, but make sure
 ### that the version of poi_id.py that you submit can be run on its own and
 ### generates the necessary .pkl files for validating your results.
 from tester import dump_classifier_and_data
-clf = Pipeline([('reduce_dim', PCA(n_components = 8)), ('clf', GaussianNB())])
-features_list = ResetFeatureList(my_dataset)
+clf = Pipeline([('reduce_dim', SelectKBest(k = 8)), 
+                 ('clf', KNeighborsClassifier(n_neighbors = 3, leaf_size = 10, 
+                                              weights = 'distance'))])
+features_list = reset_feature_list(my_dataset)
 
 
-# In[17]:
+# In[49]:
 
 # Finally, output the data
 dump_classifier_and_data(clf, my_dataset, features_list)

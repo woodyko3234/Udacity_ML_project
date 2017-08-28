@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>ProjectCode_Intro_to_ML</title>
+<title>final_project_v4</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11768,7 +11768,7 @@ Please note that the python version I dealt with was 3.5, which was different fr
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
@@ -11776,7 +11776,7 @@ Please note that the python version I dealt with was 3.5, which was different fr
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">### Load the dictionary containing the dataset</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/Users/KunWuYao/GitHub/Udacity_ML_projects/final_project/final_project_dataset.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;final_project_dataset.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
     <span class="n">data_dict</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
 
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Data type: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">data_dict</span><span class="p">))</span>
@@ -11807,9 +11807,9 @@ Please note that the python version I dealt with was 3.5, which was different fr
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data type:  &lt;class &#39;dict&#39;&gt;
-Data frame and data points in total:  [(&#39;WHITE JR THOMAS E&#39;, {&#39;deferral_payments&#39;: &#39;NaN&#39;, &#39;loan_advances&#39;: &#39;NaN&#39;, &#39;long_term_incentive&#39;: &#39;NaN&#39;, &#39;shared_receipt_with_poi&#39;: &#39;NaN&#39;, &#39;restricted_stock&#39;: 13847074, &#39;from_this_person_to_poi&#39;: &#39;NaN&#39;, &#39;expenses&#39;: 81353, &#39;other&#39;: 1085463, &#39;total_stock_value&#39;: 15144123, &#39;salary&#39;: 317543, &#39;restricted_stock_deferred&#39;: &#39;NaN&#39;, &#39;to_messages&#39;: &#39;NaN&#39;, &#39;total_payments&#39;: 1934359, &#39;email_address&#39;: &#39;thomas.white@enron.com&#39;, &#39;deferred_income&#39;: &#39;NaN&#39;, &#39;from_messages&#39;: &#39;NaN&#39;, &#39;bonus&#39;: 450000, &#39;director_fees&#39;: &#39;NaN&#39;, &#39;exercised_stock_options&#39;: 1297049, &#39;from_poi_to_this_person&#39;: &#39;NaN&#39;, &#39;poi&#39;: False})] 146
+Data frame and data points in total:  [(&#39;THORN TERENCE H&#39;, {&#39;shared_receipt_with_poi&#39;: 73, &#39;restricted_stock_deferred&#39;: &#39;NaN&#39;, &#39;to_messages&#39;: 266, &#39;other&#39;: 426629, &#39;bonus&#39;: &#39;NaN&#39;, &#39;from_poi_to_this_person&#39;: 0, &#39;expenses&#39;: 46145, &#39;from_this_person_to_poi&#39;: 0, &#39;salary&#39;: 222093, &#39;total_stock_value&#39;: 4817796, &#39;exercised_stock_options&#39;: 4452476, &#39;restricted_stock&#39;: 365320, &#39;deferral_payments&#39;: 16586, &#39;total_payments&#39;: 911453, &#39;director_fees&#39;: &#39;NaN&#39;, &#39;loan_advances&#39;: &#39;NaN&#39;, &#39;long_term_incentive&#39;: 200000, &#39;email_address&#39;: &#39;terence.thorn@enron.com&#39;, &#39;from_messages&#39;: 41, &#39;poi&#39;: False, &#39;deferred_income&#39;: &#39;NaN&#39;})] 146
 Total features number:  21
-defaultdict(&lt;class &#39;int&#39;&gt;, {&#39;deferral_payments&#39;: 107, &#39;loan_advances&#39;: 142, &#39;restricted_stock&#39;: 36, &#39;from_this_person_to_poi&#39;: 80, &#39;shared_receipt_with_poi&#39;: 60, &#39;long_term_incentive&#39;: 80, &#39;total_stock_value&#39;: 20, &#39;other&#39;: 53, &#39;expenses&#39;: 51, &#39;salary&#39;: 51, &#39;restricted_stock_deferred&#39;: 128, &#39;to_messages&#39;: 60, &#39;director_fees&#39;: 129, &#39;poi&#39;: 128, &#39;total_payments&#39;: 21, &#39;deferred_income&#39;: 97, &#39;from_messages&#39;: 60, &#39;bonus&#39;: 64, &#39;exercised_stock_options&#39;: 44, &#39;from_poi_to_this_person&#39;: 72, &#39;email_address&#39;: 35})
+defaultdict(&lt;class &#39;int&#39;&gt;, {&#39;exercised_stock_options&#39;: 44, &#39;restricted_stock_deferred&#39;: 128, &#39;from_poi_to_this_person&#39;: 72, &#39;other&#39;: 53, &#39;bonus&#39;: 64, &#39;from_this_person_to_poi&#39;: 80, &#39;expenses&#39;: 51, &#39;to_messages&#39;: 60, &#39;salary&#39;: 51, &#39;total_stock_value&#39;: 20, &#39;shared_receipt_with_poi&#39;: 60, &#39;restricted_stock&#39;: 36, &#39;deferral_payments&#39;: 107, &#39;loan_advances&#39;: 142, &#39;director_fees&#39;: 129, &#39;total_payments&#39;: 21, &#39;long_term_incentive&#39;: 80, &#39;email_address&#39;: 35, &#39;from_messages&#39;: 60, &#39;poi&#39;: 128, &#39;deferred_income&#39;: 97})
 </pre>
 </div>
 </div>
@@ -11848,7 +11848,7 @@ See the first data point with dict.items method for example:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ppl_counting</span><span class="p">(</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">value_appointed</span><span class="p">):</span>
@@ -11885,7 +11885,7 @@ See the first data point with dict.items method for example:</p>
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;LOCKHART EUGENE E&#39;, 20), (&#39;GRAMM WENDY L&#39;, 18), (&#39;WROBEL BRUCE&#39;, 18), (&#39;THE TRAVEL AGENCY IN THE PARK&#39;, 18), (&#39;WHALEY DAVID A&#39;, 18), (&#39;WODRASKA JOHN&#39;, 17), (&#39;WAKEHAM JOHN&#39;, 17), (&#39;GILLIS JOHN&#39;, 17), (&#39;SCRIMSHAW MATTHEW&#39;, 17), (&#39;CLINE KENNETH W&#39;, 17), (&#39;SAVAGE FRANK&#39;, 17), (&#39;WINOKUR JR. HERBERT S&#39;, 16), (&#39;YEAP SOON&#39;, 16), (&#39;GATHMANN WILLIAM D&#39;, 16), (&#39;FUGH JOHN L&#39;, 16), (&#39;MEYER JEROME J&#39;, 16), (&#39;MENDELSOHN JOHN&#39;, 16), (&#39;CHRISTODOULOU DIOMEDES&#39;, 16), (&#39;CHAN RONNIE&#39;, 16), (&#39;URQUHART JOHN A&#39;, 16), (&#39;PEREIRA PAULO V. FERRAZ&#39;, 16), (&#39;LOWRY CHARLES P&#39;, 16), (&#39;BLAKE JR. NORMAN P&#39;, 16), (&#39;BADUM JAMES P&#39;, 15), (&#39;NOLES JAMES L&#39;, 15), (&#39;LEMAISTRE CHARLES&#39;, 15), (&#39;WALTERS GARETH W&#39;, 15), (&#39;DUNCAN JOHN H&#39;, 15), (&#39;GRAY RODNEY&#39;, 15), (&#39;PRENTICE JAMES&#39;, 14), (&#39;BELFER ROBERT&#39;, 14), (&#39;BERBERIAN DAVID&#39;, 13), (&#39;BAZELIDES PHILIP J&#39;, 13), (&#39;JAEDICKE ROBERT&#39;, 13), (&#39;HIRKO JOSEPH&#39;, 13), (&#39;PIRO JIM&#39;, 12), (&#39;MORDAUNT KRISTINA M&#39;, 12), (&#39;BROWN MICHAEL&#39;, 12), (&#39;POWERS WILLIAM&#39;, 12), (&#39;CUMBERLAND MICHAEL S&#39;, 12), (&#39;SULLIVAN-SHAKLOVITZ COLLEEN&#39;, 12), (&#39;YEAGER F SCOTT&#39;, 12), (&#39;STABLER FRANK&#39;, 12), (&#39;KISHKILL JOSEPH G&#39;, 12), (&#39;LEWIS RICHARD&#39;, 12), (&#39;HAYSLETT RODERICK J&#39;, 12), (&#39;WHITE JR THOMAS E&#39;, 11), (&#39;OVERDYKE JR JERE C&#39;, 11), (&#39;MORAN MICHAEL P&#39;, 11), (&#39;CORDES WILLIAM R&#39;, 11), (&#39;SHERRICK JEFFREY B&#39;, 11), (&#39;GOLD JOSEPH&#39;, 11), (&#39;HUGHES JAMES A&#39;, 11), (&#39;PAI LOU L&#39;, 11), (&#39;WESTFAHL RICHARD K&#39;, 11), (&#39;FOWLER PEGGY&#39;, 11), (&#39;MCCARTY DANNY J&#39;, 11), (&#39;MCDONALD REBECCA&#39;, 11), (&#39;KOPPER MICHAEL J&#39;, 11), (&#39;HAYES ROBERT E&#39;, 10), (&#39;ELLIOTT STEVEN&#39;, 10), (&#39;GAHN ROBERT S&#39;, 10), (&#39;FOY JOE&#39;, 10), (&#39;FASTOW ANDREW S&#39;, 10), (&#39;ECHOLS JOHN B&#39;, 10), (&#39;HAUG DAVID L&#39;, 10), (&#39;BUTTS ROBERT H&#39;, 10), (&#39;DIMICHELE RICHARD G&#39;, 10), (&#39;UMANOFF ADAM S&#39;, 10), (&#39;BAXTER JOHN C&#39;, 9), (&#39;MEYER ROCKFORD G&#39;, 9), (&#39;GIBBS DANA R&#39;, 9), (&#39;LINDHOLM TOD A&#39;, 9), (&#39;HERMANN ROBERT J&#39;, 9), (&#39;HORTON STANLEY C&#39;, 9), (&#39;DODSON KEITH&#39;, 9), (&#39;BAY FRANKLIN R&#39;, 9), (&#39;BHATNAGAR SANJAY&#39;, 8), (&#39;HUMPHREY GENE E&#39;, 8), (&#39;REYNOLDS LAWRENCE&#39;, 8), (&#39;REDMOND BRIAN L&#39;, 8), (&#39;METTS MARK&#39;, 7), (&#39;BECK SALLY W&#39;, 7), (&#39;PICKERING MARK R&#39;, 7), (&#39;SUNDE MARTIN&#39;, 7), (&#39;DETMERING TIMOTHY J&#39;, 7), (&#39;TAYLOR MITCHELL S&#39;, 7), (&#39;LEFF DANIEL P&#39;, 7), (&#39;SHAPIRO RICHARD S&#39;, 6), (&#39;HICKERSON GARY J&#39;, 6), (&#39;IZZO LAWRENCE L&#39;, 6), (&#39;KITCHEN LOUISE&#39;, 6), (&#39;TOTAL&#39;, 6), (&#39;CARTER REBECCA C&#39;, 6), (&#39;MARTIN AMANDA K&#39;, 6), (&#39;SHERRIFF JOHN R&#39;, 6), (&#39;JACKSON CHARLENE R&#39;, 6), (&#39;FALLON JAMES B&#39;, 5), (&#39;BUCHANAN HAROLD G&#39;, 5), (&#39;DELAINEY DAVID W&#39;, 5), (&#39;BIBI PHILIPPE A&#39;, 5), (&#39;MCCLELLAN GEORGE&#39;, 5), (&#39;DIETRICH JANET R&#39;, 5), (&#39;BOWEN JR RAYMOND M&#39;, 5), (&#39;BERGSIEKER RICHARD P&#39;, 5), (&#39;CALGER CHRISTOPHER F&#39;, 5), (&#39;WHALLEY LAWRENCE G&#39;, 5), (&#39;DURAN WILLIAM D&#39;, 5), (&#39;BANNANTINE JAMES M&#39;, 5), (&#39;MURRAY JULIA H&#39;, 5), (&#39;BLACHMAN JEREMY M&#39;, 5), (&#39;DEFFNER JOSEPH M&#39;, 5), (&#39;CAUSEY RICHARD A&#39;, 5), (&#39;WALLS JR ROBERT H&#39;, 5), (&#39;MCCONNELL MICHAEL S&#39;, 5), (&#39;KEAN STEVEN J&#39;, 5), (&#39;THORN TERENCE H&#39;, 5), (&#39;SKILLING JEFFREY K&#39;, 5), (&#39;MCMAHON JEFFREY&#39;, 5), (&#39;SHELBY REX&#39;, 5), (&#39;KAMINSKI WINCENTY J&#39;, 5), (&#39;GLISAN JR BEN F&#39;, 5), (&#39;COX DAVID&#39;, 5), (&#39;GARLAND C KEVIN&#39;, 5), (&#39;DONAHUE JR JEFFREY M&#39;, 5), (&#39;FITZGERALD JAY L&#39;, 5), (&#39;COLWELL WESLEY&#39;, 5), (&#39;TILNEY ELIZABETH A&#39;, 5), (&#39;KOENIG MARK E&#39;, 5), (&#39;LAVORATO JOHN J&#39;, 5), (&#39;SHANKMAN JEFFREY A&#39;, 5), (&#39;RICE KENNETH D&#39;, 4), (&#39;WASAFF GEORGE&#39;, 4), (&#39;BELDEN TIMOTHY N&#39;, 4), (&#39;MULLER MARK S&#39;, 4), (&#39;BUY RICHARD B&#39;, 4), (&#39;SHARP VICTORIA T&#39;, 4), (&#39;RIEKER PAULA H&#39;, 4), (&#39;HANNON KEVIN P&#39;, 4), (&#39;OLSON CINDY K&#39;, 4), (&#39;DERRICK JR. JAMES V&#39;, 3), (&#39;PIPER GREGORY F&#39;, 3), (&#39;FREVERT MARK A&#39;, 2), (&#39;HAEDICKE MARK E&#39;, 2), (&#39;LAY KENNETH L&#39;, 2), (&#39;ALLEN PHILLIP K&#39;, 2)]
+<pre>[(&#39;LOCKHART EUGENE E&#39;, 20), (&#39;WHALEY DAVID A&#39;, 18), (&#39;THE TRAVEL AGENCY IN THE PARK&#39;, 18), (&#39;GRAMM WENDY L&#39;, 18), (&#39;WROBEL BRUCE&#39;, 18), (&#39;SCRIMSHAW MATTHEW&#39;, 17), (&#39;GILLIS JOHN&#39;, 17), (&#39;SAVAGE FRANK&#39;, 17), (&#39;WODRASKA JOHN&#39;, 17), (&#39;WAKEHAM JOHN&#39;, 17), (&#39;CLINE KENNETH W&#39;, 17), (&#39;PEREIRA PAULO V. FERRAZ&#39;, 16), (&#39;CHRISTODOULOU DIOMEDES&#39;, 16), (&#39;MENDELSOHN JOHN&#39;, 16), (&#39;MEYER JEROME J&#39;, 16), (&#39;YEAP SOON&#39;, 16), (&#39;LOWRY CHARLES P&#39;, 16), (&#39;URQUHART JOHN A&#39;, 16), (&#39;WINOKUR JR. HERBERT S&#39;, 16), (&#39;CHAN RONNIE&#39;, 16), (&#39;GATHMANN WILLIAM D&#39;, 16), (&#39;BLAKE JR. NORMAN P&#39;, 16), (&#39;FUGH JOHN L&#39;, 16), (&#39;NOLES JAMES L&#39;, 15), (&#39;BADUM JAMES P&#39;, 15), (&#39;LEMAISTRE CHARLES&#39;, 15), (&#39;GRAY RODNEY&#39;, 15), (&#39;WALTERS GARETH W&#39;, 15), (&#39;DUNCAN JOHN H&#39;, 15), (&#39;BELFER ROBERT&#39;, 14), (&#39;PRENTICE JAMES&#39;, 14), (&#39;JAEDICKE ROBERT&#39;, 13), (&#39;BERBERIAN DAVID&#39;, 13), (&#39;HIRKO JOSEPH&#39;, 13), (&#39;BAZELIDES PHILIP J&#39;, 13), (&#39;SULLIVAN-SHAKLOVITZ COLLEEN&#39;, 12), (&#39;HAYSLETT RODERICK J&#39;, 12), (&#39;BROWN MICHAEL&#39;, 12), (&#39;MORDAUNT KRISTINA M&#39;, 12), (&#39;STABLER FRANK&#39;, 12), (&#39;PIRO JIM&#39;, 12), (&#39;CUMBERLAND MICHAEL S&#39;, 12), (&#39;KISHKILL JOSEPH G&#39;, 12), (&#39;YEAGER F SCOTT&#39;, 12), (&#39;POWERS WILLIAM&#39;, 12), (&#39;LEWIS RICHARD&#39;, 12), (&#39;SHERRICK JEFFREY B&#39;, 11), (&#39;HUGHES JAMES A&#39;, 11), (&#39;MCDONALD REBECCA&#39;, 11), (&#39;GOLD JOSEPH&#39;, 11), (&#39;WHITE JR THOMAS E&#39;, 11), (&#39;CORDES WILLIAM R&#39;, 11), (&#39;MORAN MICHAEL P&#39;, 11), (&#39;WESTFAHL RICHARD K&#39;, 11), (&#39;MCCARTY DANNY J&#39;, 11), (&#39;OVERDYKE JR JERE C&#39;, 11), (&#39;KOPPER MICHAEL J&#39;, 11), (&#39;FOWLER PEGGY&#39;, 11), (&#39;PAI LOU L&#39;, 11), (&#39;HAYES ROBERT E&#39;, 10), (&#39;HAUG DAVID L&#39;, 10), (&#39;ELLIOTT STEVEN&#39;, 10), (&#39;BUTTS ROBERT H&#39;, 10), (&#39;GAHN ROBERT S&#39;, 10), (&#39;DIMICHELE RICHARD G&#39;, 10), (&#39;ECHOLS JOHN B&#39;, 10), (&#39;FOY JOE&#39;, 10), (&#39;UMANOFF ADAM S&#39;, 10), (&#39;FASTOW ANDREW S&#39;, 10), (&#39;GIBBS DANA R&#39;, 9), (&#39;HORTON STANLEY C&#39;, 9), (&#39;HERMANN ROBERT J&#39;, 9), (&#39;BAXTER JOHN C&#39;, 9), (&#39;LINDHOLM TOD A&#39;, 9), (&#39;MEYER ROCKFORD G&#39;, 9), (&#39;BAY FRANKLIN R&#39;, 9), (&#39;DODSON KEITH&#39;, 9), (&#39;BHATNAGAR SANJAY&#39;, 8), (&#39;HUMPHREY GENE E&#39;, 8), (&#39;REYNOLDS LAWRENCE&#39;, 8), (&#39;REDMOND BRIAN L&#39;, 8), (&#39;METTS MARK&#39;, 7), (&#39;BECK SALLY W&#39;, 7), (&#39;DETMERING TIMOTHY J&#39;, 7), (&#39;LEFF DANIEL P&#39;, 7), (&#39;TAYLOR MITCHELL S&#39;, 7), (&#39;SUNDE MARTIN&#39;, 7), (&#39;PICKERING MARK R&#39;, 7), (&#39;IZZO LAWRENCE L&#39;, 6), (&#39;KITCHEN LOUISE&#39;, 6), (&#39;CARTER REBECCA C&#39;, 6), (&#39;SHERRIFF JOHN R&#39;, 6), (&#39;MARTIN AMANDA K&#39;, 6), (&#39;JACKSON CHARLENE R&#39;, 6), (&#39;TOTAL&#39;, 6), (&#39;HICKERSON GARY J&#39;, 6), (&#39;SHAPIRO RICHARD S&#39;, 6), (&#39;THORN TERENCE H&#39;, 5), (&#39;BERGSIEKER RICHARD P&#39;, 5), (&#39;DELAINEY DAVID W&#39;, 5), (&#39;SKILLING JEFFREY K&#39;, 5), (&#39;KOENIG MARK E&#39;, 5), (&#39;DEFFNER JOSEPH M&#39;, 5), (&#39;BIBI PHILIPPE A&#39;, 5), (&#39;CAUSEY RICHARD A&#39;, 5), (&#39;KEAN STEVEN J&#39;, 5), (&#39;WHALLEY LAWRENCE G&#39;, 5), (&#39;DURAN WILLIAM D&#39;, 5), (&#39;COX DAVID&#39;, 5), (&#39;CALGER CHRISTOPHER F&#39;, 5), (&#39;FITZGERALD JAY L&#39;, 5), (&#39;GLISAN JR BEN F&#39;, 5), (&#39;FALLON JAMES B&#39;, 5), (&#39;BANNANTINE JAMES M&#39;, 5), (&#39;KAMINSKI WINCENTY J&#39;, 5), (&#39;BLACHMAN JEREMY M&#39;, 5), (&#39;DONAHUE JR JEFFREY M&#39;, 5), (&#39;BOWEN JR RAYMOND M&#39;, 5), (&#39;WALLS JR ROBERT H&#39;, 5), (&#39;COLWELL WESLEY&#39;, 5), (&#39;MCCONNELL MICHAEL S&#39;, 5), (&#39;MURRAY JULIA H&#39;, 5), (&#39;GARLAND C KEVIN&#39;, 5), (&#39;DIETRICH JANET R&#39;, 5), (&#39;BUCHANAN HAROLD G&#39;, 5), (&#39;LAVORATO JOHN J&#39;, 5), (&#39;SHANKMAN JEFFREY A&#39;, 5), (&#39;MCMAHON JEFFREY&#39;, 5), (&#39;MCCLELLAN GEORGE&#39;, 5), (&#39;TILNEY ELIZABETH A&#39;, 5), (&#39;SHELBY REX&#39;, 5), (&#39;HANNON KEVIN P&#39;, 4), (&#39;WASAFF GEORGE&#39;, 4), (&#39;SHARP VICTORIA T&#39;, 4), (&#39;BELDEN TIMOTHY N&#39;, 4), (&#39;RICE KENNETH D&#39;, 4), (&#39;OLSON CINDY K&#39;, 4), (&#39;BUY RICHARD B&#39;, 4), (&#39;MULLER MARK S&#39;, 4), (&#39;RIEKER PAULA H&#39;, 4), (&#39;DERRICK JR. JAMES V&#39;, 3), (&#39;PIPER GREGORY F&#39;, 3), (&#39;HAEDICKE MARK E&#39;, 2), (&#39;ALLEN PHILLIP K&#39;, 2), (&#39;LAY KENNETH L&#39;, 2), (&#39;FREVERT MARK A&#39;, 2)]
 </pre>
 </div>
 </div>
@@ -11918,10 +11918,10 @@ See the first data point with dict.items method for example:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ExtractFeatureNames</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">extract_feature_names</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
     <span class="s2">&quot;Define a function to extract all features in the dict of dict and easier to plot&quot;</span>
     <span class="n">dict_values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">dict_values_features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dict_values</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
@@ -11939,14 +11939,14 @@ See the first data point with dict.items method for example:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Store to my_dataset for easy export below.</span>
 <span class="n">my_dataset</span> <span class="o">=</span> <span class="n">data_dict</span>
 
 <span class="c1">#preprocess on the NaN value in the dictionary!!!</span>
-<span class="k">def</span> <span class="nf">RemoveNaN</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">penalty</span><span class="p">,</span> <span class="n">RemoveOutlier</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">remove_nan</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">penalty</span><span class="p">,</span> <span class="n">remove_outlier</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;looking through the dataset and </span>
 <span class="sd">    turn NaN into -1</span>
 <span class="sd">    also turn all integers into floats</span>
@@ -11961,22 +11961,22 @@ See the first data point with dict.items method for example:</p>
                     <span class="n">sub_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">penalty</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">sub_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span> <span class="n">value</span> <span class="p">)</span>
-    <span class="k">if</span> <span class="n">RemoveOutlier</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">remove_outlier</span><span class="p">:</span>
         <span class="nb">dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;THE TRAVEL AGENCY IN THE PARK&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
         <span class="nb">dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;TOTAL&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
         <span class="nb">dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;LOCKHART EUGENE E&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">dict</span>
-<span class="n">my_dataset</span> <span class="o">=</span> <span class="n">RemoveNaN</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">RemoveOutlier</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">my_dataset</span> <span class="o">=</span> <span class="n">remove_nan</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">remove_outlier</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">ResetFeatureList</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">reset_feature_list</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">):</span>
     <span class="c1">### features_list is a list of strings, each of which is a feature name.</span>
     <span class="c1">### The first feature must be &quot;poi&quot;.</span>
     <span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">]</span>
-    <span class="n">features_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ExtractFeatureNames</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">))</span>
+    <span class="n">features_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">extract_feature_names</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">features_list</span>
     <span class="c1">#Total 20 features including poi as the first feature</span>
 
-<span class="n">features_list</span> <span class="o">=</span> <span class="n">ResetFeatureList</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">)</span>
+<span class="n">features_list</span> <span class="o">=</span> <span class="n">reset_feature_list</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">)</span>
 <span class="c1">#print(list(my_dataset.items())[1])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">features_list</span><span class="p">)</span>
 </pre></div>
@@ -12022,14 +12022,14 @@ See the first data point with dict.items method for example:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_nan</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span>
 <span class="c1">#create a dict that key is the feature name and values are a list of floats</span>
 
-<span class="k">def</span> <span class="nf">DictWithFeature</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">sorting</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">dict_with_feature</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">sorting</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    define a dict with feature_key to better understand the distribution</span>
 <span class="sd">    key = feature name (salary, bonus, etc.)</span>
@@ -12067,10 +12067,10 @@ See the first data point with dict.items method for example:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dict_with_features</span> <span class="o">=</span> <span class="n">DictWithFeature</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dict_with_features</span> <span class="o">=</span> <span class="n">dict_with_feature</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">scipy.stats.stats</span> <span class="k">import</span> <span class="n">pearsonr</span>
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dict_with_features</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;PearsonR between poi and &#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s2">&quot; : &quot;</span><span class="p">,</span> 
@@ -12087,26 +12087,26 @@ See the first data point with dict.items method for example:</p>
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>PearsonR between poi and  deferral_payments  :  (-0.039880323013413189, 0.63628313644857992)
-PearsonR between poi and  loan_advances  :  (0.22018315467784991, 0.0082318533277599328)
-PearsonR between poi and  deferred_income  :  (-0.27415038034631295, 0.00092200531522211116)
-PearsonR between poi and  restricted_stock  :  (0.24765264180635185, 0.0028627778155170297)
-PearsonR between poi and  long_term_incentive  :  (0.25640554881990896, 0.0019941673619026596)
-PearsonR between poi and  shared_receipt_with_poi  :  (0.23966097464495098, 0.0039401691216989681)
-PearsonR between poi and  other  :  (0.16983000295074532, 0.042580414923631717)
-PearsonR between poi and  total_stock_value  :  (0.38262353734838966, 2.4043089131893602e-06)
-PearsonR between poi and  salary  :  (0.33885132032769316, 3.4782882030548758e-05)
-PearsonR between poi and  from_this_person_to_poi  :  (0.1349683643031559, 0.10801392105201223)
-PearsonR between poi and  to_messages  :  (0.10762314208525052, 0.2007528121636562)
-PearsonR between poi and  total_payments  :  (0.24202053177951913, 0.003589319021334966)
+<pre>PearsonR between poi and  exercised_stock_options  :  (0.38685273723309588, 1.8182211820386215e-06)
+PearsonR between poi and  restricted_stock_deferred  :  (-0.021548443730261418, 0.79837555950439509)
 PearsonR between poi and  from_poi_to_this_person  :  (0.1925980246707418, 0.021192156728044927)
-PearsonR between poi and  restricted_stock_deferred  :  (-0.021548443730261411, 0.79837555950439509)
-PearsonR between poi and  from_messages  :  (-0.034186015022908946, 0.68523064093101405)
 PearsonR between poi and  bonus  :  (0.35848605315772913, 1.1012789919115899e-05)
-PearsonR between poi and  director_fees  :  (-0.12188888360393321, 0.14700290183173831)
-PearsonR between poi and  exercised_stock_options  :  (0.38685273723309588, 1.8182211820386215e-06)
+PearsonR between poi and  other  :  (0.16983000295074535, 0.042580414923631717)
+PearsonR between poi and  from_this_person_to_poi  :  (0.13496836430315587, 0.10801392105201223)
 PearsonR between poi and  expenses  :  (0.20356124128833136, 0.014749906830119808)
+PearsonR between poi and  to_messages  :  (0.10762314208525052, 0.2007528121636562)
+PearsonR between poi and  salary  :  (0.33885132032769322, 3.4782882030548758e-05)
+PearsonR between poi and  total_stock_value  :  (0.38262353734838978, 2.4043089131893369e-06)
+PearsonR between poi and  shared_receipt_with_poi  :  (0.23966097464495092, 0.0039401691216989681)
+PearsonR between poi and  restricted_stock  :  (0.24765264180635183, 0.0028627778155170297)
+PearsonR between poi and  deferral_payments  :  (-0.039880323013413155, 0.63628313644857992)
+PearsonR between poi and  total_payments  :  (0.24202053177951907, 0.003589319021334966)
+PearsonR between poi and  director_fees  :  (-0.12188888360393317, 0.14700290183173831)
+PearsonR between poi and  loan_advances  :  (0.22018315467784991, 0.0082318533277599328)
+PearsonR between poi and  long_term_incentive  :  (0.2564055488199089, 0.0019941673619026596)
+PearsonR between poi and  from_messages  :  (-0.034186015022908946, 0.68523064093101405)
 PearsonR between poi and  poi  :  (1.0, 0.0)
+PearsonR between poi and  deferred_income  :  (-0.27415038034631295, 0.00092200531522211116)
 </pre>
 </div>
 </div>
@@ -12278,7 +12278,7 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Create new features about ratio of each feature to the mean and median of the feature</span>
@@ -12300,7 +12300,7 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;deferral_payments&#39;: 223635.2867132867, &#39;loan_advances&#39;: 586878.3216783217, &#39;restricted_stock&#39;: 874607.5944055944, &#39;long_term_incentive&#39;: 339308.7272727273, &#39;shared_receipt_with_poi&#39;: 703.5384615384615, &#39;other&#39;: 296803.05594405596, &#39;total_stock_value&#39;: 2930132.5034965035, &#39;expenses&#39;: 35619.293706293705, &#39;salary&#39;: 186739.43356643355, &#39;from_this_person_to_poi&#39;: 20.81118881118881, &#39;to_messages&#39;: 1243.2307692307693, &#39;total_payments&#39;: 2272321.188811189, &#39;poi&#39;: 0.1258741258741259, &#39;deferred_income&#39;: -195031.05594405593, &#39;from_messages&#39;: 362.13986013986016, &#39;bonus&#39;: 680720.2727272727, &#39;director_fees&#39;: 10041.23076923077, &#39;exercised_stock_options&#39;: 2090315.13986014, &#39;from_poi_to_this_person&#39;: 35.04195804195804, &#39;restricted_stock_deferred&#39;: 73922.5034965035} {&#39;deferral_payments&#39;: -10.0, &#39;loan_advances&#39;: -10.0, &#39;restricted_stock&#39;: 360528.0, &#39;long_term_incentive&#39;: -10.0, &#39;shared_receipt_with_poi&#39;: 114.0, &#39;other&#39;: 947.0, &#39;total_stock_value&#39;: 976037.0, &#39;expenses&#39;: 21530.0, &#39;salary&#39;: 210692.0, &#39;from_this_person_to_poi&#39;: 0.0, &#39;to_messages&#39;: 383.0, &#39;total_payments&#39;: 966522.0, &#39;poi&#39;: 0.0, &#39;deferred_income&#39;: 10.0, &#39;from_messages&#39;: 18.0, &#39;bonus&#39;: 300000.0, &#39;director_fees&#39;: -10.0, &#39;exercised_stock_options&#39;: 608750.0, &#39;from_poi_to_this_person&#39;: 4.0, &#39;restricted_stock_deferred&#39;: -10.0}
+<pre>{&#39;shared_receipt_with_poi&#39;: 703.5384615384615, &#39;restricted_stock_deferred&#39;: 73922.5034965035, &#39;from_poi_to_this_person&#39;: 35.04195804195804, &#39;other&#39;: 296803.05594405596, &#39;bonus&#39;: 680720.2727272727, &#39;to_messages&#39;: 1243.2307692307693, &#39;from_this_person_to_poi&#39;: 20.81118881118881, &#39;salary&#39;: 186739.43356643355, &#39;total_stock_value&#39;: 2930132.5034965035, &#39;exercised_stock_options&#39;: 2090315.13986014, &#39;restricted_stock&#39;: 874607.5944055944, &#39;deferral_payments&#39;: 223635.2867132867, &#39;total_payments&#39;: 2272321.188811189, &#39;director_fees&#39;: 10041.23076923077, &#39;loan_advances&#39;: 586878.3216783217, &#39;expenses&#39;: 35619.293706293705, &#39;long_term_incentive&#39;: 339308.7272727273, &#39;from_messages&#39;: 362.13986013986016, &#39;poi&#39;: 0.1258741258741259, &#39;deferred_income&#39;: -195031.05594405593} {&#39;shared_receipt_with_poi&#39;: 114.0, &#39;restricted_stock_deferred&#39;: -10.0, &#39;from_poi_to_this_person&#39;: 4.0, &#39;other&#39;: 947.0, &#39;bonus&#39;: 300000.0, &#39;to_messages&#39;: 383.0, &#39;from_this_person_to_poi&#39;: 0.0, &#39;salary&#39;: 210692.0, &#39;total_stock_value&#39;: 976037.0, &#39;exercised_stock_options&#39;: 608750.0, &#39;restricted_stock&#39;: 360528.0, &#39;deferral_payments&#39;: -10.0, &#39;total_payments&#39;: 966522.0, &#39;director_fees&#39;: -10.0, &#39;loan_advances&#39;: -10.0, &#39;expenses&#39;: 21530.0, &#39;long_term_incentive&#39;: -10.0, &#39;from_messages&#39;: 18.0, &#39;poi&#39;: 0.0, &#39;deferred_income&#39;: 10.0}
 </pre>
 </div>
 </div>
@@ -12311,7 +12311,7 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Create feature list</span>
@@ -12320,11 +12320,9 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
         <span class="k">try</span><span class="p">:</span> <span class="n">mean_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="k">except</span><span class="p">:</span> <span class="k">continue</span>
         <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;poi&#39;</span> <span class="ow">and</span> <span class="n">mean_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">_mean_ratio&#39;</span> <span class="o">%</span> <span class="n">key</span><span class="p">]</span> <span class="o">=</span> \
-            <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">/</span> <span class="n">mean_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">_mean_ratio&#39;</span> <span class="o">%</span> <span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">/</span> <span class="n">mean_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;poi&#39;</span> <span class="ow">and</span> <span class="n">median_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">_median_ratio&#39;</span> <span class="o">%</span> <span class="n">key</span><span class="p">]</span> <span class="o">=</span> \
-            <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">/</span> <span class="n">median_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">_median_ratio&#39;</span> <span class="o">%</span> <span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">/</span> <span class="n">median_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="c1">#check</span>
 <span class="c1">#print(my_dataset[&#39;KISHKILL JOSEPH G&#39;])</span>
 </pre></div>
@@ -12336,7 +12334,7 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Create new features about square of each feature</span>
@@ -12356,7 +12354,7 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -12378,7 +12376,7 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
 
     
 <span class="c1">#Define a function to run the plotting and set threshold</span>
-<span class="k">def</span> <span class="nf">PlottingFunction</span><span class="p">(</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="n">threshold1</span><span class="p">,</span> <span class="n">threshold2</span><span class="p">,</span> <span class="n">threshold_option</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">plotting_function</span><span class="p">(</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="n">threshold1</span><span class="p">,</span> <span class="n">threshold2</span><span class="p">,</span> <span class="n">threshold_option</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
     <span class="n">counter_r</span><span class="p">,</span> <span class="n">counter_b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">sub_dict</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">sub_dict</span><span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.</span><span class="p">:</span>
@@ -12399,7 +12397,7 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">counter_r</span><span class="p">,</span> <span class="n">counter_b</span><span class="p">)</span>
 <span class="c1">#show some figures</span>
-<span class="n">PlottingFunction</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="s1">&#39;from_poi_message_ratio&#39;</span><span class="p">,</span> <span class="s1">&#39;to_poi_message_ratio&#39;</span><span class="p">,</span> <span class="mf">0.0004</span> <span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="kc">True</span> <span class="p">)</span>
+<span class="n">plotting_function</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="s1">&#39;from_poi_message_ratio&#39;</span><span class="p">,</span> <span class="s1">&#39;to_poi_message_ratio&#39;</span><span class="p">,</span> <span class="mf">0.0004</span> <span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="kc">True</span> <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12415,233 +12413,233 @@ PearsonR between poi and  poi  :  (1.0, 0.0)
 
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,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
-AAAPYQAAD2EBqD+naQAAIABJREFUeJzt3XmcnXV5+P3PlQEXQEMQDS4gSxawKpCAioAWCSRgS6ug
-OHErbo+K1UZ/VVsX1EelLsAjKgWXCqiMy69bVEgwlLqwlkSwVmSSsLhUwpIYUEBgcj1/3PeQMycz
-k5l7znLPzOf9ep3XnPO9l3Pd98ycuea7RmYiSZJUZzO6HYAkSdL2mLBIkqTaM2GRJEm1Z8IiSZJq
-z4RFkiTVngmLJEmqPRMWSZJUeyYskiSp9kxYJElS7ZmwSJKk2pt0CUtEHBkRyyPiNxGxJSJO2M7+
-L4mISyPijojYHBFXRsSxnYpXkiRN3KRLWICdgeuBtwJjWQjpBcClwHHAAuBy4DsRcWDbIpQkSS0V
-k3nxw4jYAvxlZi4f53E/A76RmR9tT2SSJKmVJmMNy4RERACPAzZ2OxZJkjQ2O3Q7gC74W4pmpW+N
-tENEPAFYDNwKPNCZsCRJmhIeA+wNrMzMu1t10mmVsETEUuADwAmZedcouy4Gvt6ZqCRJmpJeCVzU
-qpNNm4QlIl4BfAE4KTMv387utwJ87Wtf44ADDmh3aLW3bNkyzjrrrG6H0XXeh628FwXvw1bei4L3
-AW688UZe9apXQfm3tFWmRcISEb3Al4CTM3PFGA55AOCAAw5gwYIFbY1tMpg5c6b3Ae9DI+9Fwfuw
-lfei4H0YoqVdKiZdwhIROwNzgCiL9i2HKG/MzF9FxOnAUzLzteX+S4HzgbcD/xURs8vj7s/Mezob
-vSRJqmIyjhI6BPgJsJpiHpYzgDXAh8vtewB7Nuz/RqAH+Dzwvw2P/69D8UqSpAmadDUsmfkDRkm0
-MvOUptdHtT0oSZLUVpOxhkUd1tvb2+0QasH7sJX3ouB92Mp7UfA+tM+knum2XSJiAbB69erVdp6S
-JGkc1qxZw8KFCwEWZuaaVp3XGhZJklR7JiySJKn2TFgkSVLtmbBIkqTaM2GRJEm1Z8IiSZJqz4RF
-kiTVngmLJEmqPRMWSZJUeyYskiSp9kxYJElS7ZmwSJKk2jNhkSRJtWfCIkmSas+ERZIk1Z4JiyRJ
-qj0TFkmSVHsmLJIkqfZMWCRJUu2ZsEiSpNozYZEkSbVnwiJJkmrPhEWSJNWeCYskSao9ExZJklR7
-JiySJKn2TFgkSVLtmbBIkqTaM2GRJEm1Z8IiSZJqz4RFkiTV3qRLWCLiyIhYHhG/iYgtEXHCGI75
-04hYHREPRER/RLy2E7FKkqTWmHQJC7AzcD3wViC3t3NE7A18F7gMOBD4DPCliDimfSFKkqRW2qHb
-AYxXZq4AVgBERIzhkLcAN2fmu8vXN0XEEcAy4PvtiXLq6e+H9ethzhyYO7fb0UhS/ewd/ezOJu5k
-N25LPyhbbdIlLBU8D1jVVLYSOKsLsUw6GzfC0qWwcuXWssWLoa8PZs3qXlySVBdPiF+yD3dwG4dw
-W1l2SFzHrczmrtyzq7FNJZOxSWi89gA2NJVtAB4fEY/uQjyTytKlsKop3Vu1Cnp7uxOPJNXNPtzB
-9Rw0pOx6DmLvbf70aCKmQ8Kiivr7i5qVgYGh5QMDRfnatd2JS5LqYu/oZzWHMNDUYDHADqzmEJ4e
-flC2ynRoErodmN1UNhu4JzP/ONqBy5YtY+bMmUPKent76Z0m1Qvr14++fd06+7NImt52Z9MjzUDD
-eSIbOxZLN/T19dHX1zekbPPmzW15r+mQsFwFHNdUdmxZPqqzzjqLBQsWtCWoyWC//UbfPmdOZ+KQ
-pLq6i9E7893Jbh2KpDuG+yd+zZo1LFy4sOXvNemahCJi54g4MCIGGwz3LV/vWW4/PSIuaDjk3HKf
-T0TE/Ih4K3AScGaHQ5905s0rOtj29Awt7+kpyq1dkTTd3ZrzWMh19PDwkPIeHmYh1zlaqIUmXcIC
-HAL8BFhNMQ/LGcAa4MPl9j2AR7plZ+atwIuBRRTztywDXp+ZzSOHNIy+Pli0aGjZokVFuSQJbmU2
-B3H9kLKDuJ5bt+mNoImYdE1CmfkDRkm0MvOUYcp+CLS+fmoamDULVqwoOtiuW+c8LJLUrBi6vCdP
-j7U8kY3cyW5cl4d0O6wpZ9IlLOqOuXNNVCRpNDb/tNdkbBKSJEnTjAmLJEmqPRMWSZJUeyYskiSp
-9kxYJElS7ZmwSJKk2jNhkSRJtWfCIkmSas+ERZIk1Z4JiyRJqj0TFkmSVHsmLJIkqfZMWCRJUu2Z
-sEiSpNozYZEkSbVnwiJJkmrPhEWSJNWeCYskSao9ExZJklR7JiySJKn2TFgkSVLtmbBIkqTaM2GR
-JEm1Z8IiSZJqz4RFkiTVngmLJEmqPRMWSZJUeyYskiSp9kxYJElS7ZmwSJKk2jNhkSRJtWfCIkmS
-aq9ywhIRL4yI70TEuvKxPCKObGVwkiRJUDFhiYhXAauA+4Czy8f9wGURsbR14Y0aw6kRcUtE3B8R
-V0fEodvZ/5URcX1E/CEi/jcivhwRu3UiVkmSNDFVa1jeB7w7M0/OzLPLx8nAe4EPtC684UXEycAZ
-wGnAwcANwMqI2H2E/Q8HLgC+CDwDOAl4DvCFdscqSZImrmrCsi/wnWHKlwP7VA9nzJYB52XmhZn5
-C+DNFLU9rxth/+cBt2Tm5zPztsy8EjiPImmRJEk1VzVh+RVw9DDli8ptbRMROwILgcsGyzIzKZqo
-DhvhsKuAPSPiuPIcs4GXAd9rZ6ySJKk1dqh43BnA2RFxEHBlWXY48FfAO1oQ12h2B3qADU3lG4D5
-wx2QmVeW/W6+GRGPobju5cDb2hmoJElqjUoJS2b+Y0TcDrwLeHlZfCNwcmb+e6uCa5WIeAbwGeBD
-wKXAk4FPUzQLvWGk45YtW8bMmTOHlPX29tLb29u2WCVJmiz6+vro6+sbUrZ58+a2vFcUrSmTR9kk
-dB9wYmYubyg/H5iZmS8Z5pgLgcdk5ssbyg4HfgQ8OTM3NO2/AFi9evVqFixY0J4LkSRpClqzZg0L
-Fy4EWJiZa1p13kk3cVxmPgSspqEPTURE+frKEQ7bCXi4qWwLkEC0IUxJktRCY24SioiNwLzMvCsi
-NlH8sR9WZrZ7fpMzgfMjYjVwLcWooZ2A88tYTweekpmvLff/DvCFiHgzsBJ4CnAWcE1m3t7mWCVJ
-0gSNpw/LMuDehudda0vKzG+Vc658BJgNXA8szsw7y132APZs2P+CiNgFOJWi78rvKEYZvbejgUuS
-pErGnLBk5gUNz89vSzTjkJnnAOeMsO2UYco+D3y+3XFJkqTWqzo1/0BEPGmY8idExMDEw5IkSdqq
-aqfbkTqqPhp4sOI5JUmShjWueVgi4u3l0wTeEBG/b9jcA7wA+EWLYpMkSQLGP3HcsvJrUKzf09j8
-8yBwa1kuSZLUMuNKWDJzH4CIuBx4aWZuaktUkiRJDapOzX9UqwORJEkaSdXFD4mIpwEnAHsBj2rc
-lpnvnGBckiRJj6iUsETE0RSrHd8M7A/8DNibom9Ly9YNkCRJgurDmk8HPp2ZzwIeAE6kmFn2B8C3
-WxSbJEkSUD1hOQC4sHz+MPDYzPw98EHgPa0ITJIkaVDVhOUPbO238ltgv4Ztu08oIkmSpCZVO91e
-DRwB3AhcDJwREc8CXlpukyRJapmqCcs7gV3K56eVz08G1pbbJEmSWmbcCUtE9ABPA34KkJl/wNlt
-JUlSG427D0tmDgCXArNaH44kSdK2qna6/RmwbysDkSRJGknVhOX9wKcj4s8i4skR8fjGRysDlCRJ
-qtrp9uLy63IgG8qjfN0zkaAkSZIaVU1YXPxQkiR1TNXVmn8wlv0i4hzgg5l5V5X3kSRJgup9WMbq
-VYB9WiRJ0oS0O2GJNp9fkiRNA+1OWCRJkibMhEWSJNWeCYskSao9ExZJklR77U5Yvgbc0+b3kCRJ
-U1zlhCUijoyIr0XEVRHx1LLs1RFxxOA+mfkW52CRJEkTVSlhiYgTgZXA/cDBwKPLTTOBv29NaJIk
-SYWJLH745sx8I/BQQ/kVwIIJRyVJktSgasIyH/jhMOWbgV2rhyNJkrStqgnL7cCcYcqPAG6uHo4k
-SdK2qiYsXwQ+ExHPBRJ4SkS8Evg08I+tCk6SJAmqJyz/AFwEXAbsQtE89CXgvMz8bItiG1VEnBoR
-t0TE/RFxdUQcup39HxURH4uIWyPigYi4OSL+qhOxSpKkidmhykGZmcDHIuJTFE1DuwA/z8zftzK4
-kUTEycAZwJuAa4FlwMqImDfKMOpvA08ETgHWA0/GifMkSZoUKiUsgzLzQeDnLYplPJZR1OZcCBAR
-bwZeDLwO+GTzzhGxBDgS2Dczf1cW/7JDsUqSpAmqlLBExL9S9F1plsADwDrgosy8aQKxjfTeOwIL
-gY8/8qaZGRGrgMNGOOzPgeuA90TEq4E/AMuBD2TmA62OUZIktVbVJpHNwIso5lzJ8nFwWbYDcDJw
-Q0Qc3oogm+wO9AAbmso3AHuMcMy+FDUsfwL8JfAO4CTg822IT5IktVjVJqHfUHS6fVtmbgGIiBnA
-Z4DfA68AzgU+QTHUudtmAFuApYP9bCLincC3I+KtmfnH4Q5atmwZM2fOHFLW29tLb29vu+OVJKn2
-+vr66OvrG1K2efPmtrxXFP1nx3lQxB3AEZnZ31Q+D7gyM3ePiGcBP8rMlk4kVzYJ3QecmJnLG8rP
-B2Zm5kuGOeZ84PmZOa+hbH/gf4B5mbm+af8FwOrVq1ezYIET90qSNFZr1qxh4cKFAAszc02rzlu1
-SWhHYP9hyvenaK6Boi/L+LOh7cjMh4DVwNGDZRER5esrRzjsCoq5YnZqKJtPUevy61bHKEmSWqtq
-wvJV4MsRsSwijigfy4AvAxeW+7yQogajHc4E3hgRrylrSs4FdgLOB4iI0yPigob9LwLuBr4SEQdE
-xAsoRhN9eaTmIEmSVB9V+7Aso+jk+m5gdlm2ATiLot8KwKXAiglFN4LM/FZE7A58pHz/64HFmXln
-ucsewJ4N+/8hIo4BPgv8F0Xy8k3gA+2IT5IktVbVieMGgI9RTB73+LLsnqZ92jrPSWaeA5wzwrZT
-hinrBxa3MyZJktQeE5o4DrZNVCRJklqtcsISEScBLwf2Ah7VuC0zHVojSZJaplKn24h4O/AVin4r
-B1Os53M3xQRtl7QsOkmSJKqPEnor8KbM/GvgQeCTmXkMcDYwc9QjJUmSxqlqwrIXW+c8uR94XPn8
-q4DTwEqSpJaqmrDcDuxWPv8l8Lzy+T5ATDQoSZKkRlUTlv8ATiiffwU4KyK+TzG3yb+2IjBJkqRB
-VUcJvYky2cnMz0fE3cDzgeXAeS2KTZIkCag+cdwWinV4Bl9/A/hGq4JSvfT3w/r1MGcOzJ3b7Wgk
-SdNR1WHNSyLiiIbXp0bE9RFxUUTMal146qaNG2HJEpg/H44/HubNK15v2tTtyCRJ003VPiyfAh4P
-EBHPoliM8GKKTrdntiY0ddvSpbBq1dCyVaug13FgkqQOq5qw7AP8vHx+IvCdzPx74FTguFYEpu7q
-74eVK2FgYGj5wEBRvnZtd+KSJE1PVROWB4GdyueLKFZmBthIWfOiyW39+tG3r1vXmTgkSYLqo4R+
-DJwZEVcAzwFOLsvnAb9uRWDqrv32G337nDmdiUOSJKhew/I24GHgJOAtmfmbsvw4YEUrAlN3zZsH
-ixdDT8/Q8p6eotzRQpKkTqo6rPmXwJ8NU75swhGpNvr6ig62K1duLVu0qCiXJKmTKiUsEbEAeCgz
-/7t8/RfAKRQdcT+UmQ+2LkR1y6xZsGJF0cF23TrnYZEkdU/VJqHzKPqrEBH7Ukwadx/wMuCTrQlN
-dTF3Lhx3nMmKJKl7qiYs84Dry+cvA36YmUuBv6IY5ixJktQyVROWaDh2EcWkcQC/AnafaFCSJEmN
-qiYs1wHvj4hXAy8EvleW7wNsaEVgkiRJg6omLH8DLAA+B3wsMwenETsJuLIVgUmSJA2qOqz5p8Cz
-htn0t8DAMOWSJEmVVa1hISJ2jYg3RMTpEbFbWfwM4EmtCU2SJKlQdR6WZwOXAb8D9ga+SLGO0EuB
-vYDXtCg+SZKkyjUsZwJfycy5wAMN5RcDL5hwVJIkSQ2qJiyHUkwe1+w3wB7Vw5EkSdpW1YTlj8Dj
-hymfB9xZPRxJkqRtVU1YlgMfjIgdy9cZEXsBnwD+uSWRqR76++GSS4oFhSRJ6pKqCcu7gF2AO4DH
-Aj8A1gH3Au9rTWjqqo0bYckSmD8fjj8e5s0rXm/a1O3IJEnTUNV5WDYDx0TEEcCzKZKXNZm5qpXB
-qYuWLoVVTd/OVaugt7dYwlmSpA6qlLAMyswfAz9uUSyqi/5+WLly2/KBgaJ87VqXbpYkdVTlhCUi
-DgWOopgobkjTUma+c4JxqZvWrx99+7p1JiySpI6q1IclIv4euAY4BTgEOLjhcVDLohs9hlMj4paI
-uD8iri4TqLEcd3hEPBQRa9od46S1336jb58zpzNxSJJUqlrD8g7gdZl5fgtjGbOIOBk4A3gTcC2w
-DFgZEfMy865RjpsJXACsAmZ3ItZJad48WLy46LMy0LA0VE8PLFpk7YokqeOqjhLaAlzRykDGaRlw
-XmZemJm/AN4M3Ae8bjvHnQt8Hbi6zfFNfn19RXLSaNGiolySpA6rmrCcBZzaykDGqpz7ZSHFWkYA
-ZGZS1JocNspxpwD7AB9ud4xTwqxZxWig/n64+OLi64oVRbkkSR1WtUno08D3ImI98HPgocaNmfnS
-iQY2it2BHmBDU/kGYP5wB0TEXODjwBGZuSUi2hjeFDN3rk1AkqSuq5qwnE0xQuhy4G4gWxZRi0XE
-DIpmoNMyc3D4ixmLJEmTSNWE5bXAiZn5vVYGM0Z3AQNs22l2NnD7MPs/jmIk00ER8fmybAYQEfEg
-cGxm/udwb7Rs2TJmzpw5pKy3t5fe3t7q0UuSNEX09fXR19S3cfPmzW15ryi6f4zzoIjbgMVlh9eO
-i4irgWsy8x3l6wB+CZydmZ9q2jeAA5pOcSpFDdGJwK2ZeX/TMQuA1atXr2bBggVtuorJo7+/mJpl
-zhxbhyRJo1uzZg0LFy4EWJiZLZtCpGqn2w8BH46InVoVyDidCbwxIl4TEftTjP7ZCTgfICJOj4gL
-oOiQm5k/b3xQrIH0QGbe2JysaCuXE5Ik1UXVJqG3A/sBGyLiVrbtdNvWaonM/FZE7A58hKIp6HqK
-Gp87y132APZsZwzTgcsJSZLqomrC8m8tjaKCzDwHOGeEbads59gP4/DmUbmckCSpTqqu1jymP/YR
-0Qssz8w/VHkfdY/LCUmS6qRqH5axOg+nwJ+UXE5IklQn7U5YnO9kkhpcTqinZ2h5T09Rbu2KJKmT
-2p2waBLr64NFhw1tzXM5IUlSN1TtdKupbuNGZi1dyoofr2Qtc1jHHOYc8WTm9p3hekKSpI6zhkXD
-K8c09zO3SFZYx9yrLizGNEuS1GEmLNpWfz8bV17LkoHvMp9+jucS5rGWJQPfZdPKa4oxzZIkdVC7
-E5bbaJpUTpPA+vUs5SJWsWhI8SoW0UtfMaZZkqQOamsflsx8ZjvPr/bon7E/K9lnm/IBdmAlS1i7
-w604SEiS1EljTlgiYiMwLzPviohNwIirJmbmbq0ITt2xfsu2yUqjdQ/vbcIiSeqo8dSwLAPuLZ//
-TRtiUU04aZwkqW7GnLBk5gXDPdfUMzhp3KpVxdpBg3pmbGHR4fczd+7O3QtOkjQtVe50GxE9EXFi
-RLy/fLwkInq2f6Qmg76+YpK4Rou2XErfj54GS5bApk3dCUySNC1V6nQbEXOAi4GnAjeVxX8H/Coi
-XpyZ21k6T3U3axasWAFrj3wd6668gzlbbmIu5eigVauK+VhWrOhukJKkaaNqDcvZwHpgz8xckJkL
-gL2AW8ptmgr6+8kf/xi2DAwtHxiAlSudj0WS1DFVE5YXAu/OzI2DBZl5N/DecpsmuY0bYUnvrKET
-x3EJm9h1607OxyJJ6pCqCcsfgccNU74L8GD1cFQXS5fCqht2H1L2yMRxgxwuJEnqkKoJy3eBL0TE
-c2Or5wHnAstbF566ob+/aPEZGIgh5Y9MHDdjfjGMaK6zsUiSOqNqwvJ2ij4sVwEPlI8rgHXAO1oT
-mrpl/Xa6TK876KRiGJEkSR1SaZRQZv4O+IuImAscQDHr7Y2ZaaeGKWC7E8d946MwqzOxSJIEE1xL
-KDPXRsS68vmIU/Vrchlx4rieYm4WW4IkSZ02kYnjXh8RP6NsEoqIn0XEG1oXmrpp2InjFtkSJEnq
-jqoTx30EeCfwWYp+LACHAWdFxF6Z+cEWxacueWTiuLXF6OU5c6xZkSR1T9UmobcAb8zMxv+3l0fE
-TymSGBOWKWLuXBMVSVL3VU1YdgSuG6Z89QTOqSmov78YdWQNjSRpIqr2YfkqRS1LszcBX68ejuqm
-vx8uuWT8s/Bv3FiskTh/Phx/fNGR1zUTJUlVTaQ25PURcSxwdfn6uRTrCV0YEWcO7pSZ75zAe6hL
-Nm4sZrtduXJr2eLFRafbWWMY0rx0aTHKqJFrJkqSqqqasDwTWFM+H5y1467y8cyG/RzqPElNJOEY
-nCm3WeOaiTYPSZLGo+rEcUeNZb+IeFpEzMjMLVXeR90x0YRjuzPlrjNhkSSNT+V5WMbo58DebX4P
-tdhYEo7RbHemXNdMlCSNU7sTltj+LqqbiSYcgzPl9vQMLe/pcc1ESVI17U5YNAmNlHDMmAELFozt
-HM6UK0lqJRMWDWu4hGPLFlizZmxDlAdnyu3vh4svLr6uWDG2EUaSJDWbtAlLRJwaEbdExP0RcXVE
-HDrKvi+JiEsj4o6I2BwRV5ZDsjWCxoRjwYJta1sGRwxtz9y5cNxxNgNJkiam3QlLW4Y1R8TJwBnA
-acDBwA3AyojYfYRDXgBcChwHLAAuB74TEQe2I76pJLOoVWlctRmGjhiSJKndJmun22XAeZl5YWb+
-AngzcB/wuuF2zsxlmfnpzFydmesz833AWuDP2xTflPHbH/SzhEuYw/CZyfZGDEmS1AoTTljKuVae
-NsLmZwC3TfQ9mt5vR2AhcNlgWWYmsIpixeixnCOAxwEbWxnblFLOrf/CN83nEo5nLfO4hCXsytCO
-Kw5RliR1QqWEJSJmRMQHI2IzRUJyW0T8LiI+EBGPnDMzf5WZAyOfqZLdgR5gQ1P5BmCPMZ7jb4Gd
-gW+1MK6pZZipbhexij6KjisOUZYkdVLVqfk/BrweeC9wRVl2BPAh4DHA+yYcWZtExFLgA8AJmXlX
-t+OppRGmut2BAZawkjmsZb9Fcx2iLEnqmKoJy2uBN2Tm8oayn0bEb4BzaG/CchcwAMxuKp8N3D7a
-gRHxCuALwEmZefn23mjZsmXMnDlzSFlvby+9YxkeM5ltZ6rb//ziOp76BqtWJGm66+vro6/pv9fN
-mze35b2i6P4xzoMiHgCenZn9TeXzgesz87Etim+k978auCYz31G+DuCXwNmZ+akRjukFvgScnJnf
-3c75FwCrV69ezYKxzpQ2lfT3w/z5o2+3LUiSNIw1a9awcOFCgIWZuWZ7+49V1U63NwBvG6b8beW2
-djsTeGNEvCYi9gfOBXYCzgeIiNMj4oLBnctmoAuAdwH/FRGzy8fjOxDr5OPc+pKkmqnaJPRu4HsR
-sQi4qiw7DNgTOL4VgY0mM79VzrnyEYqmoOuBxZl5Z7nLHmUsg95I0VH38+Vj0AWMMBR62uvrK2aG
-a+zL4tz6kqQuqZqw3ALMA04F9i/L/oWi/0rVc45LZp5Tvt9w205pen1UJ2KaUganul27tphsZc4c
-a1YkSV0zkYTlyeUEbI+IiCcAv6KozdBUMHeuiYokqeuq9mEZaQbbXYAHKp5TkiRpWOOqYYmIM8un
-CXwkIu5r2NwDPJeiP4kkSVLLjLdJ6ODyawDPAh5s2PYgxQihT7cgLkmSpEeMK2EZ7LwaEV8B3pGZ
-97QlKtVLf38xmZwdbyVJXVKpD0tmnmKyMg2UCyAyfz4cf3wxP8uSJbBp0/aPlSSphSa8WrOmsGEW
-QGTVqmJ+FkmSOsiERcMbXABxoGmx7YGBonzt2u7EJUmalkxYNLztLIDIunWdiUOSJExYNJL99ht9
-+5w5nYlDkiQ6NI2+poZ+5rKe/ZjDOhwrJEnqJGtYNLyGJqGNzGIJlzCffo7nEuaxliWv2NXBQpKk
-jjFh0fAamoSWchGrWDRk86obdnewkCSpY0xYNLx582DxYvpn7M9KljDQ1Ho4MBAOFpIkdYwJi0bW
-18f6g04cdRcHC0mSOsGERSObNYv9+j466i4OFpIkdYIJi0ZVtgzR0zO0vKenKHdpIUlSJ5iwaLv6
-+uCww4aWLVpUlEuS1AkmLBrV767t54xFl3D7j7f2rj3iCPjm/9vPrKsvsdetJKkjTFg0vHKl5l2f
-O5+PrjmetczjEpawNzfz/h8vYeZzXMFZktQ5Jiwa3tKlZNNKzYtYxbU8h6NxBWdJUmeZsGhb5UrN
-0bRS8w4M8ETu5gqez1oahge5grMkqc1MWLSt7azU/A/8XTE9P5ewiV23bnBSFklSm5iwaFvbWal5
-XVm7sopF9NIwVMhJWSRJbeJqzdrWvHkM9OzIjIGHWNuwQvMc1vEgOz6yVvMAO7CSJaydMZ+5x+zt
-pCySpLaxhkXbWrmSzQO7cFzTCs3P4VruY2fmMLSvyk+e+SonZZEktZUJi7Z1zTXDrtB8HYcym9t5
-Cr8eUv65me+HWbM6GaEkaZoxYdE2+nsOGHaFZoCHeDQ/4sghZT/6kQOEJEntZcKibawf2HvU7TlM
-IuMAIUlSO5mwaBv7PfWBcR/jACFJUjuZsGgb857yexbyX2PaN8JVmyVJ7WfCom3ttx/f51h25I/D
-bExm8PAjr446ygFCkqT2M2HRtubNY9bi53ITB7ArG4dsegJ38X0WcTHH0f/FH3DZZQ4QkiS1nxPH
-aXh9fexzwgls+vET+D5HcxWHcRhXcQyXbd3nhWd3Lz5J0rQyaWtYIuLUiLglIu6PiKsj4tDt7P+n
-EbE6Ih5j0P+gAAASSUlEQVSIiP6IeG2nYp2UZs0qxisfcQTHzLicD/LRrclKT48dVyRJHTUpE5aI
-OBk4AzgNOBi4AVgZEbuPsP/ewHeBy4ADgc8AX4qIYzoR76S2fDkc03SbFi2y44okqaMma5PQMuC8
-zLwQICLeDLwYeB3wyWH2fwtwc2a+u3x9U0QcUZ7n+x2Id/KaNQtWrChmhlu3rhi/bM2KJKnDJl3C
-EhE7AguBjw+WZWZGxCrgsBEOex6wqqlsJXBWW4KciubONVGRJHXNZGwS2h3oATY0lW8A9hjhmD1G
-2P/xEfHo1oYnSZJabdLVsHTSsmXLmDlz5pCy3t5eent7uxSRJEn10dfXR19Tn8bNmze35b0mY8Jy
-FzAAzG4qnw3cPsIxt4+w/z2ZOdzsaACcddZZLFiwoGqckiRNacP9E79mzRoWLlzY8veadE1CmfkQ
-sBo4erAsIqJ8feUIh13VuH/p2LJckiTV3KRLWEpnAm+MiNdExP7AucBOwPkAEXF6RFzQsP+5wL4R
-8YmImB8RbwVOKs8jSZJqbjI2CZGZ3yrnXPkIRdPO9cDizLyz3GUPYM+G/W+NiBdTjAp6O/Br4PWZ
-2TxySJIk1dCkTFgAMvMc4JwRtp0yTNkPKYZDS5KkSWayNglJkqRpxIRFkiTVngmLJEmqPRMWSZJU
-eyYskiSp9kxYJElS7ZmwSJKk2jNhkSRJtWfCIkmSas+ERZIk1Z4JiyRJqj0TFkmSVHsmLJIkqfZM
-WCRJUu2ZsEiSpNozYZEkSbVnwiJJkmrPhEWSJNWeCYskSao9ExZJklR7JiySJKn2TFgkSVLtmbBI
-kqTaM2GRJEm1Z8IiSZJqz4RFkiTVngmLJEmqPRMWSZJUeyYskiSp9kxYJElS7ZmwSJKk2jNhkSRJ
-tWfCou3q6+vrdgi14H3YyntR8D5s5b0oeB/aZ9IlLBExKyK+HhGbI2JTRHwpInYeZf8dIuITEfHT
-iPh9RPwmIi6IiCd3Mu7JzF/AgvdhK+9Fwfuwlfei4H1on0mXsAAXAQcARwMvBl4AnDfK/jsBBwEf
-Bg4GXgLMB/69vWFKkqRW2aHbAYxHROwPLAYWZuZPyrK/Br4XEf8nM29vPiYz7ymPaTzP24BrIuJp
-mfnrDoQuSZImYLLVsBwGbBpMVkqrgASeO47z7Foe87sWxiZJktpkUtWwAHsAdzQWZOZARGwst21X
-RDwa+Afgosz8/Qi7PQbgxhtvnECoU8fmzZtZs2ZNt8PoOu/DVt6LgvdhK+9Fwfsw5G/nY1p53sjM
-Vp6vWhARpwPvGWWXpOi3ciLwmsw8oOn4DcAHM3O0vixExA7AvwBPBo4aKWGJiKXA18d+BZIkqckr
-M/OiVp2sLjUsnwa+sp19bgZuB57UWBgRPcBu5bYRlcnKt4E9gReNUrsCsBJ4JXAr8MB24pIkSVs9
-Btib4m9py9SihmWsyk63/wMc0tDp9ljgYuBpw3W6LfcZTFb2pahZ2dihkCVJUgtMqoQFICIupqhl
-eQvwKOCfgGsz89UN+/wCeE9m/nuZrPwzxdDmP2NoH5iNmflQx4KXJEmV1KVJaDyWAp+jGB20Bfi/
-wDua9pkLzCyfP5UiUQG4vvwaFP1ijgJ+2M5gJUnSxE26GhZJkjT9TLZ5WCRJ0jRkwiJJkmrPhKU0
-nRdVjIhTI+KWiLg/Iq6OiEO3s/+fRsTqiHggIvoj4rWdirWdxnMfIuIlEXFpRNxR/sxcWY5Ym/TG
-+/PQcNzhEfFQREyZWbMq/G48KiI+FhG3lr8fN0fEX3Uo3LapcB9eGRHXR8QfIuJ/I+LLEbFbp+Jt
-h4g4MiKWl5/1WyLihDEcM1U/K8d1L1r1eWnCstW0XFQxIk4GzgBOo7iOG4CVEbH7CPvvDXwXuAw4
-EPgM8KWIOKYT8bbLeO8Dxc/HpcBxwALgcuA7EXFgB8Jtmwr3YfC4mcAFFJ3hp4SK9+LbFJ35TwHm
-Ab3ATW0Ota0qfEYcTvGz8EXgGcBJwHOAL3Qk4PbZmWLgxlspBm2Maqp+VpbGdS9o1edlZk77B7A/
-xYijgxvKFgMPA3uM4zyHAAMUc8J0/brGGPPVwGcaXgfwa+DdI+z/CeCnTWV9wMXdvpZO3ocRzvEz
-4P3dvpZu3IfyZ+DDFH/U1nT7OrpxL4AlwEZg127H3uX78C5gbVPZ24BfdvtaWnhPtgAnbGefKflZ
-WeVejHDcuD8vrWEpTMtFFSNiR2AhxX8AAGTxk7SK4p4M53ls+1/0ylH2r72K96H5HAE8juIP1qRU
-9T5ExCnAPhQJy5RQ8V78OXAd8J6I+HVE3BQRn4qIlq6n0kkV78NVwJ4RcVx5jtnAy4DvtTfa2ply
-n5WtUvXz0oSlMOyiihQ3s5WLKtbN7kAPsKGpfAMjX/ceI+z/+PIeTEZV7kOzv6WoJv1WC+PqtHHf
-h4iYC3ycYs2QLe0Nr6Oq/EzsCxwJ/AnwlxTzQ50EfL5NMXbCuO9DZl4JvAr4ZkQ8CPwW2ERRyzKd
-TMXPylap9Hk5pROWiDi97BA00mMgIua14H0Gp/5PijY9TSNRLJb5AeBlmXlXt+PplIiYQbFI6GmZ
-uX6wuIshddsMiurxpZl5XWauAN4JvHY6/YGKiGdQ9Nf4EEV/hcUUNXCjLk6r6WEin5eTcabb8ajb
-oop1cxdFn5vZTeWzGfm6bx9h/3sy84+tDa9jqtwHACLiFRSdCU/KzMvbE17HjPc+PI6i39ZBETFY
-izCDosb3QeDYzPzPNsXablV+Jn4L/KbpM+BGiiTuacD6YY+qtyr34b3AFZl5Zvn6ZxHxVuBHEfG+
-zGyudZiqpuJn5YRM9PNyStewZObdmdm/ncfDFG2uu0bEwQ2HH03xQXPNSOePoYsqHp2Zm9p5Pa2W
-xTpKqymuFXikbfFo4MoRDruqcf/SsWX5pFTxPhARvcCXgVeU/01PahXuwz3AMylGyx1YPs4FflE+
-H/F3p+4q/kxcATwlInZqKJtPUevy6zaF2lYV78NOFAMWGm2hqIGeTjVwU+6zciJa8nnZ7R7GdXlQ
-rPh8HXAocDjFUMSvNu3zC+Avyuc7UAxhvg14FkXmPPjYsdvXM47rfjlwH/AaitFS5wF3A08st58O
-XNCw/97AvRQ94OdTNIE9CCzq9rV0+D4sLa/7zU3f+8d3+1o6eR+GOX4qjRIa78/EzuXnwTcppkh4
-Qfk5cm63r6XD9+G1wB/L3419ys/Ta4Eru30tE7wPO1Mk4gdRJGB/U77ec4T7MCU/Kyvei5Z8Xnb9
-wuvyoBjh8zVgM0UHsS8COzXtMwC8pnz+9PJ142NL+fUF3b6ecV77W4Fbgfspsv9DGrZ9BfiPpv1f
-QPFf1/3AWuDV3b6GTt8HinkEmr//A8A/dfs6Ov3z0HTslElYqtwLirlXVgK/p0hePgk8utvX0YX7
-cCrw3+V9+DXFvCxP7vZ1TPAevLDhM36b3/lp9lk5rnvRqs9LFz+UJEm1N6X7sEiSpKnBhEWSJNWe
-CYskSao9ExZJklR7JiySJKn2TFgkSVLtmbBIkqTaM2GRJEm1Z8IiSZJqz4RF6rCI+EJE3B0RAxHx
-7G7H00oR8ZWI+Jdux6GC3w9NJU7NL3VQRCwB/o1iLY5bgLsyc0t3o2qdiHgcxefKPd2OZTqJiKdT
-/DwdlJk/bSj3+6EpY4duByBNM3OA32bmNcNtjIgdM/OhDsfUMpl5b7djmErG8fMQwDb/ffr90FRi
-k5DUIRHxFeBsYK+I2BIRN0fE5RHx2Yg4KyLuBFaU++4ZEf8eEfdGxOaI+GZEPKnhXKdFxE8i4pSI
-uK3c73MRMSMi3h0Rv42IDRHx9+OIb0tEvDkiLo6I+yJifUSc2LTPMyPisnL7XRFxXkTs3HiNY22C
-KK/97PLaN0bE7RHx+ojYKSL+KSLuiYi1Za1UcwwXl9d8e0RcGBFPaNh+UkT8tCHGSyPiseW2P42I
-ayLi9xGxKSJ+FBF7ltv2jYh/K895b0RcGxFHN733HhHxvfLc6yLi5RFxS0S8vWGfmRHxpYi4o/ze
-rRpr01/D9/X1EXEzxSq/RMTiMtZN5TV9JyL2bTj05vLr9eX38T/K485v/H5ExKPKe74hIu4vz3nI
-WGKTus2EReqctwMfBH4NzAYOLctfA/wReD7w5ogIYDmwK3AksAjYF/hG0/n2A5YAi4FXAG8Avgc8
-hWJZ+/cAH42IQxm7jwDfBp4NfB34RkTMB4iInYCVwN3AQuCkMrbPjuP8zV4D3ElxL84Gzi3f/wrg
-YOBS4MKIeEwZw0zgMmA1sIDi2p8EfKvcvgdwEfAlYH+Kprd/KTZFD/CvFEvdPxN4HvAFttZM7EJx
-/44CDgIuAZZHxNMa4v0qsAfF/T0JeAvwxKZr+r/AE8rYFgBrgFURsesY78kc4KXAS8o4AHYGzijP
-9yJgoLyWQc+hqGV5URnfS8vy5lqXT5XnfTXF/V0HrBxHbFL3ZKYPHz469ADeAdzc8Ppy4LqmfY4B
-HgSe0lB2ALAFWFi+Pg24F9ipYZ9LgPVN57oRePcYY9sCfK6p7KrBMuCNwF3AYxq2Hwc8DDyxfP0V
-4F/G+H6XAz9oeD2jvKbzG8pml3E9p3z9PuCSpvM8rdxnDsUf4QFgz2Heb1a57chxfL/+G3hr+Xz/
-8n0Obti+X1n29vL1EcAmYMem86wF3jCG9zsNeADYbTv77V6+7zPK108vXz+7ab9Hvh/AThSJ8ckN
-23egSKDf1e3fDR8+tvewhkXqvtVNr/cHfpWZ/ztYkJk3Ar+jSFwG3ZqZ9zW83gD8vOlcGyhqIMbq
-6qbXVzW85/7ADZn5QMP2KygSjfnjeI9Gj3QQzaLz8d0UScJg2Yby6eA1HAi8qGyyuTci7qVIypIi
-ebgB+A/gZxHxrYh4w2DtQWZuAi4ALo2I5RHx9rJGBoCI2DkiPh0RPy+bXu4tr3mvcpd5wEOZ+ZOG
-+NZTJCiDng08DtjYFOPeZXxjcVtmbmwsiIg5EXFR2Uy3maKDbTbENhb7USQoVzbE/zBwLUN/rqRa
-stOt1H1/qHhcc2fMHKGszv+YjOUaYOs17ELRXPZuiiaQRr8tk55jIuIw4FjgrymaxZ6bmbdl5usi
-4jMUTWknl9sWZea1FE0uRwPvAtZT9B/5Z+BR47ieXYD/pWiKao7vd2M8x3A/D9+lSFLeUJ5/BvA/
-44xNmtTq/EEmTVc3AntGxFMHCyLiGRR9Wv6nze/9vGFe39gQ14GDHVhLR1A0s9zU5rgGrQH+hKIW
-4uamx/2DO2XmVZn5YYomooco+m0MbrshMz+RmYcDPwOWlpueT9EctTwz/we4g6JmZNBNwA4RcfBg
-QUTMoWhqaoxvD2BgmPiG1JqMVUTsRlG789HMvDwzb6LoI9PowfJrzyinWk9xLw5vOPcOFP2H2v1z
-JU2YCYtUM5m5iuIP6dcj4uCIeA5FU8bljc0RbfKyKEYezY2ID1P8Mftcue3rFP0rLoiIP4mIoyg6
-yl6YmXe2Oa5Bnwd2o+gMfEg5smdxOaooIuI5EfF3EbGwHP1zIkV/jxsjYu+I+HhEPC8i9oqIY4G5
-bG1GWwu8NCIOjIgDy+t9pJakTBQuA74YEYeWict5wH2UnVvL791VwL9FxDER8fSIeH5EfDQiFlS8
-5k0UTWVvioj9IuJFFLVBjR1q76CoEVoSEU+KiMc3n6RsPvxH4FPlPXsGRefkxwL/VDE2qWNMWKTu
-GmnmxhMo/lD9gGKkzDqKkUCtOv9ITivf5wbgVcArMvMXAGUNxmKKhOFaipE536dodqliuNhGLcvM
-31LUEMygGLH0U+BMYFNmJnAPxQie71HUiHwEeGdmrqRILPanGMVzE8WIpM9m5hfK07+T4p5fAfw7
-xRDzNU2xvBq4neL78s/AF4HfUyRyg44HfkiRBNxEMWppL4r+RONWXtfJFCOz/psiWfk/TfsMUHwf
-/h/gNxSTEw7nvWXcFwLXUYw+OzYzN1eJTeokZ7qVBBTzsAB/mZnLux3LZFEOef4lcHRmXt7teKSp
-zE63kjRGZTPYLhQ1HU8BPkkxadsPuxmXNB3YJCRNAxGxtHGYbdNjcBhxy6pbo5ip994oZqttfr97
-miZjm0x2BD5O0cfonymah44qm2S2KyJ+NsL34J6I6G1j3NKkZ5OQNA1EMX3+7BE2P5SZv2rx+/VQ
-TGY2kltzCi36OFZlR+AdR9i8ITOrDnGXpjwTFkmSVHs2CUmSpNozYZEkSbVnwiJJkmrPhEWSJNWe
-CYskSao9ExZJklR7JiySJKn2/n8f6RSqTV3XcAAAAABJRU5ErkJggg==
+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
 "
 >
 </div>
@@ -12686,15 +12684,15 @@ After computing the ratio of messages received from poi to total received messag
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Algorithms-selection-and-tuning">Algorithms selection and tuning<a class="anchor-link" href="#Algorithms-selection-and-tuning">&#182;</a></h2><p>For the analysis of the data, a total of 6 classifiers was applied, which included:</p>
 <h4 id="Decision-Tree-Classifier">Decision Tree Classifier<a class="anchor-link" href="#Decision-Tree-Classifier">&#182;</a></h4><h4 id="Gaussian-Naive-Bayes">Gaussian Naive Bayes<a class="anchor-link" href="#Gaussian-Naive-Bayes">&#182;</a></h4><h4 id="Support-Vector-Classifier-(SVC)">Support Vector Classifier (SVC)<a class="anchor-link" href="#Support-Vector-Classifier-(SVC)">&#182;</a></h4><h4 id="AdaBoost">AdaBoost<a class="anchor-link" href="#AdaBoost">&#182;</a></h4><h4 id="Random-Forrest-Tree-Classifier">Random Forrest Tree Classifier<a class="anchor-link" href="#Random-Forrest-Tree-Classifier">&#182;</a></h4><h4 id="K-Nearest-Neighbor">K Nearest Neighbor<a class="anchor-link" href="#K-Nearest-Neighbor">&#182;</a></h4><p>The object of the algorithm was to classify and find out which people are more likely to be a POI. There were clearly 2 categories I was looking to label the data.</p>
-<p>To tune the algorithm, I applied PCA to decompose features and dimentions, and MaxAbsScaler to scale and normalize the features. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (or sometimes, principal modes of variation). The number of principal components is less than or equal to the smaller of the number of original variables or the number of observations. This transformation is defined in such a way that the first principal component has the largest possible variance (that is, accounts for as much of the variability in the data as possible), and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components. I did not think the outcome would be the best when I put most features into the algorithms, either only few ones. Also for avoiding overfitting and underfitting, I would like to try PCA components between 2 and 20 since there were 58 features in total in the dataset. MaxAbsScaler transforms a dataset of Vector rows, rescaling each feature to range [-1, 1] by dividing through the maximum absolute value in each feature. It does not shift/center the data, and thus does not destroy any sparsity. MaxAbsScaler computes summary statistics on a data set and produces a MaxAbsScalerModel. The model can then transform each feature individually to range [-1, 1].</p>
-<p>For the most part, PCA made a huge improvement when trying different feature numbers. You might find more comparison details from the executing section.</p>
+<p>To tune the algorithm, I applied PCA to decompose features and dimentions, and MaxAbsScaler to scale and normalize the features. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (or sometimes, principal modes of variation). The number of principal components is less than or equal to the smaller of the number of original variables or the number of observations. This transformation is defined in such a way that the first principal component has the largest possible variance (that is, accounts for as much of the variability in the data as possible), and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components. I did not think the outcome would be the best when I put most features into the algorithms, either only few ones. Also for avoiding overfitting and underfitting, I would like to try PCA components, which meant to group the similar features, between 2 and 10 since there were 58 features in total in the dataset. MaxAbsScaler transforms a dataset of Vector rows, rescaling each feature to range [-1, 1] by dividing through the maximum absolute value in each feature. It does not shift/center the data, and thus does not destroy any sparsity. MaxAbsScaler computes summary statistics on a data set and produces a MaxAbsScalerModel. The model can then transform each feature individually to range [-1, 1].</p>
+<p>Also, when conducting machine learning algorithms, validation process must be necessary. A testing set would be needed to validate how the algorithm worked after training and it shall be independent of the training set. In a small or skewed dataset like this one, multiple times of validation process might avoid the algorithm to be biased and improve outcome reliability. To build a validation process, I would like to import the module StratifiedShuffleSplit from sklearn. It would return stratified randomized folds which depends on how many times you want to validate, and the training and testing data allocation would be based on appointed data spliting percentage. Since the Anron dataset was pretty small (only 143 persons) and very skewed POI distribution, I would like to set the cross-validation process to be repeated 1000 time and the tested size to be 10%.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">featureFormat</span><span class="p">(</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">sort_keys</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
@@ -12736,13 +12734,13 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Task 4: Try a varity of classifiers</span>
 <span class="c1">### Please name your classifier clf for easy export below.</span>
     
-<span class="n">data</span> <span class="o">=</span> <span class="n">featureFormat</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">ResetFeatureList</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">),</span> <span class="n">sort_keys</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">featureFormat</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">reset_feature_list</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">),</span> <span class="n">sort_keys</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="c1">#features order is organized by names of people </span>
 
 <span class="c1"># one data point is consist of zeros n NaN values</span>
@@ -12770,7 +12768,9 @@ After computing the ratio of messages received from poi to total received messag
 <span class="c1">### http://scikit-learn.org/stable/modules/pipeline.html</span>
 <span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
 <span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="k">import</span> <span class="n">Pipeline</span>
-
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="k">import</span> <span class="n">SelectKBest</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="k">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">FeatureUnion</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">GridSearchCV</span>
 
 <span class="c1"># Example starting point. Try investigating other evaluation techniques!</span>
 <span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="k">import</span> <span class="n">train_test_split</span>
@@ -12782,10 +12782,25 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/KunWuYao/anaconda/lib/python3.5/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">algorithm_tester</span><span class="p">(</span><span class="n">algorithm</span><span class="p">,</span> <span class="n">test_times</span><span class="p">,</span> <span class="n">n_range</span><span class="p">):</span>
@@ -12808,10 +12823,10 @@ After computing the ratio of messages received from poi to total received messag
             <span class="n">labels_train</span>   <span class="o">=</span> <span class="p">[]</span>
             <span class="n">labels_test</span>    <span class="o">=</span> <span class="p">[]</span>    
             <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">train_idx</span><span class="p">:</span>
-                <span class="n">features_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">features</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="p">)</span>
+                <span class="n">features_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">features_normalized</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="p">)</span>
                 <span class="n">labels_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">labels</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="p">)</span>
             <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="n">test_idx</span><span class="p">:</span>
-                <span class="n">features_test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">features</span><span class="p">[</span><span class="n">jj</span><span class="p">]</span> <span class="p">)</span>
+                <span class="n">features_test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">features_normalized</span><span class="p">[</span><span class="n">jj</span><span class="p">]</span> <span class="p">)</span>
                 <span class="n">labels_test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">labels</span><span class="p">[</span><span class="n">jj</span><span class="p">]</span> <span class="p">)</span>
             <span class="c1">### fit the classifier using training set, and test on test set</span>
             <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
@@ -12852,12 +12867,12 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Naive Bayes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
-    <span class="n">GaussianNB</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
+    <span class="n">GaussianNB</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12867,11 +12882,11 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;SVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
-    <span class="n">SVC</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
+    <span class="n">SVC</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12881,11 +12896,11 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Decision Tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
-    <span class="n">DecisionTreeClassifier</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">21</span><span class="p">]</span> <span class="p">)</span>
+    <span class="n">DecisionTreeClassifier</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span> <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12895,11 +12910,11 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Random Forest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
-    <span class="n">RandomForestClassifier</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
+    <span class="n">RandomForestClassifier</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12909,11 +12924,11 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;AdaBoost&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
-    <span class="n">AdaBoostClassifier</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
+    <span class="n">AdaBoostClassifier</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12923,11 +12938,11 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;K Nearest Neighbors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
-    <span class="n">KNeighborsClassifier</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
+    <span class="n">KNeighborsClassifier</span><span class="p">(),</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12937,7 +12952,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">algorithms_comparison</span><span class="p">)</span>
@@ -12947,14 +12962,28 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;K Nearest Neighbors&#39;: [], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [], &#39;Naive Bayes&#39;: [[0.345, 0.46938775510204084, 0.8606666666666667, 8], [0.385, 0.4935897435897436, 0.8653333333333333, 9], [0.385, 0.46107784431137727, 0.858, 10]], &#39;Random Forest&#39;: [], &#39;SVM&#39;: []}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>By running the machine learning codes, I noticed that every algorithm return high accuracy, but does that mean the prediction is good? Or that just results from the low ratio of persons of interest to all people in the dataset?
-After importing and computing recall and precision scores, I found that some algorithms get really bad recall and precision scores. In addition, after testing multiple times, I found that only Naive Bayes returned  recall and precision scores both higher than 0.3. Additionally, there were many different n_component choices in PCA process when running Naive Bayes as the chosen algorithm. Here are the algorithms and PCA choices with both recall and precision scores higher than 0.3:</p>
+<p>By running the machine learning codes, I noticed that every algorithm return high accuracy, but does that mean the prediction is good? Or that just results from the low ratio of persons of interest to all people in the dataset? Especially the POI distribution was pretty skewed with only 18 out of the 143 persons. How would the accuracy be if I predicted all persons to be a non-POI? 87.41%, which would be pretty high but nothing valuable to the predicting algorithm. To better evaluate how the outcomes were return by the algorithms I applied, I would like to compute the recall and precision scores instead of accuracy. You might check wiki for more details: <a href="https://en.wikipedia.org/wiki/Precision_and_recall">https://en.wikipedia.org/wiki/Precision_and_recall</a>  In other words, in a skewed dataset with very few true values, recall and precision scores might better evaluate whether the algorithm worked well on predicting positive values.
+After computing recall and precision scores, I found that some algorithms get really bad recall and precision scores. In addition, after testing multiple times, I found that only Naive Bayes returned  recall and precision scores both higher than 0.3. Additionally, there were many different n_component choices in PCA process when running Naive Bayes as the chosen algorithm. Here are the algorithms and PCA choices with both recall and precision scores higher than 0.3:</p>
 <table>
 <thead><tr>
 <th>ML Method</th>
@@ -13007,18 +13036,6 @@ After importing and computing recall and precision scores, I found that some alg
 <td>0.415</td>
 </tr>
 <tr>
-<td>Naive Bayes GaussianNB</td>
-<td>11</td>
-<td>0.315</td>
-<td>0.444</td>
-</tr>
-<tr>
-<td>Naive Bayes GaussianNB</td>
-<td>12</td>
-<td>0.310</td>
-<td>0.437</td>
-</tr>
-<tr>
 <td>Decision Tree</td>
 <td>3</td>
 <td>0.335</td>
@@ -13042,10 +13059,10 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_outcome</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">GaussianNB</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">13</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_outcome</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">GaussianNB</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">best_outcome</span><span class="p">)</span>
 </pre></div>
 
@@ -13059,7 +13076,7 @@ After importing and computing recall and precision scores, I found that some alg
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[0.3465, 0.42567567567567566, 0.8505333333333334, 8], [0.314, 0.41180327868852457, 0.8487333333333333, 9], [0.304, 0.412483039348711, 0.8494666666666667, 10], [0.3085, 0.44197707736389685, 0.8558666666666667, 11], [0.3025, 0.4287739192062367, 0.8532666666666666, 12]]
+<pre>[[0.34, 0.4336734693877551, 0.8528, 9], [0.3435, 0.413855421686747, 0.8476, 10]]
 </pre>
 </div>
 </div>
@@ -13078,6 +13095,7 @@ After importing and computing recall and precision scores, I found that some alg
 <thead><tr>
 <th style="text-align:left">Algorithm</th>
 <th>PCA n_component</th>
+<th>Features included</th>
 <th>Recall</th>
 <th>Precision</th>
 </tr>
@@ -13085,9 +13103,10 @@ After importing and computing recall and precision scores, I found that some alg
 <tbody>
 <tr>
 <td style="text-align:left">Naive Bayes GaussianNB</td>
-<td>8</td>
-<td>0.347</td>
-<td>0.426</td>
+<td>9</td>
+<td>58</td>
+<td>0.340</td>
+<td>0.434</td>
 </tr>
 <tr>
 <td style="text-align:left">Results WILL vary. There is some randomness in the data splitting </td>
@@ -13111,14 +13130,14 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#try if we don&#39;t add any new features</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/Users/KunWuYao/GitHub/Udacity_ML_projects/final_project/final_project_dataset.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
     <span class="n">my_dataset_o</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
-<span class="n">my_dataset_o</span> <span class="o">=</span> <span class="n">RemoveNaN</span><span class="p">(</span><span class="n">my_dataset_o</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">RemoveOutlier</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">features_list</span> <span class="o">=</span> <span class="n">ResetFeatureList</span><span class="p">(</span><span class="n">my_dataset_o</span><span class="p">)</span>
+<span class="n">my_dataset_o</span> <span class="o">=</span> <span class="n">remove_nan</span><span class="p">(</span><span class="n">my_dataset_o</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">remove_outlier</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">features_list</span> <span class="o">=</span> <span class="n">reset_feature_list</span><span class="p">(</span><span class="n">my_dataset_o</span><span class="p">)</span>
 <span class="n">data_o</span> <span class="o">=</span> <span class="n">featureFormat</span><span class="p">(</span><span class="n">my_dataset_o</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">sort_keys</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">labels</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">targetFeatureSplit</span><span class="p">(</span> <span class="n">data_o</span> <span class="p">)</span> 
 <span class="n">features_normalized</span> <span class="o">=</span> <span class="n">min_max_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
@@ -13131,11 +13150,11 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;Naive Bayes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">GaussianNB</span><span class="p">(),</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;Naive Bayes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">GaussianNB</span><span class="p">(),</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13145,10 +13164,10 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;SVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">SVC</span><span class="p">(),</span><span class="mi">100</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;SVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">SVC</span><span class="p">(),</span><span class="mi">100</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13158,10 +13177,10 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;Decision Tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span><span class="mi">100</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;Decision Tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span><span class="mi">100</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13171,10 +13190,10 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;Random Forest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(),</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;Random Forest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(),</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13184,10 +13203,10 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;AdaBoost&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">AdaBoostClassifier</span><span class="p">(),</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;AdaBoost&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">AdaBoostClassifier</span><span class="p">(),</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13197,10 +13216,10 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;K Nearest Neighbors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">KNeighborsClassifier</span><span class="p">(),</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison_o</span><span class="p">[</span><span class="s1">&#39;K Nearest Neighbors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span><span class="n">KNeighborsClassifier</span><span class="p">(),</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13210,64 +13229,10 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">algorithms_comparison_o</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_outcome_o</span> <span class="o">=</span> <span class="p">(</span><span class="n">algorithm_tester</span><span class="p">(</span><span class="n">GaussianNB</span><span class="p">(),</span><span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">best_outcome_o</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>After running to get the consequences, I found that after lots of new features were added, the best score was only a little higher, and that made me think maybe PCA was not the best method to find out how many and which features I shall pick up. This was just a starting point analysis for classifying Enron employees. The results should not be taken too seriously and more advanced models should be used. Possibilities for future research could be to include more complex pipelines for the data, try different feature selecting tools and learning parameters, or even Neural Networks.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><p><a href="https://www.udacity.com/course/intro-to-machine-learning--ud120">Udacity - Intro to Machine Learning course</a></p>
-<p><a href="http://scikit-learn.org/stable/documentation.html">Sklearn documentation</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Task 6: Dump your classifier, dataset, and features_list so anyone can</span>
-<span class="c1">### check your results. You do not need to change anything below, but make sure</span>
-<span class="c1">### that the version of poi_id.py that you submit can be run on its own and</span>
-<span class="c1">### generates the necessary .pkl files for validating your results.</span>
-<span class="kn">from</span> <span class="nn">tester</span> <span class="k">import</span> <span class="n">dump_classifier_and_data</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s1">&#39;reduce_dim&#39;</span><span class="p">,</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)),</span> <span class="p">(</span><span class="s1">&#39;clf&#39;</span><span class="p">,</span> <span class="n">GaussianNB</span><span class="p">())])</span>
-<span class="n">features_list</span> <span class="o">=</span> <span class="n">ResetFeatureList</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13280,7 +13245,7 @@ After importing and computing recall and precision scores, I found that some alg
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;poi&#39;, &#39;bonus&#39;, &#39;bonus_mean_ratio&#39;, &#39;bonus_median_ratio&#39;, &#39;deferral_payments&#39;, &#39;deferral_payments_mean_ratio&#39;, &#39;deferral_payments_median_ratio&#39;, &#39;deferred_income&#39;, &#39;deferred_income_mean_ratio&#39;, &#39;deferred_income_median_ratio&#39;, &#39;director_fees&#39;, &#39;director_fees_mean_ratio&#39;, &#39;director_fees_median_ratio&#39;, &#39;exercised_stock_options&#39;, &#39;exercised_stock_options_mean_ratio&#39;, &#39;exercised_stock_options_median_ratio&#39;, &#39;expenses&#39;, &#39;expenses_mean_ratio&#39;, &#39;expenses_median_ratio&#39;, &#39;from_messages&#39;, &#39;from_messages_mean_ratio&#39;, &#39;from_messages_median_ratio&#39;, &#39;from_poi_message_ratio&#39;, &#39;from_poi_to_this_person&#39;, &#39;from_poi_to_this_person_mean_ratio&#39;, &#39;from_poi_to_this_person_median_ratio&#39;, &#39;from_this_person_to_poi&#39;, &#39;from_this_person_to_poi_mean_ratio&#39;, &#39;loan_advances&#39;, &#39;loan_advances_mean_ratio&#39;, &#39;loan_advances_median_ratio&#39;, &#39;long_term_incentive&#39;, &#39;long_term_incentive_mean_ratio&#39;, &#39;long_term_incentive_median_ratio&#39;, &#39;other&#39;, &#39;other_mean_ratio&#39;, &#39;other_median_ratio&#39;, &#39;restricted_stock&#39;, &#39;restricted_stock_deferred&#39;, &#39;restricted_stock_deferred_mean_ratio&#39;, &#39;restricted_stock_deferred_median_ratio&#39;, &#39;restricted_stock_mean_ratio&#39;, &#39;restricted_stock_median_ratio&#39;, &#39;salary&#39;, &#39;salary_mean_ratio&#39;, &#39;salary_median_ratio&#39;, &#39;shared_receipt_with_poi&#39;, &#39;shared_receipt_with_poi_mean_ratio&#39;, &#39;shared_receipt_with_poi_median_ratio&#39;, &#39;to_messages&#39;, &#39;to_messages_mean_ratio&#39;, &#39;to_messages_median_ratio&#39;, &#39;to_poi_message_ratio&#39;, &#39;total_payments&#39;, &#39;total_payments_mean_ratio&#39;, &#39;total_payments_median_ratio&#39;, &#39;total_stock_value&#39;, &#39;total_stock_value_mean_ratio&#39;, &#39;total_stock_value_median_ratio&#39;]
+<pre>{&#39;K Nearest Neighbors&#39;: [], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [], &#39;Naive Bayes&#39;: [[0.31, 0.34065934065934067, 0.828, 5], [0.33, 0.3707865168539326, 0.836, 6], [0.375, 0.38860103626943004, 0.838, 7], [0.405, 0.391304347826087, 0.8366666666666667, 8], [0.405, 0.38388625592417064, 0.834, 9], [0.41, 0.39805825242718446, 0.8386666666666667, 10]], &#39;Random Forest&#39;: [], &#39;SVM&#39;: []}
 </pre>
 </div>
 </div>
@@ -13291,7 +13256,661 @@ After importing and computing recall and precision scores, I found that some alg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_outcome_o</span> <span class="o">=</span> <span class="p">(</span><span class="n">algorithm_tester</span><span class="p">(</span><span class="n">GaussianNB</span><span class="p">(),</span><span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">best_outcome_o</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.319, 0.33756613756613757, 0.8257333333333333, 7], [0.365, 0.3573176700930005, 0.8278, 8], [0.357, 0.35172413793103446, 0.8265333333333333, 9]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th style="text-align:left">Algorithm</th>
+<th>PCA n_component</th>
+<th>Features included</th>
+<th>Recall</th>
+<th>Precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Naive Bayes GaussianNB</td>
+<td>8</td>
+<td>19</td>
+<td>0.365</td>
+<td>0.357</td>
+</tr>
+<tr>
+<td style="text-align:left">Results WILL vary. There is some randomness in the data splitting </td>
+</tr>
+</tbody>
+</table>
+<p>After running to get the consequences, I found that after lots of new features were added, the best score was only a little higher (pushed precision score from 0.357 up to 0.434 but made recall score drop to 0.340), and that made me think maybe PCA was not the best method to find out how many and which features I shall pick up. Actually, PCA is very usful when conducting face recognizing or database with a tremendous amount of features but not very helpful with small database like this one.
+To find out whether other algorithms can get higher scores, I would like to remove PCA and try another feature selection tool: SelectKBest. SelectKBest would search in the features list and return the features with highest importance. It can be combined with GridSearchCV to find out how many features might return the best outcome. That is really important because in a dataset with hundreds of features or more, there might be a lot of features which are unimportant/insignificant to the label we want to predict. Putting all features into the algorithm would not only slow down the computation process but also influence the algorithm to make improper predictions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="c1">#turn warning messages off!</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Try to find out some usful features</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="k">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">FeatureUnion</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="k">import</span> <span class="n">SelectKBest</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="k">import</span> <span class="n">f_classif</span><span class="p">,</span> <span class="n">f_regression</span>
+<span class="c1">### StratifiedShuffleSplits for 1000 internal cross-validation splits</span>
+<span class="c1">### within the grid-search.</span>
+<span class="n">labels</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">targetFeatureSplit</span><span class="p">(</span> <span class="n">data</span> <span class="p">)</span>
+<span class="n">features_normalized</span> <span class="o">=</span> <span class="n">min_max_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="n">sss</span> <span class="o">=</span> <span class="n">StratifiedShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">dt_clf_best_params</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="c1">#&#39;pca__n_components&#39;: [None, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],</span>
+            <span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> 
+                          <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+           <span class="c1"># &#39;select__score_func&#39;: [f_classif, f_regression] #f_classif got better than f_regression</span>
+             <span class="p">}</span>
+<span class="n">clf_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">GaussianNB</span><span class="p">(),</span> <span class="n">SVC</span><span class="p">(),</span> <span class="n">DecisionTreeClassifier</span><span class="p">(),</span> <span class="n">RandomForestClassifier</span><span class="p">(),</span>
+            <span class="n">AdaBoostClassifier</span><span class="p">(),</span> <span class="n">KNeighborsClassifier</span><span class="p">()]</span>
+
+<span class="k">for</span> <span class="n">clf</span> <span class="ow">in</span> <span class="n">clf_list</span><span class="p">:</span>
+    <span class="c1"># Pipeline object</span>
+    <span class="n">pipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;minabser&#39;</span><span class="p">,</span> <span class="n">MaxAbsScaler</span><span class="p">()),</span>
+                        <span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="n">SelectKBest</span><span class="p">()),</span> 
+                        <span class="c1">#(&#39;pca&#39;, PCA()),</span>
+                        <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>   
+                        <span class="p">])</span>
+    <span class="n">dt_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipe</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">sss</span><span class="p">,</span>
+                        <span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;f1&#39;</span><span class="p">)</span>
+    <span class="c1">#print(dt_search.get_params)</span>
+    <span class="n">dt_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="c1">### Score of best_estimator on the left out data</span>
+    <span class="c1"># Print the optimized parameters used in the model selected from grid search</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">clf</span><span class="p">,</span> <span class="s1">&#39; result table: &#39;</span><span class="p">,</span> <span class="n">dt_search</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Features index list: &#39;</span><span class="p">,</span> <span class="n">dt_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s1">&#39;select&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_support</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>GaussianNB(priors=None)  result table:  {&#39;select__k&#39;: 16}
+Features index list:  [ True  True  True False False False  True  True  True False False False
+  True  True  True False False False False False False False False False
+ False False False False False False False  True False False False False
+ False False False False False False  True  True  True False False False
+ False False False False False False False  True  True  True]
+SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=&#39;auto&#39;, kernel=&#39;rbf&#39;,
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)  result table:  {&#39;select__k&#39;: 7}
+Features index list:  [False  True False False False False False False False False False False
+  True  True  True False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False  True  True  True]
+DecisionTreeClassifier(class_weight=None, criterion=&#39;gini&#39;, max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=None, splitter=&#39;best&#39;)  result table:  {&#39;select__k&#39;: 9}
+Features index list:  [ True  True  True False False False False False False False False False
+  True  True  True False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False  True  True  True]
+RandomForestClassifier(bootstrap=True, class_weight=None, criterion=&#39;gini&#39;,
+            max_depth=None, max_features=&#39;auto&#39;, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            n_estimators=10, n_jobs=1, oob_score=False, random_state=None,
+            verbose=0, warm_start=False)  result table:  {&#39;select__k&#39;: 9}
+Features index list:  [ True  True  True False False False False False False False False False
+  True  True  True False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False  True  True  True]
+AdaBoostClassifier(algorithm=&#39;SAMME.R&#39;, base_estimator=None,
+          learning_rate=1.0, n_estimators=50, random_state=None)  result table:  {&#39;select__k&#39;: 50}
+Features index list:  [ True  True  True False  True False  True  True  True  True  True  True
+  True  True  True  True  True  True False False False  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True False False False  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True]
+KNeighborsClassifier(algorithm=&#39;auto&#39;, leaf_size=30, metric=&#39;minkowski&#39;,
+           metric_params=None, n_jobs=1, n_neighbors=5, p=2,
+           weights=&#39;uniform&#39;)  result table:  {&#39;select__k&#39;: 8}
+Features index list:  [False  True  True False False False False False False False False False
+  True  True  True False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False  True  True  True]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">algorithm_tester_tuned</span><span class="p">(</span><span class="n">algorithm</span><span class="p">,</span> <span class="n">tuning_params</span><span class="p">,</span> <span class="n">test_times</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;for every PCA n_component in each algorithm</span>
+<span class="sd">    run pipe.fit 100 times to see how precision and recall scores it is</span>
+<span class="sd">    test_times can be 100 or 1000</span>
+<span class="sd">    n_range shall be a list including 2 integers&#39;&#39;&#39;</span>
+    <span class="n">algorithm_tester</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s1">&#39;minabser&#39;</span><span class="p">,</span> <span class="n">MaxAbsScaler</span><span class="p">()),</span>
+                    <span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="n">SelectKBest</span><span class="p">()),</span> 
+                    <span class="p">(</span><span class="s1">&#39;clf&#39;</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">)</span> 
+                       <span class="p">])</span>
+    <span class="n">sss</span> <span class="o">=</span> <span class="n">StratifiedShuffleSplit</span><span class="p">(</span><span class="n">test_times</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+    <span class="n">true_negatives</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">false_negatives</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">true_positives</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">false_positives</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">train_idx</span><span class="p">,</span> <span class="n">test_idx</span> <span class="ow">in</span> <span class="n">sss</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="c1">#reference: http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html</span>
+        <span class="n">features_train</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">features_test</span>  <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">labels_train</span>   <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">labels_test</span>    <span class="o">=</span> <span class="p">[]</span>    
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">train_idx</span><span class="p">:</span>
+            <span class="n">features_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">features_normalized</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="p">)</span>
+            <span class="n">labels_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">labels</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="p">)</span>
+        <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="n">test_idx</span><span class="p">:</span>
+            <span class="n">features_test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">features_normalized</span><span class="p">[</span><span class="n">jj</span><span class="p">]</span> <span class="p">)</span>
+            <span class="n">labels_test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">labels</span><span class="p">[</span><span class="n">jj</span><span class="p">]</span> <span class="p">)</span>
+        <span class="c1">### fit the classifier using training set, and test on test set</span>
+        <span class="n">clf</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">tuning_params</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
+        <span class="n">predictions</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">prediction</span><span class="p">,</span> <span class="n">truth</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">labels_test</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">prediction</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">truth</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">true_negatives</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">prediction</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">truth</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">false_negatives</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">prediction</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">truth</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">false_positives</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">prediction</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">truth</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">true_positives</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Warning: Found a predicted label not == 0 or 1.&quot;</span><span class="p">)</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;All predictions should take value 0 or 1.&quot;</span><span class="p">)</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Evaluating performance for processed predictions:&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">total_predictions</span> <span class="o">=</span> <span class="n">true_negatives</span> <span class="o">+</span> <span class="n">false_negatives</span> <span class="o">+</span> \
+                            <span class="n">false_positives</span> <span class="o">+</span> <span class="n">true_positives</span>
+        <span class="n">precision</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">*</span><span class="n">true_positives</span><span class="o">/</span><span class="p">(</span><span class="n">true_positives</span><span class="o">+</span><span class="n">false_positives</span><span class="p">)</span>
+        <span class="n">recall</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">*</span><span class="n">true_positives</span><span class="o">/</span><span class="p">(</span><span class="n">true_positives</span><span class="o">+</span><span class="n">false_negatives</span><span class="p">)</span>
+        <span class="n">accuracy</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">*</span><span class="p">(</span><span class="n">true_positives</span> <span class="o">+</span> <span class="n">true_negatives</span><span class="p">)</span><span class="o">/</span><span class="n">total_predictions</span>
+
+    <span class="k">except</span><span class="p">:</span> <span class="k">return</span> <span class="ne">ValueError</span>
+    <span class="n">tmp_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">]</span> <span class="c1"># [avg_recall, avg_precision, avg_accuracy, n_component]</span>
+    <span class="n">algorithm_tester</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp_list</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">algorithm_tester</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SVC_best_param</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+<span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;SVC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester_tuned</span><span class="p">(</span>
+    <span class="n">SVC</span><span class="p">(),</span> <span class="n">SVC_best_param</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">NB_best_param</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">}</span>
+<span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Naive Bayes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester_tuned</span><span class="p">(</span>
+    <span class="n">GaussianNB</span><span class="p">(),</span> <span class="n">NB_best_param</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DT_best_param</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
+<span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Decision Tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester_tuned</span><span class="p">(</span>
+    <span class="n">DecisionTreeClassifier</span><span class="p">(),</span> <span class="n">DT_best_param</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">RF_best_param</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
+<span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Random Forest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester_tuned</span><span class="p">(</span>
+    <span class="n">RandomForestClassifier</span><span class="p">(),</span> <span class="n">RF_best_param</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">adaboost_best_param</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
+<span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Adaboost&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester_tuned</span><span class="p">(</span>
+    <span class="n">AdaBoostClassifier</span><span class="p">(),</span> <span class="n">adaboost_best_param</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">KNN_best_param</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
+<span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;K Nearest Neighbors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester_tuned</span><span class="p">(</span>
+    <span class="n">KNeighborsClassifier</span><span class="p">(),</span> <span class="n">KNN_best_param</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">algorithms_comparison</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;K Nearest Neighbors&#39;: [[0.237, 0.7011834319526628, 0.8848]], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [[0.357, 0.3216216216216216, 0.8138666666666666]], &#39;Adaboost&#39;: [[0.3385, 0.41815935762816553, 0.849]], &#39;Naive Bayes&#39;: [[0.374, 0.38516992790937177, 0.8369333333333333]], &#39;Random Forest&#39;: [[0.2635, 0.4395329441201001, 0.857]], &#39;SVM&#39;: [], &#39;SVC&#39;: [[0.0385, 0.9625, 0.8716]]}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="SelectKBest">SelectKBest<a class="anchor-link" href="#SelectKBest">&#182;</a></h4><p>With each algorithm tuned with its best k features assessed by f1 score, the scores are listed below:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Algorithm</th>
+<th>Best k Features Number</th>
+<th>Recall</th>
+<th>Precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Random Forest</td>
+<td>9</td>
+<td>0.269</td>
+<td>0.445</td>
+</tr>
+<tr>
+<td style="text-align:left">Decision Tree</td>
+<td>9</td>
+<td>0.3575</td>
+<td>0.322</td>
+</tr>
+<tr>
+<td style="text-align:left">Adaboost</td>
+<td>50</td>
+<td>0.339</td>
+<td>0.418</td>
+</tr>
+<tr>
+<td style="text-align:left">Naive Bayes</td>
+<td>16</td>
+<td>0.374</td>
+<td>0.385</td>
+</tr>
+<tr>
+<td style="text-align:left">KNN</td>
+<td>8</td>
+<td>0.237</td>
+<td>0.701</td>
+</tr>
+<tr>
+<td style="text-align:left">SVC</td>
+<td>7</td>
+<td>0.039</td>
+<td>0.963</td>
+</tr>
+</tbody>
+</table>
+<p>In this case, each algorithm except for Naive Bayes got a huge improvement, and DecisionTreeClassifier and AdaBoostClassifier pushed both recall and precision scores higher than 0.3! Although KNeighborsClassifier and SVC achieved pretty high precision scores, but they had bad recall scores. To try to get better scores, next I would like to try finding out the best parameters set for KNeighborsClassifier, making its scores higher than 0.3 as well. KNN has some inner parameters like n_neighbors, weights, leaf<em>size, etc. If I did not change anything in the algorithm, it would apply all default parameters. But the default values might not always work well, even not the optimal for the learning algorithm. That's why I needed to try different parameters to find out the most fitting ones. For example, the KNN algorithm with default setting returned 0.237 and 0.701 for recall and precision scores, which was not a qualified outcome. By changing the parameters, I might lower the precision score but raise the recall score higher than the threshold. To see more details: <a href="https://en.wikipedia.org/wiki/Hyperparameter">https://en.wikipedia.org/wiki/Hyperparameter</a></em>(machine_learning)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sss</span> <span class="o">=</span> <span class="n">StratifiedShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> 
+                          <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+             <span class="s1">&#39;model__n_neighbors&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+             <span class="s1">&#39;model__weights&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span> <span class="s1">&#39;distance&#39;</span><span class="p">],</span> <span class="c1">#already tried rbf and sigmoid and worse than poly</span>
+             <span class="s1">&#39;model__leaf_size&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+             <span class="p">}</span> <span class="c1">#push up dimention did not help at all</span>
+<span class="c1">##Search for best_params for KNeighborsClassifier</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
+<span class="c1">## Pipeline object</span>
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;minabser&#39;</span><span class="p">,</span> <span class="n">MaxAbsScaler</span><span class="p">()),</span>
+                    <span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="n">SelectKBest</span><span class="p">()),</span> 
+                    <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>   
+                    <span class="p">])</span>
+<span class="n">dt_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipe</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">sss</span><span class="p">,</span>
+                    <span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;f1&#39;</span><span class="p">)</span>
+<span class="c1">##print(dt_search.get_params)</span>
+<span class="n">dt_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+<span class="c1">### Score of best_estimator on the left out data</span>
+<span class="c1">## Print the optimized parameters used in the model selected from grid search</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">clf</span><span class="p">,</span> <span class="s1">&#39; result table: &#39;</span><span class="p">,</span> <span class="n">dt_search</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Features index list: &#39;</span><span class="p">,</span> <span class="n">dt_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s1">&#39;select&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_support</span><span class="p">())</span>
+<span class="n">knn_bestkfeature</span> <span class="o">=</span> <span class="n">dt_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s1">&#39;select&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_support</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>KNeighborsClassifier(algorithm=&#39;auto&#39;, leaf_size=30, metric=&#39;minkowski&#39;,
+           metric_params=None, n_jobs=1, n_neighbors=5, p=2,
+           weights=&#39;uniform&#39;)  result table:  {&#39;model__weights&#39;: &#39;distance&#39;, &#39;select__k&#39;: 8, &#39;model__leaf_size&#39;: 10, &#39;model__n_neighbors&#39;: 3}
+Features index list:  [False  True  True False False False False False False False False False
+  True  True  True False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False  True  True  True]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">KNN_best_param</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;select__k&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;clf__n_neighbors&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;clf__leaf_size&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                 <span class="s1">&#39;clf__weights&#39;</span><span class="p">:</span> <span class="s1">&#39;distance&#39;</span><span class="p">}</span>
+<span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;K Nearest Neighbors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester_tuned</span><span class="p">(</span>
+    <span class="n">KNeighborsClassifier</span><span class="p">(),</span> <span class="n">KNN_best_param</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">algorithms_comparison</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;K Nearest Neighbors&#39;: [[0.3105, 0.476592478894858, 0.8626]], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [[0.357, 0.3216216216216216, 0.8138666666666666]], &#39;Adaboost&#39;: [[0.3385, 0.41815935762816553, 0.849]], &#39;Naive Bayes&#39;: [[0.374, 0.38516992790937177, 0.8369333333333333]], &#39;Random Forest&#39;: [[0.2635, 0.4395329441201001, 0.857]], &#39;SVM&#39;: [], &#39;SVC&#39;: [[0.0385, 0.9625, 0.8716]]}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features_list</span> <span class="o">=</span> <span class="n">reset_feature_list</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">features_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">knn_bestkfeature</span><span class="p">))</span>
+<span class="n">finalized_features_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">boolean</span><span class="p">,</span> <span class="n">feature</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">knn_bestkfeature</span><span class="p">,</span> <span class="n">features_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+    <span class="k">if</span> <span class="n">boolean</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">feature</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">finalized_features_list</span><span class="p">:</span>
+        <span class="n">finalized_features_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finalized_features_list</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>58 58
+[&#39;bonus_mean_ratio&#39;, &#39;bonus_median_ratio&#39;, &#39;exercised_stock_options&#39;, &#39;exercised_stock_options_mean_ratio&#39;, &#39;exercised_stock_options_median_ratio&#39;, &#39;total_stock_value&#39;, &#39;total_stock_value_mean_ratio&#39;, &#39;total_stock_value_median_ratio&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After trying different parameters in KNN algorithm, the recall and precision scores were pushed up to 0.3105 and 0.4766 separately, with the following parameter setting:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Function</th>
+<th>Parameter Key</th>
+<th>Parameter Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SelectKBest</td>
+<td>k</td>
+<td>8</td>
+</tr>
+<tr>
+<td style="text-align:left">KNeighborsClassifier</td>
+<td>n_neighbors</td>
+<td>3</td>
+</tr>
+<tr>
+<td style="text-align:left">KNeighborsClassifier</td>
+<td>leaf_size</td>
+<td>10</td>
+</tr>
+<tr>
+<td style="text-align:left">KNeighborsClassifier</td>
+<td>weights</td>
+<td>distance</td>
+</tr>
+</tbody>
+</table>
+<p>And the selected features were:
+ ['bonus_mean_ratio', 'bonus_median_ratio', 'exercised_stock_options', 'exercised_stock_options_mean_ratio', 'exercised_stock_options_median_ratio', 'total_stock_value', 'total_stock_value_mean_ratio', 'total_stock_value_median_ratio']</p>
+<p>Compared the outcome with Naive Bayes tuned with PCA, KNN with tuned parameters and SelectKBest returns better scores, so I would like to choose KNN as my final model.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h3><p>The results should not be taken too seriously and more advanced models should be used. Possibilities for future research could be to include more complex pipelines for the data, try different feature selecting tools and learning parameters, or even Neural Networks. This was just a starting point analysis for classifying Enron employees, and I would like to try and learn more tools and algorithms to make the prediction better.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><p><a href="https://www.udacity.com/course/intro-to-machine-learning--ud120">Udacity - Intro to Machine Learning course</a></p>
+<p><a href="http://scikit-learn.org/stable/documentation.html">Sklearn documentation</a></p>
+<p><a href="http://machinelearningmastery.com/feature-selection-machine-learning-python/">Feature selecting</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Task 6: Dump your classifier, dataset, and features_list so anyone can</span>
+<span class="c1">### check your results. You do not need to change anything below, but make sure</span>
+<span class="c1">### that the version of poi_id.py that you submit can be run on its own and</span>
+<span class="c1">### generates the necessary .pkl files for validating your results.</span>
+<span class="kn">from</span> <span class="nn">tester</span> <span class="k">import</span> <span class="n">dump_classifier_and_data</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s1">&#39;reduce_dim&#39;</span><span class="p">,</span> <span class="n">SelectKBest</span><span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)),</span> 
+                 <span class="p">(</span><span class="s1">&#39;clf&#39;</span><span class="p">,</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">leaf_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> 
+                                              <span class="n">weights</span> <span class="o">=</span> <span class="s1">&#39;distance&#39;</span><span class="p">))])</span>
+<span class="n">features_list</span> <span class="o">=</span> <span class="n">reset_feature_list</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;/Users/KunWuYao/Desktop/Python shortcut/Python Exercise ver3/Udacity/Data Analyst Nanodegree/Project5/tester.py&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">57</span>
+<span class="ansi-red-fg">    print &#34;Warning: Found a predicted label not == 0 or 1.&#34;</span>
+                                                          ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> Missing parentheses in call to &#39;print&#39;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finally, output the data</span>
@@ -13299,6 +13918,26 @@ After importing and computing recall and precision scores, I found that some alg
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-49-2da21b3e921c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Finally, output the data</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>dump_classifier_and_data<span class="ansi-blue-fg">(</span>clf<span class="ansi-blue-fg">,</span> my_dataset<span class="ansi-blue-fg">,</span> features_list<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;dump_classifier_and_data&#39; is not defined</pre>
+</div>
+</div>
+
 </div>
 </div>
 
