@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>final_project_v4</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>final_project_readme_v6</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -13,8 +11,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1109,7 +1107,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2538,7 +2535,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3029,7 +3025,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8760,6 +8755,9 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
+[dir="rtl"] #ipython_notebook {
+  float: right !important;
+}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8962,8 +8960,14 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
+[dir="rtl"] #tabs li {
+  float: right;
+}
 ul#tabs {
   margin-bottom: 4px;
+}
+[dir="rtl"] ul#tabs {
+  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8986,6 +8990,16 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
+}
+[dir="rtl"] .list_toolbar .tree-buttons {
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-right {
+  padding-top: 1px;
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-left {
+  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9122,6 +9136,9 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
+[dir="rtl"] #tree-selector a {
+  float: right;
+}
 #button-select-all {
   min-width: 50px;
 }
@@ -9211,6 +9228,9 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
+[dir="rtl"] #new-menu {
+  text-align: right;
+}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9255,6 +9275,9 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
+}
+[dir="rtl"] #running .col-sm-8 {
+  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9551,6 +9574,7 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
+  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9571,11 +9595,6 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
-}
-@-moz-document url-prefix() {
-  div.inner_cell {
-    overflow-x: hidden;
-  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11246,7 +11265,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 20ex;
+  width: 21ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11558,6 +11577,7 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
+  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11571,6 +11591,9 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
+}
+.terminal-app .terminal .xterm-rows {
+  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11631,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11643,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11804,12 +11831,14 @@ Please note that the python version I dealt with was 3.5, which was different fr
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data type:  &lt;class &#39;dict&#39;&gt;
-Data frame and data points in total:  [(&#39;THORN TERENCE H&#39;, {&#39;shared_receipt_with_poi&#39;: 73, &#39;restricted_stock_deferred&#39;: &#39;NaN&#39;, &#39;to_messages&#39;: 266, &#39;other&#39;: 426629, &#39;bonus&#39;: &#39;NaN&#39;, &#39;from_poi_to_this_person&#39;: 0, &#39;expenses&#39;: 46145, &#39;from_this_person_to_poi&#39;: 0, &#39;salary&#39;: 222093, &#39;total_stock_value&#39;: 4817796, &#39;exercised_stock_options&#39;: 4452476, &#39;restricted_stock&#39;: 365320, &#39;deferral_payments&#39;: 16586, &#39;total_payments&#39;: 911453, &#39;director_fees&#39;: &#39;NaN&#39;, &#39;loan_advances&#39;: &#39;NaN&#39;, &#39;long_term_incentive&#39;: 200000, &#39;email_address&#39;: &#39;terence.thorn@enron.com&#39;, &#39;from_messages&#39;: 41, &#39;poi&#39;: False, &#39;deferred_income&#39;: &#39;NaN&#39;})] 146
+Data frame and data points in total:  [(&#39;KEAN STEVEN J&#39;, {&#39;loan_advances&#39;: &#39;NaN&#39;, &#39;from_this_person_to_poi&#39;: 387, &#39;expenses&#39;: 41953, &#39;deferral_payments&#39;: &#39;NaN&#39;, &#39;total_payments&#39;: 1747522, &#39;long_term_incentive&#39;: 300000, &#39;from_poi_to_this_person&#39;: 140, &#39;salary&#39;: 404338, &#39;restricted_stock&#39;: 4131594, &#39;to_messages&#39;: 12754, &#39;exercised_stock_options&#39;: 2022048, &#39;restricted_stock_deferred&#39;: &#39;NaN&#39;, &#39;poi&#39;: False, &#39;shared_receipt_with_poi&#39;: 3639, &#39;other&#39;: 1231, &#39;director_fees&#39;: &#39;NaN&#39;, &#39;deferred_income&#39;: &#39;NaN&#39;, &#39;total_stock_value&#39;: 6153642, &#39;email_address&#39;: &#39;steven.kean@enron.com&#39;, &#39;bonus&#39;: 1000000, &#39;from_messages&#39;: 6759})] 146
 Total features number:  21
-defaultdict(&lt;class &#39;int&#39;&gt;, {&#39;exercised_stock_options&#39;: 44, &#39;restricted_stock_deferred&#39;: 128, &#39;from_poi_to_this_person&#39;: 72, &#39;other&#39;: 53, &#39;bonus&#39;: 64, &#39;from_this_person_to_poi&#39;: 80, &#39;expenses&#39;: 51, &#39;to_messages&#39;: 60, &#39;salary&#39;: 51, &#39;total_stock_value&#39;: 20, &#39;shared_receipt_with_poi&#39;: 60, &#39;restricted_stock&#39;: 36, &#39;deferral_payments&#39;: 107, &#39;loan_advances&#39;: 142, &#39;director_fees&#39;: 129, &#39;total_payments&#39;: 21, &#39;long_term_incentive&#39;: 80, &#39;email_address&#39;: 35, &#39;from_messages&#39;: 60, &#39;poi&#39;: 128, &#39;deferred_income&#39;: 97})
+defaultdict(&lt;class &#39;int&#39;&gt;, {&#39;loan_advances&#39;: 142, &#39;from_this_person_to_poi&#39;: 80, &#39;expenses&#39;: 51, &#39;deferral_payments&#39;: 107, &#39;total_payments&#39;: 21, &#39;long_term_incentive&#39;: 80, &#39;from_poi_to_this_person&#39;: 72, &#39;salary&#39;: 51, &#39;restricted_stock&#39;: 36, &#39;exercised_stock_options&#39;: 44, &#39;to_messages&#39;: 60, &#39;bonus&#39;: 64, &#39;restricted_stock_deferred&#39;: 128, &#39;poi&#39;: 128, &#39;shared_receipt_with_poi&#39;: 60, &#39;other&#39;: 53, &#39;deferred_income&#39;: 97, &#39;total_stock_value&#39;: 20, &#39;email_address&#39;: 35, &#39;director_fees&#39;: 129, &#39;from_messages&#39;: 60})
 </pre>
 </div>
 </div>
@@ -11883,9 +11912,11 @@ See the first data point with dict.items method for example:</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;LOCKHART EUGENE E&#39;, 20), (&#39;WHALEY DAVID A&#39;, 18), (&#39;THE TRAVEL AGENCY IN THE PARK&#39;, 18), (&#39;GRAMM WENDY L&#39;, 18), (&#39;WROBEL BRUCE&#39;, 18), (&#39;SCRIMSHAW MATTHEW&#39;, 17), (&#39;GILLIS JOHN&#39;, 17), (&#39;SAVAGE FRANK&#39;, 17), (&#39;WODRASKA JOHN&#39;, 17), (&#39;WAKEHAM JOHN&#39;, 17), (&#39;CLINE KENNETH W&#39;, 17), (&#39;PEREIRA PAULO V. FERRAZ&#39;, 16), (&#39;CHRISTODOULOU DIOMEDES&#39;, 16), (&#39;MENDELSOHN JOHN&#39;, 16), (&#39;MEYER JEROME J&#39;, 16), (&#39;YEAP SOON&#39;, 16), (&#39;LOWRY CHARLES P&#39;, 16), (&#39;URQUHART JOHN A&#39;, 16), (&#39;WINOKUR JR. HERBERT S&#39;, 16), (&#39;CHAN RONNIE&#39;, 16), (&#39;GATHMANN WILLIAM D&#39;, 16), (&#39;BLAKE JR. NORMAN P&#39;, 16), (&#39;FUGH JOHN L&#39;, 16), (&#39;NOLES JAMES L&#39;, 15), (&#39;BADUM JAMES P&#39;, 15), (&#39;LEMAISTRE CHARLES&#39;, 15), (&#39;GRAY RODNEY&#39;, 15), (&#39;WALTERS GARETH W&#39;, 15), (&#39;DUNCAN JOHN H&#39;, 15), (&#39;BELFER ROBERT&#39;, 14), (&#39;PRENTICE JAMES&#39;, 14), (&#39;JAEDICKE ROBERT&#39;, 13), (&#39;BERBERIAN DAVID&#39;, 13), (&#39;HIRKO JOSEPH&#39;, 13), (&#39;BAZELIDES PHILIP J&#39;, 13), (&#39;SULLIVAN-SHAKLOVITZ COLLEEN&#39;, 12), (&#39;HAYSLETT RODERICK J&#39;, 12), (&#39;BROWN MICHAEL&#39;, 12), (&#39;MORDAUNT KRISTINA M&#39;, 12), (&#39;STABLER FRANK&#39;, 12), (&#39;PIRO JIM&#39;, 12), (&#39;CUMBERLAND MICHAEL S&#39;, 12), (&#39;KISHKILL JOSEPH G&#39;, 12), (&#39;YEAGER F SCOTT&#39;, 12), (&#39;POWERS WILLIAM&#39;, 12), (&#39;LEWIS RICHARD&#39;, 12), (&#39;SHERRICK JEFFREY B&#39;, 11), (&#39;HUGHES JAMES A&#39;, 11), (&#39;MCDONALD REBECCA&#39;, 11), (&#39;GOLD JOSEPH&#39;, 11), (&#39;WHITE JR THOMAS E&#39;, 11), (&#39;CORDES WILLIAM R&#39;, 11), (&#39;MORAN MICHAEL P&#39;, 11), (&#39;WESTFAHL RICHARD K&#39;, 11), (&#39;MCCARTY DANNY J&#39;, 11), (&#39;OVERDYKE JR JERE C&#39;, 11), (&#39;KOPPER MICHAEL J&#39;, 11), (&#39;FOWLER PEGGY&#39;, 11), (&#39;PAI LOU L&#39;, 11), (&#39;HAYES ROBERT E&#39;, 10), (&#39;HAUG DAVID L&#39;, 10), (&#39;ELLIOTT STEVEN&#39;, 10), (&#39;BUTTS ROBERT H&#39;, 10), (&#39;GAHN ROBERT S&#39;, 10), (&#39;DIMICHELE RICHARD G&#39;, 10), (&#39;ECHOLS JOHN B&#39;, 10), (&#39;FOY JOE&#39;, 10), (&#39;UMANOFF ADAM S&#39;, 10), (&#39;FASTOW ANDREW S&#39;, 10), (&#39;GIBBS DANA R&#39;, 9), (&#39;HORTON STANLEY C&#39;, 9), (&#39;HERMANN ROBERT J&#39;, 9), (&#39;BAXTER JOHN C&#39;, 9), (&#39;LINDHOLM TOD A&#39;, 9), (&#39;MEYER ROCKFORD G&#39;, 9), (&#39;BAY FRANKLIN R&#39;, 9), (&#39;DODSON KEITH&#39;, 9), (&#39;BHATNAGAR SANJAY&#39;, 8), (&#39;HUMPHREY GENE E&#39;, 8), (&#39;REYNOLDS LAWRENCE&#39;, 8), (&#39;REDMOND BRIAN L&#39;, 8), (&#39;METTS MARK&#39;, 7), (&#39;BECK SALLY W&#39;, 7), (&#39;DETMERING TIMOTHY J&#39;, 7), (&#39;LEFF DANIEL P&#39;, 7), (&#39;TAYLOR MITCHELL S&#39;, 7), (&#39;SUNDE MARTIN&#39;, 7), (&#39;PICKERING MARK R&#39;, 7), (&#39;IZZO LAWRENCE L&#39;, 6), (&#39;KITCHEN LOUISE&#39;, 6), (&#39;CARTER REBECCA C&#39;, 6), (&#39;SHERRIFF JOHN R&#39;, 6), (&#39;MARTIN AMANDA K&#39;, 6), (&#39;JACKSON CHARLENE R&#39;, 6), (&#39;TOTAL&#39;, 6), (&#39;HICKERSON GARY J&#39;, 6), (&#39;SHAPIRO RICHARD S&#39;, 6), (&#39;THORN TERENCE H&#39;, 5), (&#39;BERGSIEKER RICHARD P&#39;, 5), (&#39;DELAINEY DAVID W&#39;, 5), (&#39;SKILLING JEFFREY K&#39;, 5), (&#39;KOENIG MARK E&#39;, 5), (&#39;DEFFNER JOSEPH M&#39;, 5), (&#39;BIBI PHILIPPE A&#39;, 5), (&#39;CAUSEY RICHARD A&#39;, 5), (&#39;KEAN STEVEN J&#39;, 5), (&#39;WHALLEY LAWRENCE G&#39;, 5), (&#39;DURAN WILLIAM D&#39;, 5), (&#39;COX DAVID&#39;, 5), (&#39;CALGER CHRISTOPHER F&#39;, 5), (&#39;FITZGERALD JAY L&#39;, 5), (&#39;GLISAN JR BEN F&#39;, 5), (&#39;FALLON JAMES B&#39;, 5), (&#39;BANNANTINE JAMES M&#39;, 5), (&#39;KAMINSKI WINCENTY J&#39;, 5), (&#39;BLACHMAN JEREMY M&#39;, 5), (&#39;DONAHUE JR JEFFREY M&#39;, 5), (&#39;BOWEN JR RAYMOND M&#39;, 5), (&#39;WALLS JR ROBERT H&#39;, 5), (&#39;COLWELL WESLEY&#39;, 5), (&#39;MCCONNELL MICHAEL S&#39;, 5), (&#39;MURRAY JULIA H&#39;, 5), (&#39;GARLAND C KEVIN&#39;, 5), (&#39;DIETRICH JANET R&#39;, 5), (&#39;BUCHANAN HAROLD G&#39;, 5), (&#39;LAVORATO JOHN J&#39;, 5), (&#39;SHANKMAN JEFFREY A&#39;, 5), (&#39;MCMAHON JEFFREY&#39;, 5), (&#39;MCCLELLAN GEORGE&#39;, 5), (&#39;TILNEY ELIZABETH A&#39;, 5), (&#39;SHELBY REX&#39;, 5), (&#39;HANNON KEVIN P&#39;, 4), (&#39;WASAFF GEORGE&#39;, 4), (&#39;SHARP VICTORIA T&#39;, 4), (&#39;BELDEN TIMOTHY N&#39;, 4), (&#39;RICE KENNETH D&#39;, 4), (&#39;OLSON CINDY K&#39;, 4), (&#39;BUY RICHARD B&#39;, 4), (&#39;MULLER MARK S&#39;, 4), (&#39;RIEKER PAULA H&#39;, 4), (&#39;DERRICK JR. JAMES V&#39;, 3), (&#39;PIPER GREGORY F&#39;, 3), (&#39;HAEDICKE MARK E&#39;, 2), (&#39;ALLEN PHILLIP K&#39;, 2), (&#39;LAY KENNETH L&#39;, 2), (&#39;FREVERT MARK A&#39;, 2)]
+<pre>[(&#39;LOCKHART EUGENE E&#39;, 20), (&#39;THE TRAVEL AGENCY IN THE PARK&#39;, 18), (&#39;GRAMM WENDY L&#39;, 18), (&#39;WROBEL BRUCE&#39;, 18), (&#39;WHALEY DAVID A&#39;, 18), (&#39;CLINE KENNETH W&#39;, 17), (&#39;WODRASKA JOHN&#39;, 17), (&#39;SAVAGE FRANK&#39;, 17), (&#39;GILLIS JOHN&#39;, 17), (&#39;SCRIMSHAW MATTHEW&#39;, 17), (&#39;WAKEHAM JOHN&#39;, 17), (&#39;CHRISTODOULOU DIOMEDES&#39;, 16), (&#39;PEREIRA PAULO V. FERRAZ&#39;, 16), (&#39;CHAN RONNIE&#39;, 16), (&#39;BLAKE JR. NORMAN P&#39;, 16), (&#39;WINOKUR JR. HERBERT S&#39;, 16), (&#39;FUGH JOHN L&#39;, 16), (&#39;GATHMANN WILLIAM D&#39;, 16), (&#39;MENDELSOHN JOHN&#39;, 16), (&#39;LOWRY CHARLES P&#39;, 16), (&#39;URQUHART JOHN A&#39;, 16), (&#39;YEAP SOON&#39;, 16), (&#39;MEYER JEROME J&#39;, 16), (&#39;DUNCAN JOHN H&#39;, 15), (&#39;BADUM JAMES P&#39;, 15), (&#39;GRAY RODNEY&#39;, 15), (&#39;WALTERS GARETH W&#39;, 15), (&#39;LEMAISTRE CHARLES&#39;, 15), (&#39;NOLES JAMES L&#39;, 15), (&#39;BELFER ROBERT&#39;, 14), (&#39;PRENTICE JAMES&#39;, 14), (&#39;JAEDICKE ROBERT&#39;, 13), (&#39;HIRKO JOSEPH&#39;, 13), (&#39;BERBERIAN DAVID&#39;, 13), (&#39;BAZELIDES PHILIP J&#39;, 13), (&#39;CUMBERLAND MICHAEL S&#39;, 12), (&#39;LEWIS RICHARD&#39;, 12), (&#39;BROWN MICHAEL&#39;, 12), (&#39;PIRO JIM&#39;, 12), (&#39;SULLIVAN-SHAKLOVITZ COLLEEN&#39;, 12), (&#39;YEAGER F SCOTT&#39;, 12), (&#39;HAYSLETT RODERICK J&#39;, 12), (&#39;KISHKILL JOSEPH G&#39;, 12), (&#39;STABLER FRANK&#39;, 12), (&#39;MORDAUNT KRISTINA M&#39;, 12), (&#39;POWERS WILLIAM&#39;, 12), (&#39;GOLD JOSEPH&#39;, 11), (&#39;MCCARTY DANNY J&#39;, 11), (&#39;WHITE JR THOMAS E&#39;, 11), (&#39;FOWLER PEGGY&#39;, 11), (&#39;MCDONALD REBECCA&#39;, 11), (&#39;HUGHES JAMES A&#39;, 11), (&#39;KOPPER MICHAEL J&#39;, 11), (&#39;WESTFAHL RICHARD K&#39;, 11), (&#39;MORAN MICHAEL P&#39;, 11), (&#39;OVERDYKE JR JERE C&#39;, 11), (&#39;CORDES WILLIAM R&#39;, 11), (&#39;PAI LOU L&#39;, 11), (&#39;SHERRICK JEFFREY B&#39;, 11), (&#39;HAUG DAVID L&#39;, 10), (&#39;BUTTS ROBERT H&#39;, 10), (&#39;FOY JOE&#39;, 10), (&#39;DIMICHELE RICHARD G&#39;, 10), (&#39;HAYES ROBERT E&#39;, 10), (&#39;ELLIOTT STEVEN&#39;, 10), (&#39;ECHOLS JOHN B&#39;, 10), (&#39;GAHN ROBERT S&#39;, 10), (&#39;UMANOFF ADAM S&#39;, 10), (&#39;FASTOW ANDREW S&#39;, 10), (&#39;DODSON KEITH&#39;, 9), (&#39;BAY FRANKLIN R&#39;, 9), (&#39;HORTON STANLEY C&#39;, 9), (&#39;GIBBS DANA R&#39;, 9), (&#39;HERMANN ROBERT J&#39;, 9), (&#39;BAXTER JOHN C&#39;, 9), (&#39;MEYER ROCKFORD G&#39;, 9), (&#39;LINDHOLM TOD A&#39;, 9), (&#39;HUMPHREY GENE E&#39;, 8), (&#39;REYNOLDS LAWRENCE&#39;, 8), (&#39;BHATNAGAR SANJAY&#39;, 8), (&#39;REDMOND BRIAN L&#39;, 8), (&#39;PICKERING MARK R&#39;, 7), (&#39;BECK SALLY W&#39;, 7), (&#39;METTS MARK&#39;, 7), (&#39;SUNDE MARTIN&#39;, 7), (&#39;TAYLOR MITCHELL S&#39;, 7), (&#39;DETMERING TIMOTHY J&#39;, 7), (&#39;LEFF DANIEL P&#39;, 7), (&#39;IZZO LAWRENCE L&#39;, 6), (&#39;TOTAL&#39;, 6), (&#39;CARTER REBECCA C&#39;, 6), (&#39;HICKERSON GARY J&#39;, 6), (&#39;KITCHEN LOUISE&#39;, 6), (&#39;MARTIN AMANDA K&#39;, 6), (&#39;JACKSON CHARLENE R&#39;, 6), (&#39;SHERRIFF JOHN R&#39;, 6), (&#39;SHAPIRO RICHARD S&#39;, 6), (&#39;KEAN STEVEN J&#39;, 5), (&#39;WHALLEY LAWRENCE G&#39;, 5), (&#39;GARLAND C KEVIN&#39;, 5), (&#39;CAUSEY RICHARD A&#39;, 5), (&#39;MCCLELLAN GEORGE&#39;, 5), (&#39;WALLS JR ROBERT H&#39;, 5), (&#39;SKILLING JEFFREY K&#39;, 5), (&#39;CALGER CHRISTOPHER F&#39;, 5), (&#39;SHELBY REX&#39;, 5), (&#39;LAVORATO JOHN J&#39;, 5), (&#39;COLWELL WESLEY&#39;, 5), (&#39;DONAHUE JR JEFFREY M&#39;, 5), (&#39;DURAN WILLIAM D&#39;, 5), (&#39;BANNANTINE JAMES M&#39;, 5), (&#39;SHANKMAN JEFFREY A&#39;, 5), (&#39;MURRAY JULIA H&#39;, 5), (&#39;MCCONNELL MICHAEL S&#39;, 5), (&#39;MCMAHON JEFFREY&#39;, 5), (&#39;COX DAVID&#39;, 5), (&#39;BLACHMAN JEREMY M&#39;, 5), (&#39;THORN TERENCE H&#39;, 5), (&#39;BOWEN JR RAYMOND M&#39;, 5), (&#39;DEFFNER JOSEPH M&#39;, 5), (&#39;TILNEY ELIZABETH A&#39;, 5), (&#39;GLISAN JR BEN F&#39;, 5), (&#39;KOENIG MARK E&#39;, 5), (&#39;DIETRICH JANET R&#39;, 5), (&#39;BERGSIEKER RICHARD P&#39;, 5), (&#39;BIBI PHILIPPE A&#39;, 5), (&#39;FITZGERALD JAY L&#39;, 5), (&#39;DELAINEY DAVID W&#39;, 5), (&#39;FALLON JAMES B&#39;, 5), (&#39;BUCHANAN HAROLD G&#39;, 5), (&#39;KAMINSKI WINCENTY J&#39;, 5), (&#39;RIEKER PAULA H&#39;, 4), (&#39;RICE KENNETH D&#39;, 4), (&#39;WASAFF GEORGE&#39;, 4), (&#39;MULLER MARK S&#39;, 4), (&#39;SHARP VICTORIA T&#39;, 4), (&#39;HANNON KEVIN P&#39;, 4), (&#39;BELDEN TIMOTHY N&#39;, 4), (&#39;OLSON CINDY K&#39;, 4), (&#39;BUY RICHARD B&#39;, 4), (&#39;PIPER GREGORY F&#39;, 3), (&#39;DERRICK JR. JAMES V&#39;, 3), (&#39;HAEDICKE MARK E&#39;, 2), (&#39;ALLEN PHILLIP K&#39;, 2), (&#39;LAY KENNETH L&#39;, 2), (&#39;FREVERT MARK A&#39;, 2)]
 </pre>
 </div>
 </div>
@@ -11989,7 +12020,9 @@ See the first data point with dict.items method for example:</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[&#39;poi&#39;, &#39;bonus&#39;, &#39;deferral_payments&#39;, &#39;deferred_income&#39;, &#39;director_fees&#39;, &#39;exercised_stock_options&#39;, &#39;expenses&#39;, &#39;from_messages&#39;, &#39;from_poi_to_this_person&#39;, &#39;from_this_person_to_poi&#39;, &#39;loan_advances&#39;, &#39;long_term_incentive&#39;, &#39;other&#39;, &#39;restricted_stock&#39;, &#39;restricted_stock_deferred&#39;, &#39;salary&#39;, &#39;shared_receipt_with_poi&#39;, &#39;to_messages&#39;, &#39;total_payments&#39;, &#39;total_stock_value&#39;]
 </pre>
@@ -12085,28 +12118,30 @@ See the first data point with dict.items method for example:</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>PearsonR between poi and  exercised_stock_options  :  (0.38685273723309588, 1.8182211820386215e-06)
-PearsonR between poi and  restricted_stock_deferred  :  (-0.021548443730261418, 0.79837555950439509)
-PearsonR between poi and  from_poi_to_this_person  :  (0.1925980246707418, 0.021192156728044927)
-PearsonR between poi and  bonus  :  (0.35848605315772913, 1.1012789919115899e-05)
-PearsonR between poi and  other  :  (0.16983000295074535, 0.042580414923631717)
-PearsonR between poi and  from_this_person_to_poi  :  (0.13496836430315587, 0.10801392105201223)
-PearsonR between poi and  expenses  :  (0.20356124128833136, 0.014749906830119808)
-PearsonR between poi and  to_messages  :  (0.10762314208525052, 0.2007528121636562)
-PearsonR between poi and  salary  :  (0.33885132032769322, 3.4782882030548758e-05)
-PearsonR between poi and  total_stock_value  :  (0.38262353734838978, 2.4043089131893369e-06)
-PearsonR between poi and  shared_receipt_with_poi  :  (0.23966097464495092, 0.0039401691216989681)
-PearsonR between poi and  restricted_stock  :  (0.24765264180635183, 0.0028627778155170297)
-PearsonR between poi and  deferral_payments  :  (-0.039880323013413155, 0.63628313644857992)
-PearsonR between poi and  total_payments  :  (0.24202053177951907, 0.003589319021334966)
-PearsonR between poi and  director_fees  :  (-0.12188888360393317, 0.14700290183173831)
-PearsonR between poi and  loan_advances  :  (0.22018315467784991, 0.0082318533277599328)
-PearsonR between poi and  long_term_incentive  :  (0.2564055488199089, 0.0019941673619026596)
-PearsonR between poi and  from_messages  :  (-0.034186015022908946, 0.68523064093101405)
-PearsonR between poi and  poi  :  (1.0, 0.0)
+<pre>PearsonR between poi and  loan_advances  :  (0.22018315467784991, 0.0082318533277599328)
+PearsonR between poi and  restricted_stock_deferred  :  (-0.021548443730261428, 0.79837555950439509)
 PearsonR between poi and  deferred_income  :  (-0.27415038034631295, 0.00092200531522211116)
+PearsonR between poi and  expenses  :  (0.20356124128833136, 0.014749906830119808)
+PearsonR between poi and  deferral_payments  :  (-0.039880323013413189, 0.63628313644857992)
+PearsonR between poi and  total_payments  :  (0.24202053177951902, 0.003589319021334966)
+PearsonR between poi and  long_term_incentive  :  (0.25640554881990896, 0.0019941673619026596)
+PearsonR between poi and  salary  :  (0.33885132032769316, 3.4782882030548758e-05)
+PearsonR between poi and  to_messages  :  (0.10762314208525051, 0.2007528121636562)
+PearsonR between poi and  exercised_stock_options  :  (0.38685273723309593, 1.8182211820386215e-06)
+PearsonR between poi and  from_this_person_to_poi  :  (0.1349683643031559, 0.10801392105201223)
+PearsonR between poi and  total_stock_value  :  (0.38262353734838972, 2.4043089131893602e-06)
+PearsonR between poi and  poi  :  (1.0, 0.0)
+PearsonR between poi and  shared_receipt_with_poi  :  (0.23966097464495092, 0.0039401691216989681)
+PearsonR between poi and  other  :  (0.16983000295074532, 0.042580414923631717)
+PearsonR between poi and  from_poi_to_this_person  :  (0.1925980246707418, 0.021192156728044927)
+PearsonR between poi and  director_fees  :  (-0.12188888360393317, 0.14700290183173831)
+PearsonR between poi and  bonus  :  (0.35848605315772913, 1.1012789919115899e-05)
+PearsonR between poi and  restricted_stock  :  (0.24765264180635183, 0.0028627778155170297)
+PearsonR between poi and  from_messages  :  (-0.034186015022908939, 0.68523064093101405)
 </pre>
 </div>
 </div>
@@ -12298,9 +12333,11 @@ PearsonR between poi and  deferred_income  :  (-0.27415038034631295, 0.000922005
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;shared_receipt_with_poi&#39;: 703.5384615384615, &#39;restricted_stock_deferred&#39;: 73922.5034965035, &#39;from_poi_to_this_person&#39;: 35.04195804195804, &#39;other&#39;: 296803.05594405596, &#39;bonus&#39;: 680720.2727272727, &#39;to_messages&#39;: 1243.2307692307693, &#39;from_this_person_to_poi&#39;: 20.81118881118881, &#39;salary&#39;: 186739.43356643355, &#39;total_stock_value&#39;: 2930132.5034965035, &#39;exercised_stock_options&#39;: 2090315.13986014, &#39;restricted_stock&#39;: 874607.5944055944, &#39;deferral_payments&#39;: 223635.2867132867, &#39;total_payments&#39;: 2272321.188811189, &#39;director_fees&#39;: 10041.23076923077, &#39;loan_advances&#39;: 586878.3216783217, &#39;expenses&#39;: 35619.293706293705, &#39;long_term_incentive&#39;: 339308.7272727273, &#39;from_messages&#39;: 362.13986013986016, &#39;poi&#39;: 0.1258741258741259, &#39;deferred_income&#39;: -195031.05594405593} {&#39;shared_receipt_with_poi&#39;: 114.0, &#39;restricted_stock_deferred&#39;: -10.0, &#39;from_poi_to_this_person&#39;: 4.0, &#39;other&#39;: 947.0, &#39;bonus&#39;: 300000.0, &#39;to_messages&#39;: 383.0, &#39;from_this_person_to_poi&#39;: 0.0, &#39;salary&#39;: 210692.0, &#39;total_stock_value&#39;: 976037.0, &#39;exercised_stock_options&#39;: 608750.0, &#39;restricted_stock&#39;: 360528.0, &#39;deferral_payments&#39;: -10.0, &#39;total_payments&#39;: 966522.0, &#39;director_fees&#39;: -10.0, &#39;loan_advances&#39;: -10.0, &#39;expenses&#39;: 21530.0, &#39;long_term_incentive&#39;: -10.0, &#39;from_messages&#39;: 18.0, &#39;poi&#39;: 0.0, &#39;deferred_income&#39;: 10.0}
+<pre>{&#39;loan_advances&#39;: 586878.3216783217, &#39;from_this_person_to_poi&#39;: 20.81118881118881, &#39;bonus&#39;: 680720.2727272727, &#39;expenses&#39;: 35619.293706293705, &#39;deferral_payments&#39;: 223635.2867132867, &#39;total_payments&#39;: 2272321.188811189, &#39;long_term_incentive&#39;: 339308.7272727273, &#39;from_poi_to_this_person&#39;: 35.04195804195804, &#39;salary&#39;: 186739.43356643355, &#39;restricted_stock&#39;: 874607.5944055944, &#39;to_messages&#39;: 1243.2307692307693, &#39;exercised_stock_options&#39;: 2090315.13986014, &#39;restricted_stock_deferred&#39;: 73922.5034965035, &#39;poi&#39;: 0.1258741258741259, &#39;shared_receipt_with_poi&#39;: 703.5384615384615, &#39;other&#39;: 296803.05594405596, &#39;deferred_income&#39;: -195031.05594405593, &#39;total_stock_value&#39;: 2930132.5034965035, &#39;director_fees&#39;: 10041.23076923077, &#39;from_messages&#39;: 362.13986013986016} {&#39;loan_advances&#39;: -10.0, &#39;from_this_person_to_poi&#39;: 0.0, &#39;bonus&#39;: 300000.0, &#39;expenses&#39;: 21530.0, &#39;deferral_payments&#39;: -10.0, &#39;total_payments&#39;: 966522.0, &#39;long_term_incentive&#39;: -10.0, &#39;from_poi_to_this_person&#39;: 4.0, &#39;salary&#39;: 210692.0, &#39;restricted_stock&#39;: 360528.0, &#39;to_messages&#39;: 383.0, &#39;exercised_stock_options&#39;: 608750.0, &#39;restricted_stock_deferred&#39;: -10.0, &#39;poi&#39;: 0.0, &#39;shared_receipt_with_poi&#39;: 114.0, &#39;other&#39;: 947.0, &#39;deferred_income&#39;: 10.0, &#39;total_stock_value&#39;: 976037.0, &#39;director_fees&#39;: -10.0, &#39;from_messages&#39;: 18.0}
 </pre>
 </div>
 </div>
@@ -12325,26 +12362,6 @@ PearsonR between poi and  deferred_income  :  (-0.27415038034631295, 0.000922005
             <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">_median_ratio&#39;</span> <span class="o">%</span> <span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_dataset</span><span class="p">[</span><span class="n">point</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">/</span> <span class="n">median_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="c1">#check</span>
 <span class="c1">#print(my_dataset[&#39;KISHKILL JOSEPH G&#39;])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Create new features about square of each feature</span>
-<span class="c1">#import re</span>
-<span class="c1">#for point in my_dataset.keys():</span>
-<span class="c1">#    for key in features_list:</span>
-<span class="c1">#        if re.findall(&quot;_sqr&quot;, key) or key == &#39;poi&#39;: continue</span>
-<span class="c1">#        else:</span>
-<span class="c1">#            my_dataset[point][&#39;%s_sqr&#39; % key] = \</span>
-<span class="c1">#                my_dataset[point][key] **2</span>
 </pre></div>
 
 </div>
@@ -12408,245 +12425,153 @@ PearsonR between poi and  deferred_income  :  (-0.27415038034631295, 0.000922005
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>18 71
 </pre>
@@ -12684,7 +12609,8 @@ After computing the ratio of messages received from poi to total received messag
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Algorithms-selection-and-tuning">Algorithms selection and tuning<a class="anchor-link" href="#Algorithms-selection-and-tuning">&#182;</a></h2><p>For the analysis of the data, a total of 6 classifiers was applied, which included:</p>
 <h4 id="Decision-Tree-Classifier">Decision Tree Classifier<a class="anchor-link" href="#Decision-Tree-Classifier">&#182;</a></h4><h4 id="Gaussian-Naive-Bayes">Gaussian Naive Bayes<a class="anchor-link" href="#Gaussian-Naive-Bayes">&#182;</a></h4><h4 id="Support-Vector-Classifier-(SVC)">Support Vector Classifier (SVC)<a class="anchor-link" href="#Support-Vector-Classifier-(SVC)">&#182;</a></h4><h4 id="AdaBoost">AdaBoost<a class="anchor-link" href="#AdaBoost">&#182;</a></h4><h4 id="Random-Forrest-Tree-Classifier">Random Forrest Tree Classifier<a class="anchor-link" href="#Random-Forrest-Tree-Classifier">&#182;</a></h4><h4 id="K-Nearest-Neighbor">K Nearest Neighbor<a class="anchor-link" href="#K-Nearest-Neighbor">&#182;</a></h4><p>The object of the algorithm was to classify and find out which people are more likely to be a POI. There were clearly 2 categories I was looking to label the data.</p>
-<p>To tune the algorithm, I applied PCA to decompose features and dimentions, and MaxAbsScaler to scale and normalize the features. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (or sometimes, principal modes of variation). The number of principal components is less than or equal to the smaller of the number of original variables or the number of observations. This transformation is defined in such a way that the first principal component has the largest possible variance (that is, accounts for as much of the variability in the data as possible), and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components. I did not think the outcome would be the best when I put most features into the algorithms, either only few ones. Also for avoiding overfitting and underfitting, I would like to try PCA components, which meant to group the similar features, between 2 and 10 since there were 58 features in total in the dataset. MaxAbsScaler transforms a dataset of Vector rows, rescaling each feature to range [-1, 1] by dividing through the maximum absolute value in each feature. It does not shift/center the data, and thus does not destroy any sparsity. MaxAbsScaler computes summary statistics on a data set and produces a MaxAbsScalerModel. The model can then transform each feature individually to range [-1, 1].</p>
+<p>When applying algorithms, If I did not change anything in the algorithm, it would apply all default parameters. But the default values might not always be the optimal, even doesn't work well for the learning algorithm. Thats's why I might need to "tune the algorithm". According to the Andrew Ng's MOOC "Machine Learning", there might be overfitting or underfitting when applying the algorithm. For example, the dataset had up to 58 features after some new features were added. If I didn't apply some feature selection methods like SelectKBest or decomposition methods like PCA, the algorithm would take all the features into calculation and have a great chance to become overfitting, because the calculation matrix would be up to 58 dimensions or even more if degree of the features was more than one. Also, there are many other inner parameters in each algorithm such as degree in SVC, which controls the degree of the optimal polynomial function it creates. When it is set very high, the algorithm would take a lot of time computing and more likely to become overfitting, but if it is set low like one or even less, the algorithm would compute much faster but more likely to become underfitting, which means it doesn't even fit the training set. When the algorithm is overfitting, it would be very specific to the training set but return poor accuracy with the test set. That's why I needed to try different parameters to find out the most fitting ones. For example, by changing the parameters in PCA, I might find some perform better than default setting and others. To see more details: <a href="https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning">https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning</a>)</p>
+<p>First, to tune the algorithm, I applied PCA to decompose features and dimentions, and MaxAbsScaler to scale and normalize the features. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (or sometimes, principal modes of variation). The number of principal components is less than or equal to the smaller of the number of original variables or the number of observations. This transformation is defined in such a way that the first principal component has the largest possible variance (that is, accounts for as much of the variability in the data as possible), and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components. I did not think the outcome would be the best when I put most features into the algorithms, either only few ones. Also for avoiding overfitting and underfitting, I would like to try PCA components, which meant to group the similar features, between 2 and 10 since there were 58 features in total in the dataset. MaxAbsScaler transforms a dataset of Vector rows, rescaling each feature to range [-1, 1] by dividing through the maximum absolute value in each feature. It does not shift/center the data, and thus does not destroy any sparsity. MaxAbsScaler computes summary statistics on a data set and produces a MaxAbsScalerModel. The model can then transform each feature individually to range [-1, 1].</p>
 <p>Also, when conducting machine learning algorithms, validation process must be necessary. A testing set would be needed to validate how the algorithm worked after training and it shall be independent of the training set. In a small or skewed dataset like this one, multiple times of validation process might avoid the algorithm to be biased and improve outcome reliability. To build a validation process, I would like to import the module StratifiedShuffleSplit from sklearn. It would return stratified randomized folds which depends on how many times you want to validate, and the training and testing data allocation would be based on appointed data spliting percentage. Since the Anron dataset was pretty small (only 143 persons) and very skewed POI distribution, I would like to set the cross-validation process to be repeated 1000 time and the tested size to be 10%.</p>
 
 </div>
@@ -12786,7 +12712,9 @@ After computing the ratio of messages received from poi to total received messag
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/KunWuYao/anaconda/lib/python3.5/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
   &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
@@ -12867,7 +12795,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
@@ -12882,7 +12810,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;SVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
@@ -12896,7 +12824,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Decision Tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
@@ -12910,7 +12838,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;Random Forest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
@@ -12924,7 +12852,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;AdaBoost&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
@@ -12938,7 +12866,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">algorithms_comparison</span><span class="p">[</span><span class="s1">&#39;K Nearest Neighbors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">algorithm_tester</span><span class="p">(</span>
@@ -12952,7 +12880,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">algorithms_comparison</span><span class="p">)</span>
@@ -12966,9 +12894,11 @@ After computing the ratio of messages received from poi to total received messag
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;K Nearest Neighbors&#39;: [], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [], &#39;Naive Bayes&#39;: [[0.345, 0.46938775510204084, 0.8606666666666667, 8], [0.385, 0.4935897435897436, 0.8653333333333333, 9], [0.385, 0.46107784431137727, 0.858, 10]], &#39;Random Forest&#39;: [], &#39;SVM&#39;: []}
+<pre>{&#39;Naive Bayes&#39;: [[0.345, 0.46938775510204084, 0.8606666666666667, 8], [0.385, 0.4935897435897436, 0.8653333333333333, 9], [0.385, 0.46107784431137727, 0.858, 10]], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [], &#39;K Nearest Neighbors&#39;: [], &#39;SVM&#39;: [], &#39;Random Forest&#39;: []}
 </pre>
 </div>
 </div>
@@ -12982,7 +12912,7 @@ After computing the ratio of messages received from poi to total received messag
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>By running the machine learning codes, I noticed that every algorithm return high accuracy, but does that mean the prediction is good? Or that just results from the low ratio of persons of interest to all people in the dataset? Especially the POI distribution was pretty skewed with only 18 out of the 143 persons. How would the accuracy be if I predicted all persons to be a non-POI? 87.41%, which would be pretty high but nothing valuable to the predicting algorithm. To better evaluate how the outcomes were return by the algorithms I applied, I would like to compute the recall and precision scores instead of accuracy. You might check wiki for more details: <a href="https://en.wikipedia.org/wiki/Precision_and_recall">https://en.wikipedia.org/wiki/Precision_and_recall</a>  In other words, in a skewed dataset with very few true values, recall and precision scores might better evaluate whether the algorithm worked well on predicting positive values.
+<h2 id="Validation-and-Performance">Validation and Performance<a class="anchor-link" href="#Validation-and-Performance">&#182;</a></h2><p>By running the machine learning codes, I noticed that every algorithm return high accuracy, but does that mean the prediction is good? Or that just results from the low ratio of persons of interest to all people in the dataset? Especially the POI distribution was pretty skewed with only 18 out of the 143 persons. How would the accuracy be if I predicted all persons to be a non-POI? 87.41%, which would be pretty high but nothing valuable to the predicting algorithm. To better evaluate how the outcomes were return by the algorithms I applied, I would like to compute the recall and precision scores instead of accuracy. You might check wiki for more details: <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Wiki Precision and Recall</a> In this case, precision score measured how many POI the algorithms predicted were truely POI, and recall score measured how many POI the algorithms failed to detect, which meant the algorithm predicted he/she to be a non-POI. In other words, in a skewed dataset with very few true values, to predict a negative value is much easier than to predict a true value. As mentioned earlier, the accuracy was still pretty high even I did not predict any person to be POI. If I measure the accuracy with precision and recall score instead, the all non-POI prediction would get poor score because it did not predict anybody to be a POI. Concretely, recall and precision scores might better evaluate whether the algorithm worked well on predicting positive values in a skewed dataset.
 After computing recall and precision scores, I found that some algorithms get really bad recall and precision scores. In addition, after testing multiple times, I found that only Naive Bayes returned  recall and precision scores both higher than 0.3. Additionally, there were many different n_component choices in PCA process when running Naive Bayes as the chosen algorithm. Here are the algorithms and PCA choices with both recall and precision scores higher than 0.3:</p>
 <table>
 <thead><tr>
@@ -13074,7 +13004,9 @@ After computing recall and precision scores, I found that some algorithms get re
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[0.34, 0.4336734693877551, 0.8528, 9], [0.3435, 0.413855421686747, 0.8476, 10]]
 </pre>
@@ -13090,7 +13022,7 @@ After computing recall and precision scores, I found that some algorithms get re
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Validation-and-Performance">Validation and Performance<a class="anchor-link" href="#Validation-and-Performance">&#182;</a></h2><p>To validate the performance of each algorithm, <strong>recall</strong> and <strong>precision</strong> scores were calculated for each one. The scores of the best algorithm were listed below:</p>
+<p>To validate the performance of each algorithm, <strong>recall</strong> and <strong>precision</strong> scores were calculated for each one. The scores of the best algorithm were listed below:</p>
 <table>
 <thead><tr>
 <th style="text-align:left">Algorithm</th>
@@ -13134,7 +13066,7 @@ After computing recall and precision scores, I found that some algorithms get re
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#try if we don&#39;t add any new features</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/Users/KunWuYao/GitHub/Udacity_ML_projects/final_project/final_project_dataset.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;final_project_dataset.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
     <span class="n">my_dataset_o</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
 <span class="n">my_dataset_o</span> <span class="o">=</span> <span class="n">remove_nan</span><span class="p">(</span><span class="n">my_dataset_o</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">remove_outlier</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">features_list</span> <span class="o">=</span> <span class="n">reset_feature_list</span><span class="p">(</span><span class="n">my_dataset_o</span><span class="p">)</span>
@@ -13243,7 +13175,9 @@ After computing recall and precision scores, I found that some algorithms get re
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{&#39;K Nearest Neighbors&#39;: [], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [], &#39;Naive Bayes&#39;: [[0.31, 0.34065934065934067, 0.828, 5], [0.33, 0.3707865168539326, 0.836, 6], [0.375, 0.38860103626943004, 0.838, 7], [0.405, 0.391304347826087, 0.8366666666666667, 8], [0.405, 0.38388625592417064, 0.834, 9], [0.41, 0.39805825242718446, 0.8386666666666667, 10]], &#39;Random Forest&#39;: [], &#39;SVM&#39;: []}
 </pre>
@@ -13271,7 +13205,9 @@ After computing recall and precision scores, I found that some algorithms get re
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[0.319, 0.33756613756613757, 0.8257333333333333, 7], [0.365, 0.3573176700930005, 0.8278, 8], [0.357, 0.35172413793103446, 0.8265333333333333, 9]]
 </pre>
@@ -13380,7 +13316,9 @@ To find out whether other algorithms can get higher scores, I would like to remo
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>GaussianNB(priors=None)  result table:  {&#39;select__k&#39;: 16}
 Features index list:  [ True  True  True False False False  True  True  True False False False
@@ -13614,7 +13552,9 @@ Features index list:  [False  True  True False False False False False False Fal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{&#39;K Nearest Neighbors&#39;: [[0.237, 0.7011834319526628, 0.8848]], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [[0.357, 0.3216216216216216, 0.8138666666666666]], &#39;Adaboost&#39;: [[0.3385, 0.41815935762816553, 0.849]], &#39;Naive Bayes&#39;: [[0.374, 0.38516992790937177, 0.8369333333333333]], &#39;Random Forest&#39;: [[0.2635, 0.4395329441201001, 0.857]], &#39;SVM&#39;: [], &#39;SVC&#39;: [[0.0385, 0.9625, 0.8716]]}
 </pre>
@@ -13630,7 +13570,7 @@ Features index list:  [False  True  True False False False False False False Fal
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="SelectKBest">SelectKBest<a class="anchor-link" href="#SelectKBest">&#182;</a></h4><p>With each algorithm tuned with its best k features assessed by f1 score, the scores are listed below:</p>
+<h3 id="Features-Selection">Features Selection<a class="anchor-link" href="#Features-Selection">&#182;</a></h3><h4 id="SelectKBest">SelectKBest<a class="anchor-link" href="#SelectKBest">&#182;</a></h4><p>With each algorithm tuned with its best k features assessed by f1 score, the scores are listed below:</p>
 <table>
 <thead><tr>
 <th style="text-align:left">Algorithm</th>
@@ -13678,7 +13618,32 @@ Features index list:  [False  True  True False False False False False False Fal
 </tr>
 </tbody>
 </table>
-<p>In this case, each algorithm except for Naive Bayes got a huge improvement, and DecisionTreeClassifier and AdaBoostClassifier pushed both recall and precision scores higher than 0.3! Although KNeighborsClassifier and SVC achieved pretty high precision scores, but they had bad recall scores. To try to get better scores, next I would like to try finding out the best parameters set for KNeighborsClassifier, making its scores higher than 0.3 as well. KNN has some inner parameters like n_neighbors, weights, leaf<em>size, etc. If I did not change anything in the algorithm, it would apply all default parameters. But the default values might not always work well, even not the optimal for the learning algorithm. That's why I needed to try different parameters to find out the most fitting ones. For example, the KNN algorithm with default setting returned 0.237 and 0.701 for recall and precision scores, which was not a qualified outcome. By changing the parameters, I might lower the precision score but raise the recall score higher than the threshold. To see more details: <a href="https://en.wikipedia.org/wiki/Hyperparameter">https://en.wikipedia.org/wiki/Hyperparameter</a></em>(machine_learning)</p>
+<p>In this case, each algorithm except for Naive Bayes got a huge improvement, and DecisionTreeClassifier and AdaBoostClassifier pushed both recall and precision scores higher than 0.3! Although KNeighborsClassifier and SVC achieved pretty high precision scores, but they had bad recall scores. To try to get better scores, next I would like to try finding out the best parameters set for KNeighborsClassifier, making its scores higher than 0.3 as well. KNN has some inner parameters, and the parameters I would like to search for the best fit are listed below:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Algorithm</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">K Nearest Neighbors</td>
+<td>n_neighbors</td>
+<td>Number of neighbors to use by default for kneighbors queries. How many groups in the algorithm</td>
+</tr>
+<tr>
+<td style="text-align:left">K Nearest Neighbors</td>
+<td>weights</td>
+<td>weight function used in prediction. Possible values: ‘uniform’ : uniform weights. All points in each neighborhood are weighted equally.  ‘distance’ : weight points by the inverse of their distance. in this case, closer neighbors of a query point will have a greater influence than neighbors which are further away.   [callable] : a user-defined function which accepts an array of distances, and returns an array of the same shape containing the weights.</td>
+</tr>
+<tr>
+<td style="text-align:left">K Nearest Neighbors</td>
+<td>leaf_size</td>
+<td>Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -13721,7 +13686,9 @@ Features index list:  [False  True  True False False False False False False Fal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>KNeighborsClassifier(algorithm=&#39;auto&#39;, leaf_size=30, metric=&#39;minkowski&#39;,
            metric_params=None, n_jobs=1, n_neighbors=5, p=2,
@@ -13759,7 +13726,9 @@ Features index list:  [False  True  True False False False False False False Fal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{&#39;K Nearest Neighbors&#39;: [[0.3105, 0.476592478894858, 0.8626]], &#39;AdaBoost&#39;: [], &#39;Decision Tree&#39;: [[0.357, 0.3216216216216216, 0.8138666666666666]], &#39;Adaboost&#39;: [[0.3385, 0.41815935762816553, 0.849]], &#39;Naive Bayes&#39;: [[0.374, 0.38516992790937177, 0.8369333333333333]], &#39;Random Forest&#39;: [[0.2635, 0.4395329441201001, 0.857]], &#39;SVM&#39;: [], &#39;SVC&#39;: [[0.0385, 0.9625, 0.8716]]}
 </pre>
@@ -13792,7 +13761,9 @@ Features index list:  [False  True  True False False False False False False Fal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>58 58
 [&#39;bonus_mean_ratio&#39;, &#39;bonus_median_ratio&#39;, &#39;exercised_stock_options&#39;, &#39;exercised_stock_options_mean_ratio&#39;, &#39;exercised_stock_options_median_ratio&#39;, &#39;total_stock_value&#39;, &#39;total_stock_value_mean_ratio&#39;, &#39;total_stock_value_median_ratio&#39;]
@@ -13878,11 +13849,14 @@ Features index list:  [False  True  True False False False False False False Fal
 <span class="c1">### check your results. You do not need to change anything below, but make sure</span>
 <span class="c1">### that the version of poi_id.py that you submit can be run on its own and</span>
 <span class="c1">### generates the necessary .pkl files for validating your results.</span>
-<span class="kn">from</span> <span class="nn">tester</span> <span class="k">import</span> <span class="n">dump_classifier_and_data</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s1">&#39;reduce_dim&#39;</span><span class="p">,</span> <span class="n">SelectKBest</span><span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)),</span> 
+<span class="kn">from</span> <span class="nn">tester</span> <span class="k">import</span> <span class="n">dump_classifier_and_data</span><span class="p">,</span> <span class="n">test_classifier</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s1">&#39;minabser&#39;</span><span class="p">,</span> <span class="n">MaxAbsScaler</span><span class="p">()),</span>
+                    <span class="p">(</span><span class="s1">&#39;reduce_dim&#39;</span><span class="p">,</span> <span class="n">SelectKBest</span><span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)),</span> 
                  <span class="p">(</span><span class="s1">&#39;clf&#39;</span><span class="p">,</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">leaf_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> 
                                               <span class="n">weights</span> <span class="o">=</span> <span class="s1">&#39;distance&#39;</span><span class="p">))])</span>
 <span class="n">features_list</span> <span class="o">=</span> <span class="n">reset_feature_list</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">)</span>
+<span class="c1">#test final output</span>
+<span class="n">test_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">my_dataset</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">folds</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13893,7 +13867,9 @@ Features index list:  [False  True  True False False False False False False Fal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;/Users/KunWuYao/Desktop/Python shortcut/Python Exercise ver3/Udacity/Data Analyst Nanodegree/Project5/tester.py&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">57</span>
@@ -13925,7 +13901,9 @@ Features index list:  [False  True  True False False False False False False Fal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -13945,4 +13923,8 @@ Features index list:  [False  True  True False False False False False False Fal
     </div>
   </div>
 </body>
+
+ 
+
+
 </html>

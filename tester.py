@@ -13,6 +13,8 @@
 import pickle
 import sys
 from sklearn.cross_validation import StratifiedShuffleSplit
+from sklearn.preprocessing import MaxAbsScaler
+import numpy as np
 
 
 PERF_FORMAT_STRING = "\
@@ -20,6 +22,37 @@ PERF_FORMAT_STRING = "\
 Recall: {:>0.{display_precision}f}\tF1: {:>0.{display_precision}f}\tF2: {:>0.{display_precision}f}"
 RESULTS_FORMAT_STRING = "\tTotal predictions: {:4d}\tTrue positives: {:4d}\tFalse positives: {:4d}\
 \tFalse negatives: {:4d}\tTrue negatives: {:4d}"
+
+def featureFormat(dictionary, features, sort_keys = True):
+    '''definitely not a necessary function
+        just for the checking function in the tester.py'''
+    return_list = []
+    if sort_keys:
+        keys = sorted(dictionary.keys())
+    else:
+        keys = dictionary.keys()
+    for key in keys:
+        tmp_list = []
+        for feature in features:
+            value = dictionary[key][feature]
+            tmp_list.append( float(value) )
+        if features[0] == 'poi':
+            test_list = tmp_list[1:]
+        else:
+            test_list = tmp_list
+        return_list.append( tmp_list )
+    return np.array(return_list)
+
+def targetFeatureSplit( data ):
+    '''definitely not a necessary function
+    just for the checking function in the tester.py'''
+    target = []
+    features = []
+    for item in data:
+        target.append( item[0] )
+        features.append( item[1:] )
+
+    return target, features
 
 def test_classifier(clf, dataset, feature_list, folds = 1000):
     data = featureFormat(dataset, feature_list, sort_keys = True)
